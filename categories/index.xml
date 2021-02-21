@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on IFshow</title>
+    <link>https://www.ifshow.com/categories/</link>
+    <description>Recent content in Categories on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 15 Feb 2021 10:00:15 -0300</lastBuildDate><atom:link href="https://www.ifshow.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fgo-us</title>
+      <link>https://www.ifshow.com/categories/fgo-us/</link>
+      <pubDate>Mon, 15 Feb 2021 10:00:15 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/categories/fgo-us/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>game</title>
+      <link>https://www.ifshow.com/categories/game/</link>
+      <pubDate>Thu, 10 Dec 2020 09:00:15 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/categories/game/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>investment</title>
+      <link>https://www.ifshow.com/categories/investment/</link>
+      <pubDate>Sat, 03 Oct 2020 10:00:15 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/categories/investment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>it-maintenance</title>
+      <link>https://www.ifshow.com/categories/it-maintenance/</link>
+      <pubDate>Sat, 23 May 2020 10:16:26 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/categories/it-maintenance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://www.ifshow.com/categories/life/</link>
+      <pubDate>Fri, 10 Jul 2015 02:09:34 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/categories/life/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

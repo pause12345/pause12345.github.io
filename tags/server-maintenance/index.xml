@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>server-maintenance on IFshow</title>
+    <link>https://www.ifshow.com/tags/server-maintenance/</link>
+    <description>Recent content in server-maintenance on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 18 Sep 2019 16:34:48 +0000</lastBuildDate><atom:link href="https://www.ifshow.com/tags/server-maintenance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tmux简易教程</title>
+      <link>https://www.ifshow.com/tmux-easy-tutorial/</link>
+      <pubDate>Wed, 18 Sep 2019 16:34:48 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/tmux-easy-tutorial/</guid>
+      <description>1、新建会话 tmux # 新建一个无名称的会话 tmux new -s test # 新建名为test的会话 2、中断当前会话 tmux detach # 断开当前会话，会话在后台运行 使用快捷键 Ctrl+b 再按d 3、回到之前的会话 tmux a # 默认回到第一个会话 tmux a -t test # 回到到名为test的会话 4、关闭会话 tmux kill-session -t test # 关闭名为test的会话 tmux kill-server # 关闭Tmux服务器</description>
+    </item>
+    
+    <item>
+      <title>修改Nginx和PHP的上传文件上限</title>
+      <link>https://www.ifshow.com/nginx-and-php-modify-upper-limit-about-upload-file/</link>
+      <pubDate>Tue, 08 Sep 2015 14:04:01 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/nginx-and-php-modify-upper-limit-about-upload-file/</guid>
+      <description>1. 修改nginx配置文件： /etc/nginx/nginx.conf 找到http{}段，添加以下内容后保存退出：（示例为100M，可以自行设定数值） client\_max\_body\_size 100m; 2. 修改php配置文件： vi /etc/php.ini 查找 **max_execution_time **改为 max_execution_time = 0 查找 post_max_size 改为 post_max_size = 100M 查找 upload_max_filesize 改为 upload_max_filesize = 100M</description>
+    </item>
+    
+    <item>
+      <title>安装CentOS 7后必做的安全加固</title>
+      <link>https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/</link>
+      <pubDate>Wed, 18 Mar 2015 08:34:30 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/</guid>
+      <description>刚装好的CentOS 7系统存在很大风险，需要立刻进行安全加固。 1. 用root账号通过SSH登录服务器 通常使用SSH远程登录服务器进行日常维护。在windows系统下可以用PuTTY软件，Linux和MAC系统内置SSH客户端功能直接在终端（terminal）输入相关指令。 SSH首次</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>什么是重构，什么不是重构 | IFshow</title>
+    <meta property="og:title" content="什么是重构，什么不是重构 - IFshow">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2015-05-19T09:00:44&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2015-05-19T09:00:44&#43;08:00'>
+        
+    <meta name="Keywords" content="IT,investment,FGO">
+    <meta name="description" content="什么是重构，什么不是重构">
+        
+    <meta name="author" content="boxwang">
+    <meta property="og:url" content="https://www.ifshow.com/what-refactoring-is-and-what-it-isnt/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7012795738014849",
+        enable_page_level_ads: true
+    });
+    </script>
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.ifshow.com/">
+                        IFshow
+                    </a>
+                
+                <p class="description">Cogito Ergo Sum</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.ifshow.com/">首页</a>
+                    
+                    <a  href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服">FGO美服</a>
+                    
+                    <a  href="https://www.ifshow.com/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.ifshow.com/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+            <img src="https://storage.live.com/items/240ACD90363D22FB!3827:/top.jpg" />
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#不要为了重构而重构">不要为了重构而重构</a></li>
+    <li><a href="#为理解而做简略重构scratch-refactoring">为理解而做简略重构(Scratch Refactoring)</a></li>
+    <li><a href="#什么是大规模重构">什么是“大规模”重构？</a></li>
+    <li><a href="#这些是重构那些不是">这些是重构——那些不是</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">什么是重构，什么不是重构</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2015年5月19日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p>转自：http://www.vaikan.com/what-refactoring-is-and-what-it-isnt/</p>
+<p>有时候，会有程序员跑到我这里说他们不喜欢某个东西的设计，“我们需要给它来个全面的重构”，来纠正里面的错误。哦，哦。这听起来可不是个好主意。而且这听起来也不是重构… 重构(Refactoring)这个词最初由Martin Fowler 和 Kent Beck给下的定义，它是</p>
+<blockquote>
+<p>一种修改，使软件的内部结构更容易理解，在不改变软件的可见行为方式前提下使软件更容易变更…它是一种有节制的整理代码、使bug产生几率最小化的方法。</p>
+</blockquote>
+<p>重构的结果是引用了快捷方法、去除了重复代码和死代码，使设计和逻辑更加清晰。是在更好的、更聪明的使用编程语言。是在优势利用你现在知道、但当时的开发程序员并不知道——或并没有加以利用的信息。不断的简化代码，让它们更容易理解。不断的使它们在将来的变更变得更容易、更安全。 在这个过程中发现了bug、修改bug，这不是重构。优化不是重构。强化异常捕捉、增加预防性代码不是重构。让代码更容易测试不是重构——尽管重构能达到相同的效果。这些所有的事都是有益的。但这些都不是重构。 程序员，特别是做维护工作的程序员，清理代码是他们的日常工作之一。这是基本工作，是必须要做的。Martin Fowler等人的贡献是使重构代码的最佳实践方法格式化，并把常见的、证明切实有效的重构模式——重构的目标和重构的步骤——进行归档分类。 重构很简单。尽可能在写代码前先写测试能够防止你犯错误。小规模的、独立的、稳妥的对代码进行结构上的调整，每次调整完后都要进行测试，确保你没有改变代码的行为特征——功能和以前一样，只是代码上看着不同。重构模式和现代化的IDE里的重构工具使重构变得容易、安全和代价低廉。</p>
+<h2 id="不要为了重构而重构">不要为了重构而重构</h2>
+<p>重构可以被当成一种能给你的代码变更带来帮助的措施。代码重构应该在你进行代码变更前进行，这样能让你确信你对代码理解了，使你更容易、更安全的把变更引入代码。对你的重构动作进行回归测试。然后进行纠正或变更。再次测试。之后可能需要对更多的代码进行重构，使你代码变更的意图变得更加清晰。再次进行全面测试。重构，再变更。或变更，然后重构。</p>
+<blockquote>
+<p>你不是为了重构而重构，你重构是因为你想做其它的事情，而重构能帮助你完成这些事情。</p>
+</blockquote>
+<p>重构的范围应该受你需要实施的代码变更或代码修正来决定——为了让代码变更更安全和更简洁，你应该做些什么？换句话说：不要为了重构而重构。不要对那些你不打算进行变更或不会变更的代码进行重构。</p>
+<h2 id="为理解而做简略重构scratch-refactoring">为理解而做简略重构(Scratch Refactoring)</h2>
+<p>Michael Feather的《Working Effectively with Legacy Code》这本书里提到了简略重构(Scratch Refactoring)的概念；Martin Fowler称之为“为理解而重构”。这是用来对付那些你不理解的(或不能忍受的)代码，清理它们，这样在你打算真正动手修改它前，你能对它们是干什么的有了更好的理解，同样也对你debug这些代码有帮助。一旦你能清楚了一个变量或方法的真正意图，重命名它们，给它们一个更合适的名称，删除那些你不喜欢看的(或觉得没有用的)代码，拆解复杂的条件语句，把长程序分解成数个容易理解的小程序。 不要惦记着复查或测试这些改动。这是为了让你的重构快速的推进——这能让这些代码以及它们的运行原理在你的大脑里产生一个快速但不完备的原型。从中学习，然后丢掉它们。简略重构还能让你尝试各种不同的重构途径，学到更多的重构技巧。Michael Feathers建议说，在这个过程中要留意那些看起来没什么用处、或者特别有用的东西，这样当你完成此练习后、要真正修改它们时，才能把事情做正确——修改时一点一点来，讲究方法，边修改边测试。</p>
+<h2 id="什么是大规模重构">什么是“大规模”重构？</h2>
+<p>对代码进行简单的但又明显的重构：消除重复，修改变量和方法名称使其更有意义，提炼方法使代码更易懂、更易复用，简化条件逻辑，把无意义的数字换成命名的变量，把相似的代码集中到一起。通过这些重构，在代码的可理解性和可维护性上，你能得到巨大的回报。 相对于这些较小的、行内的重构，更加重大的设计上的重构与之有明显差异——这就是Martin Fowler所指的”大型重构”。大的、代价很高的变动，附带有大量的技术风险。这不是你编程过程中的清理代码和设计改进：这是根本性的重新设计。 有些人喜欢把对一个系统的重新设计或重写或重新搭建平台或返工叫“大规模重构”。因为技术上讲，这些并不改变软件功能特征——业务逻辑、软件输入和输出仍和以前一样，“只是”设计和代码实现变了。它和常规重构的区别看起来就是：一个是重写了一段代码，一个是重写了一个系统，只要你是一步一步做下来的，你都可以称之为“重构”——不管你是长年累月被困于将一个老系统换成新代码，还是对系统架构进行大规模的改造。 “大规模重构”会变的很糟糕。你可能需要花数周、数月(甚至数年)才能完成，需要你对软件的很多部分进行改动。软件会因此不能运行，需要分多次发布这些变更，需要你做临时的台架(scaffolding)和变通方案——尤其是你采用短周期的敏捷开发方法时。这时Branch by Abstraction这样的实践方法就派上用场了，它能帮你在长周期内管理代码中的变化。 而且在开发新代码的同时你还要维护旧代码，这使得代码版本控制很麻烦，变更起来不方便，致使代码很脆弱，易犯错——这正和重构所预期的目的背道而驰。有时这样的情况会一直持续下去——这种新旧代码交替的过程永远不能完成，因为能获得最大利益的部分都是最先完成，或者因为最初带来这个想法的顾问已经干别的去了，或者是预算被消减，而且你也讨厌维护这样一个拖拉的项目。</p>
+<h2 id="这些是重构那些不是">这些是重构——那些不是</h2>
+<p>在这种重型的项目开发过程中混入重构的概念是不对的。它们从根本上就是另外一种工作，带有完全不同的开发成本和风险。它混淆了人们对什么是重构、重构能干什么的认识。 重构可以、也应该融入到你写代码或维护代码的过程中——作为日常开发/质量管理的组成部分，就像写测试和代码审查一样。重构应该被安静的，持续的和低调的完成。它需要我们把工作精力分出一部分给它，它需要在我们的工期评估和风险评估中考虑到它的存在。如果做的正确，你不需要去解释或向外人验证这部分工作。 花几分钟、一两个小时做重构，就像是你开发过程中的一种修改，是工作的一部分。如果它让你花了数天时间，或者更长，那不是重构；那是重写，或重新设计。如果你需要明确的留出一部分时间(或整个sprint周期)来重构代码，如果需要为清理代码而申请批准，或把清理代码作为一个开发需求，那你不是在重构——即使你用了重构的技术和工具，你仍然做的是另外一种工作。 有些程序员认为对代码进行根本的、重大的修改是他们的权利和义务，在重构的名义下进行重新设计、重写，为了将来，也不辜负自己的技艺。重新设计和重写有时候是你正确的该做的事情。但出于坦诚和表述清楚，请不要把这些活动赋以重构的名义。</p>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.ifshow.com/">boxwang</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.ifshow.com/what-refactoring-is-and-what-it-isnt/">https://www.ifshow.com/what-refactoring-is-and-what-it-isnt/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。如果特别注明为转载文章，请联系其原始作者。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/original-android-dosbox-turbo-typical-configuration-autoexec/">【原创】Android DosBox Turbo的典型autoexec配置</a></li>
+        
+        <li><a href="/flashtool-flash-mode-and-fastboot-mode-operating-instructions/">Sony XL39h的Flash mode和Fastboot mode操作简介</a></li>
+        
+        <li><a href="/about-the-business-plan-look-at-this-one-is-enough/">有关商业计划书，看这一篇就够了</a></li>
+        
+        <li><a href="/centos-using-logrotate-management-log/">CentOS使用logrotate管理日志</a></li>
+        
+        <li><a href="/how-to-access-internet-in-an-unsafe-wifi/">如何在不安全的WiFi下上网</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://www.ifshow.com/tags/refactoring'>refactoring</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "pause12345/pause12345.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                </div>
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.ifshow.com/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.ifshow.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-information-navigation/" title="置顶：FGO美服 信息汇总">置顶：FGO美服 信息汇总</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-ccc-revival/" title="FGO美服：CCC复刻">FGO美服：CCC复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-presidents-day-celebration-campaign-2021/" title="FGO美服：总统日庆祝活动2021">FGO美服：总统日庆祝活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-chinese-new-year-campaign-2021/" title="FGO美服：中国新年活动2021">FGO美服：中国新年活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-servant-rank-up-quest-part-ten/" title="FGO美服：从者强化任务第十弹">FGO美服：从者强化任务第十弹</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-valentine-2021/" title="FGO美服：情人节2021">FGO美服：情人节2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-prisma-codes-revival/" title="FGO美服：魔伊活动复刻">FGO美服：魔伊活动复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-1300th-day-celebration-campaign/" title="FGO美服：开服1300天庆祝活动">FGO美服：开服1300天庆祝活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-manga-release-celebration-campaign/" title="FGO美服：漫画上线纪念活动">FGO美服：漫画上线纪念活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-sparrow-inn-daily-report/" title="FGO美服：雀之旅馆的活动日志">FGO美服：雀之旅馆的活动日志</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">推荐内容</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服专区" target="_blank" style="color:red">
+                
+                    FGO美服专区
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.ifshow.com/categories/fgo-us/">fgo-us (370)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/game/">game (1)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (73)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/life/">life (6)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://www.ifshow.com/tags/android/">android</a>
+    
+    <a href="https://www.ifshow.com/tags/app/">app</a>
+    
+    <a href="https://www.ifshow.com/tags/business-analytics/">business-analytics</a>
+    
+    <a href="https://www.ifshow.com/tags/business-plan/">business-plan</a>
+    
+    <a href="https://www.ifshow.com/tags/career-life/">career-life</a>
+    
+    <a href="https://www.ifshow.com/tags/centos/">centos</a>
+    
+    <a href="https://www.ifshow.com/tags/cyberpunk2077/">cyberpunk2077</a>
+    
+    <a href="https://www.ifshow.com/tags/desktop-maintenance/">desktop-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/e-hr/">e-hr</a>
+    
+    <a href="https://www.ifshow.com/tags/etf/">etf</a>
+    
+    <a href="https://www.ifshow.com/tags/fgo/">fgo</a>
+    
+    <a href="https://www.ifshow.com/tags/git/">git</a>
+    
+    <a href="https://www.ifshow.com/tags/hugo/">hugo</a>
+    
+    <a href="https://www.ifshow.com/tags/information-security/">information-security</a>
+    
+    <a href="https://www.ifshow.com/tags/it-auditors/">it-auditors</a>
+    
+    <a href="https://www.ifshow.com/tags/it-outsourcing/">it-outsourcing</a>
+    
+    <a href="https://www.ifshow.com/tags/it-project-management/">it-project-management</a>
+    
+    <a href="https://www.ifshow.com/tags/kali/">kali</a>
+    
+    <a href="https://www.ifshow.com/tags/linux/">linux</a>
+    
+    <a href="https://www.ifshow.com/tags/living/">living</a>
+    
+    <a href="https://www.ifshow.com/tags/openwrt/">openwrt</a>
+    
+    <a href="https://www.ifshow.com/tags/pmp/">pmp</a>
+    
+    <a href="https://www.ifshow.com/tags/refactoring/">refactoring</a>
+    
+    <a href="https://www.ifshow.com/tags/seo/">seo</a>
+    
+    <a href="https://www.ifshow.com/tags/server-maintenance/">server-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/shadowsocks/">shadowsocks</a>
+    
+    <a href="https://www.ifshow.com/tags/stock/">stock</a>
+    
+    <a href="https://www.ifshow.com/tags/system-maintenance/">system-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/win10/">win10</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="" title=""></a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.ifshow.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2005 - 2021 <a href="https://www.ifshow.com/">IFshow By boxwang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-8286719-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

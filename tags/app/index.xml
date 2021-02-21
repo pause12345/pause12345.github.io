@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>app on IFshow</title>
+    <link>https://www.ifshow.com/tags/app/</link>
+    <description>Recent content in app on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 09 Oct 2015 00:52:08 +0000</lastBuildDate><atom:link href="https://www.ifshow.com/tags/app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>纯HTML5APP与原生APP的差距在哪</title>
+      <link>https://www.ifshow.com/what-is-gaps-about-pure-html5app-and-native-app/</link>
+      <pubDate>Fri, 09 Oct 2015 00:52:08 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/what-is-gaps-about-pure-html5app-and-native-app/</guid>
+      <description>来源：http://wittsay.cc/w3cnews/800 笔者写过一些纯H5的APP，虽然开发起来的确很快很舒服，但和原生比起来纯H5APP还是有很多问题，主要聚集在以下几个方面： 1、动画 动画有很多种，比如侧边栏菜单的滑入滑出、元素的响应动画、页面切换之间的过场等等，在H5</description>
+    </item>
+    
+  </channel>
+</rss>

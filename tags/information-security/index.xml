@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>information-security on IFshow</title>
+    <link>https://www.ifshow.com/tags/information-security/</link>
+    <description>Recent content in information-security on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 24 Jun 2016 04:05:43 +0000</lastBuildDate><atom:link href="https://www.ifshow.com/tags/information-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>企业数据防泄密的几个层次</title>
+      <link>https://www.ifshow.com/several-levels-of-enterprise-data-leak-prevention/</link>
+      <pubDate>Fri, 24 Jun 2016 04:05:43 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/several-levels-of-enterprise-data-leak-prevention/</guid>
+      <description>来源：e-works 作者：张文华 计算机作为一种企业经营管理的一种基本工具，已经渗透到企业日常工作的方方面面。企业在日常工作中产生的大量计算机数据，无疑是企业的宝贵财富和重要资产。对于企业的有形资产，如厂房、原材料、产品等，企业会设仓库、建围墙，保安24小时值班，但面对对大量计算机</description>
+    </item>
+    
+    <item>
+      <title>如何在不安全的WiFi下上网</title>
+      <link>https://www.ifshow.com/how-to-access-internet-in-an-unsafe-wifi/</link>
+      <pubDate>Thu, 07 May 2015 15:30:03 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/how-to-access-internet-in-an-unsafe-wifi/</guid>
+      <description>外出连接公众WiFi时，很容易带来安全问题。首选是用3G/4G流量上网，避免使用未知WiFi。当条件限制只能连接公众WiFi时，可以采用以下方法保证安全： 使用VPN，连接公众WiFi后立刻连接VPN，之后上网流量都走VPN通道；缺点是GFW可以识别，无法用于科学上网。 使用Shad</description>
+    </item>
+    
+  </channel>
+</rss>

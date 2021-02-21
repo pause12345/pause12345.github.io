@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on IFshow</title>
+    <link>https://www.ifshow.com/tags/linux/</link>
+    <description>Recent content in linux on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Feb 2017 09:04:18 +0000</lastBuildDate><atom:link href="https://www.ifshow.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>怎么在安卓系统上安装Kali Rolling</title>
+      <link>https://www.ifshow.com/how-to-install-kali-rolling-on-android/</link>
+      <pubDate>Sat, 11 Feb 2017 09:04:18 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/how-to-install-kali-rolling-on-android/</guid>
+      <description>网上有很多针对安卓系统上安装老版本的Kali的文章（已经过时），为此本文介绍在安卓系统上安装最新版的Kali Rolling，装了Kali可以直接ssh到安卓设备上进行渗透扫描。 1.准备工作： 已经ROOT的安卓设备，能无线上网，有2G以上空余存储空间 2. 安装linux deploy、V</description>
+    </item>
+    
+  </channel>
+</rss>

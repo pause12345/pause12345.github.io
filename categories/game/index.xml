@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>game on IFshow</title>
+    <link>https://www.ifshow.com/categories/game/</link>
+    <description>Recent content in game on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 10 Dec 2020 09:00:15 -0300</lastBuildDate><atom:link href="https://www.ifshow.com/categories/game/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>赛博朋克2077心得</title>
+      <link>https://www.ifshow.com/cyberpunk-2077-tips/</link>
+      <pubDate>Thu, 10 Dec 2020 09:00:15 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/cyberpunk-2077-tips/</guid>
+      <description>后续根据游戏推进情况，随时更新。 1、开始新游戏前，完成绑定GOG账号领取数字版奖励。 2、中文版默认中文语音，想听原版英文要在设置里面修改并下载英文语音包，同样需要开始新游戏之前完成。 3、进入游戏后无法修改性别外形，属性点没法重置，专精点数可以花钱10万重置（购买立刻生效）。 4、记</description>
+    </item>
+    
+  </channel>
+</rss>

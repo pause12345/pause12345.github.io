@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>全新CentOS 7安装 LNMP（Linux&#43;Nginx&#43;MariaDB&#43;PHP）及多站点配置 | IFshow</title>
+    <meta property="og:title" content="全新CentOS 7安装 LNMP（Linux&#43;Nginx&#43;MariaDB&#43;PHP）及多站点配置 - IFshow">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2015-03-23T15:33:45&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2015-03-23T15:33:45&#43;08:00'>
+        
+    <meta name="Keywords" content="IT,investment,FGO">
+    <meta name="description" content="全新CentOS 7安装 LNMP（Linux&#43;Nginx&#43;MariaDB&#43;PHP）及多站点配置">
+        
+    <meta name="author" content="boxwang">
+    <meta property="og:url" content="https://www.ifshow.com/the-new-centos-7-install-lnmp-linux-nginx-mariadb-php-and-multi-site-configuration/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7012795738014849",
+        enable_page_level_ads: true
+    });
+    </script>
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.ifshow.com/">
+                        IFshow
+                    </a>
+                
+                <p class="description">Cogito Ergo Sum</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.ifshow.com/">首页</a>
+                    
+                    <a  href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服">FGO美服</a>
+                    
+                    <a  href="https://www.ifshow.com/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.ifshow.com/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+            <img src="https://storage.live.com/items/240ACD90363D22FB!3827:/top.jpg" />
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-准备工作">1. 准备工作</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#2-安装nginx">2. 安装Nginx</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#3-安装mariadb">3. 安装MariaDB</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#4-安装php7php-fpm模式">4. 安装PHP7（php-fpm模式）</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#5-nginx多站点配置php-fpm模式">5. Nginx多站点配置（php-fpm模式）</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#6-安装phpmyadmin可选">6. 安装phpmyadmin（可选）</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#7-安装ftp可选">7. 安装FTP（可选）</a></li>
+    <li><a href="#8centos-7网站数据自动备份到dropbox可选">8.CentOS 7网站数据自动备份到Dropbox（可选）</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">全新CentOS 7安装 LNMP（Linux&#43;Nginx&#43;MariaDB&#43;PHP）及多站点配置</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2015年3月23日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p>本文介绍在全新CentOS 7系统下安装 LNMP（Linux+Nginx+MariaDB+PHP）的过程，本博客就在此环境下运行。CentOS 7系统安装过程略过，新装后务必先进行<a href="https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/" target="_blank">安全加固</a>。</p>
+<h2 id="1-准备工作">1. 准备工作</h2>
+<h4 id="11-安装epel源">1.1 安装EPEL源</h4>
+<pre><code>yum -y install epel-release.noarch
+</code></pre><h4 id="12-手动进行系统更新">1.2 手动进行系统更新</h4>
+<pre><code>yum -y update
+</code></pre><h4 id="13-设置系统当前时区为香港然后检查系统时区设置">1.3 设置系统当前时区为香港，然后检查系统时区设置</h4>
+<pre><code>timedatectl set-timezone Asia/Hong_Kong
+timedatectl
+</code></pre><h2 id="2-安装nginx">2. 安装Nginx</h2>
+<h4 id="21-添加nginx官方库">2.1 添加nginx官方库</h4>
+<p>在http://nginx.org/packages/centos/7/noarch/RPMS/查看最新库信息</p>
+<pre><code>rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+</code></pre><h4 id="22-安装nginx">2.2 安装nginx</h4>
+<pre><code>yum -y install nginx
+</code></pre><h4 id="23-编辑nginx主配置文件">2.3 编辑nginx主配置文件</h4>
+<pre><code>vi /etc/nginx/nginx.conf
+</code></pre><p>查找worker_processes修改为CPU核心数（按实际情况填写）</p>
+<pre><code>worker_processes 1;
+</code></pre><p>查找gzip取消注释修改为</p>
+<pre><code>gzip on;
+gzip_min_length 1k;
+gzip_buffers 4 16k;
+gzip_comp_level 5;
+</code></pre><p>在http {}段添加全局参数server_tokens（用于隐藏nginx版本号）</p>
+<pre><code>server_tokens off;
+</code></pre><p>编辑默认站点配置文件：</p>
+<pre><code>vi /etc/nginx/conf.d/default.conf
+</code></pre><p>把server {}段注释，再添加以下内容（用于屏蔽80端口空主机头访问）</p>
+<pre><code> server {
+  listen 80 default; 
+  return 500; 
+ }
+</code></pre><h4 id="24-配置防火墙开启http服务端口">2.4 配置防火墙开启HTTP服务端口</h4>
+<pre><code>firewall-cmd --permanent --add-service=http
+firewall-cmd --reload
+</code></pre><h4 id="25-启动nginx并设为开机自启">2.5 启动nginx并设为开机自启</h4>
+<pre><code>systemctl start nginx.service
+systemctl enable nginx.service
+</code></pre><p>如果Apache服务在运行会出现冲突，关闭并移除Apache</p>
+<pre><code>systemctl stop httpd.service
+systemctl disable httpd.service
+yum -y remove httpd
+</code></pre><p>nginx主配置文件：/etc/nginx/nginx.conf
+nginx默认配置文件目录：/etc/nginx/conf.d/
+nginx默认站点主目录：/usr/share/nginx/html/
+nginx默认日志目录：/var/log/nginx/</p>
+<h2 id="3-安装mariadb">3. 安装MariaDB</h2>
+<h4 id="31-添加最新版本">3.1 添加最新版本</h4>
+<p>首先访问<a href="https://downloads.mariadb.org/mariadb/repositories/" target="_blank">Setting Up MariaDB Repositories</a>页面，选择CentOS → 发行版本 → MariaDB版本。复制页面提示的内容到MariaDB.repo并保存退出。</p>
+<pre><code>vi /etc/yum.repos.d/MariaDB.repo
+</code></pre><h4 id="32-安装mariadb">3.2 安装mariadb</h4>
+<pre><code>yum -y install MariaDB-server MariaDB-client
+</code></pre><h4 id="33-启动mariadb并设为开机自启">3.3 启动mariadb并设为开机自启</h4>
+<pre><code>systemctl start mariadb.service
+systemctl enable mariadb.service
+</code></pre><h4 id="34-安全性设置">3.4 安全性设置</h4>
+<pre><code>mysql_secure_installation
+</code></pre><p>运行后首先会提示输入root密码直接回车（密码为空）；然后提示修改root密码直接回车（默认为yes）输入两遍新密码；之后出现的提示选择都是回车（默认为yes）</p>
+<h4 id="35-新建数据库和用户授权">3.5 新建数据库和用户授权</h4>
+<pre><code>mysql -u root -p
+CREATE DATABASE ifshow;
+CREATE USER ifshow IDENTIFIED BY '12345';
+GRANT ALL ON ifshow.* to ifshow;
+quit
+</code></pre><p>登录数据库管理，新建数据库ifshow；新建用户ifshow密码为12345；授权数据库ifshow所有权限给用户ifshow，退出管理界面。</p>
+<h2 id="4-安装php7php-fpm模式">4. 安装PHP7（php-fpm模式）</h2>
+<h4 id="41-安装php7相应的yum源">4.1 安装PHP7相应的yum源</h4>
+<pre><code>rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+</code></pre><h4 id="42-安装php7php-fpm模式及相关支持">4.2 安装php7（php-fpm模式）及相关支持</h4>
+<p>查询最新版本，比如php72w</p>
+<pre><code>yum list php*
+</code></pre><p>安装PHP7（以下安装的是php72w，按需修改）</p>
+<pre><code>yum -y install php72w php72w-cli php72w-common php72w-devel php72w-opcache php72w-fpm php72w-mysql php72w-pdo php72w-pgsql php72w-xml php72w-mbstring php72w-mcrypt php72w-gd
+</code></pre><h4 id="43-修改php配置文件">4.3 修改php配置文件</h4>
+<pre><code>vi /etc/php.ini
+</code></pre><p>查找expose_php，修改为以下内容（隐藏php版本号）：</p>
+<pre><code>expose_php = Off
+</code></pre><p>查找date.timezone，修改为以下内容：</p>
+<pre><code>date.timezone = &quot;Asia/Hong_Kong&quot;
+</code></pre><h4 id="44-修改php-fpm配置文件">4.4 修改php-fpm配置文件</h4>
+<pre><code>vi /etc/php-fpm.d/www.conf
+</code></pre><p>查找listen = 127.0.0.1:9000，修改为以下内容</p>
+<pre><code>listen = /var/run/php-fpm/php-fpm.sock
+</code></pre><p>查找security.limit_extensions，修改为以下内容</p>
+<pre><code>security.limit_extensions = .php .htm .html .js .css .jpg .jpeg .gif .png .rar .zip .ico
+</code></pre><p>查找user = apache，修改为以下内容</p>
+<pre><code>user = nginx
+</code></pre><p>查找group = apache，修改为以下内容</p>
+<pre><code>group = nginx
+</code></pre><h4 id="45-启动php-fpm并设置为开机自启">4.5 启动php-fpm并设置为开机自启</h4>
+<pre><code>systemctl enable php-fpm.service
+systemctl start php-fpm.service
+</code></pre><h2 id="5-nginx多站点配置php-fpm模式">5. Nginx多站点配置（php-fpm模式）</h2>
+<h4 id="51-建立站点ifshow的目录及子目录">5.1 建立站点ifshow的目录及子目录</h4>
+<pre><code>mkdir -p /data/ifshow/web
+mkdir -p /data/ifshow/log
+mkdir -p /data/ifshow/tmp/session
+</code></pre><h4 id="52-新建用户ifshow用于独立运行站点">5.2 新建用户ifshow用于独立运行站点</h4>
+<pre><code>useradd -d '/data/ifshow' -s /sbin/nologin ifshow
+passwd ifshow
+usermod -G nginx ifshow
+chown -R ifshow:nginx /data/ifshow
+</code></pre><h4 id="53-添加站点ifshow的nginx配置文件">5.3 添加站点ifshow的nginx配置文件</h4>
+<pre><code>vi /etc/nginx/conf.d/ifshow.conf
+</code></pre><p>输入以下内容</p>
+<pre><code>server {
+ listen 80;
+ server_name www.ifshow.com;
+ access_log /data/ifshow/log/access.log;
+ error_log /data/ifshow/log/error.log;
+ root /data/ifshow/web;
+ index index.php index.html index.htm;
+ location = /favicon.ico {
+ log_not_found off;
+ access_log off;
+ }
+ location = /robots.txt {
+ allow all;
+ log_not_found off;
+ access_log off;
+ }
+
+ #error_page 404 /404.html;
+
+ # redirect server error pages to the static page /50x.html
+ #
+ error_page 500 502 503 504 /50x.html;
+ location = /50x.html {
+ root /usr/share/nginx/html;
+ }
+
+ # pass the PHP scripts to FastCGI server listening on sock
+ #
+ location ~ \.php$ { 
+ try_files $uri =404;
+ fastcgi_pass unix:/var/run/php-fpm/ifshow.sock;
+ fastcgi_index index.php;
+ fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+ include fastcgi_params;
+ }
+ 
+ # Deny all attempts to access hidden files such as .htaccess
+ # Deny access to any files with a .php extension in the uploads directory
+ #
+ location ~ /\. {
+ deny all;
+ }
+ location ~* /(?:uploads|files)/.*\.php$ {
+ deny all;
+ }
+ 
+ location ~* \.(gif|jpg|jpeg|png|bmp|txt|zip|jar|swf)$ {
+ expires 30d;
+ access_log off; 
+ valid_referers none blocked *.ifshow.com  server_names ~\.google\. ~\.baidu\. ~\.bing\. ~\.yahoo\. ~\.soso\. ~\.sogou\. ~\.alexa\. ~\.haosou\. ~\.youdao\.;
+ if ($invalid_referer) {
+ #return 403;
+ rewrite ^/ http://www.ifshow.com/403.png;
+  }
+ }
+ rewrite ^/sitemap.xml$ /sitemap.php last;
+}
+
+server {
+ server_name ifshow.com;
+ rewrite ^/(.*)$ http://www.$host/$1 permanent;
+}
+</code></pre><p>说明：监听80端口，自定义日志文件存放位置，对favicon.ico和robots.txt的访问及错误不写入日志，启用php-fpm支持且使用ifshow.sock套接字通信，屏蔽对.开头的隐藏文件的访问（比如.htaccess），屏蔽对uploads和files目录下php文件的访问（通常是上传文件存放目录），图片防盗链，访问sitemap.xml文件改写为访问sitemap.php，访问ifshow.com重定向到www.ifshow.com。</p>
+<p><strong>如果站点同时使用http和https，要把配置文件开头部分改为：</strong></p>
+<pre><code>server {
+ listen 80;
+ listen 443 ssl;
+ server_name www.ifshow.com;
+ ssl_certificate /data/ifshow/crt/www.ifshow.com.crt;
+ ssl_certificate_key /data/ifshow/crt/www.ifshow.com.key;
+</code></pre><p>增加对443端口ssl模式的监听，指定ssl证书和密钥的位置。站点同时使用http和https时，页面文件调用本站资源可以去掉http:或者https:，只保留后面的内容（//…），浏览器能自动匹配相应的头部。</p>
+<p><strong>如果要强制使用https，把http访问都转到https，则修改配置文件开头和结尾如下：</strong></p>
+<pre><code>server {
+ listen 443 ssl;
+ server_name www.ifshow.com;
+ ssl_certificate /data/ifshow/crt/www.ifshow.com.crt;
+ ssl_certificate_key /data/ifshow/crt/www.ifshow.com.key;
+...
+}
+server {
+ listen 80;
+ server_name www.ifshow.com;
+ rewrite ^(.*)$ https://$host$1 permanent;
+}
+server {
+ server_name ifshow.com;
+ rewrite ^/(.*)$ https://www.$host/$1 permanent;
+}
+</code></pre><p><strong>补充1：CentOS7免费SSL证书Let’s Encrypt教程</strong></p>
+<blockquote>
+<p><a href="https://www.ifshow.com/centos-7-free-ssl-certificate-lets-encrypt-tutorial/" target="_blank">CentOS7免费SSL证书Let’s Encrypt教程</a></p>
+</blockquote>
+<p><strong>补充2：在启用wordpress固定链接后修改nginx配置文件</strong></p>
+<p>修改nginx的wordpress配置文件，在root行下面添加以下内容后保存退出：</p>
+<pre><code>location / {
+ try_files $uri $uri/ /index.php?$args;
+ }
+ rewrite /wp-admin$ $scheme://$host$uri/ permanent;
+</code></pre><p>重启nginx和php-rpm服务：</p>
+<pre><code>systemctl restart nginx.service
+systemctl restart php-fpm.service
+</code></pre><p>测试nginx配置文件是否正确</p>
+<pre><code>nginx -t
+</code></pre><h4 id="54-添加站点ifshow的php-fpm配置文件">5.4 添加站点ifshow的php-fpm配置文件</h4>
+<pre><code>vi /etc/php-fpm.d/ifshow.conf
+</code></pre><p>输入以下内容</p>
+<pre><code>[ifshow]
+listen = /var/run/php-fpm/ifshow.sock
+listen.allowed_clients = 127.0.0.1
+listen.owner = ifshow
+listen.group = nginx
+listen.mode = 0660
+
+user = ifshow
+group = nginx
+
+pm = dynamic
+pm.max_children = 50
+pm.start_servers = 5
+pm.min_spare_servers = 5
+pm.max_spare_servers = 35
+
+chdir = /
+slowlog = /var/log/php-fpm/www-slow.log
+php_value[session.save_handler] = files
+php_value[session.save_path] = /data/ifshow/tmp/session
+php_admin_value[open_basedir] = /data/ifshow/web:/data/ifshow/tmp:/usr/share/php:/tmp
+php_admin_value[upload_tmp_dir] = /data/ifshow/tmp
+</code></pre><h4 id="55-添加站点ifshow的logrotate日志管理配置文件">5.5 添加站点ifshow的logrotate日志管理配置文件</h4>
+<pre><code>vi /etc/logrotate.d/ifshow
+</code></pre><p>输入以下内容</p>
+<pre><code>/data/ifshow/log/*.log {
+daily
+missingok
+rotate 7
+compress
+delaycompress
+notifempty
+create 640 nginx adm
+sharedscripts
+postrotate
+ [ -f /var/run/nginx.pid ] &amp;&amp; kill -USR1 `cat /var/run/nginx.pid`
+endscript
+}
+</code></pre><p>进一步了解logrotate请点击<a href="https://www.ifshow.com/centos-using-logrotate-management-log/" target="_blank">这里</a>。</p>
+<h4 id="56-重启nginx和php-fpm服务重载配置也可以">5.6 重启nginx和php-fpm服务（重载配置也可以）</h4>
+<pre><code>systemctl restart nginx.service
+systemctl restart php-fpm.service
+</code></pre><h4 id="57-关闭和重开站点ifshow">5.7 关闭和重开站点ifshow</h4>
+<p>建立配置文件的备份文件夹</p>
+<pre><code>mkdir -p /etc/nginx/conf.bak
+mkdir -p /etc/php-fpm.d
+</code></pre><p>把站点ifshow的配置文件移走并重启nginx和php-fpm服务，就关闭了站点ifshow</p>
+<pre><code>mv /etc/nginx/conf.d/ifshow.conf /etc/nginx/conf.bak
+mv /etc/php-fpm.d/ifshow.conf /etc/php-fpm.bak
+systemctl restart nginx.service
+systemctl restart php-fpm.service
+</code></pre><p>把移回配置文件并重启nginx和php-fpm服务，就重开了站点ifshow</p>
+<pre><code>mv /etc/nginx/conf.bak/ifshow.conf /etc/nginx/conf.d
+mv /etc/php-fpm.bak/ifshow.conf /etc/php-fpm.d
+systemctl restart nginx.service
+systemctl restart php-fpm.service
+</code></pre><h4 id="57-重复类似操作添加其他站点">5.7 重复类似操作添加其他站点</h4>
+<p>新建用户、站点文件夹和配置文件，重启服务。</p>
+<h2 id="6-安装phpmyadmin可选">6. 安装phpmyadmin（可选）</h2>
+<h4 id="61-安装phpmyadmin到ifshow网站根目录">6.1 安装phpmyadmin到ifshow网站根目录</h4>
+<pre><code>wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz
+tar xzvf phpMyAdmin-4.9.0.1-all-languages.tar.gz
+mv phpMyAdmin-4.9.0.1-all-languages /data/ifshow/web/phpmyadmin
+cd /data/ifshow/web/phpmyadmin
+cp config.sample.inc.php config.inc.php
+</code></pre><p>浏览器输入https://www.ifshow.com/phpmyadmin即可访问。</p>
+<h4 id="62-常见问题">6.2 常见问题</h4>
+<p><strong>6.2.1 变量 $cfg[‘TempDir’] （./tmp/）无法访问</strong></p>
+<p>创建tmp目录，添加权限：</p>
+<pre><code>mkdir -p /data/ifshow/web/phpmyadmin/tmp
+chmod 777 /data/ifshow/web/phpmyadmin/tmp
+</code></pre><p><strong>6.2.2 未配置短语密码</strong></p>
+<p>登录phpMyAdmin之后提示 <strong>配置文件现在需要一个短语密码</strong>。</p>
+<p>编辑phpMyAdmin配置文件：</p>
+<pre><code>vi /data/ifshow/web/phpmyadmin/config.inc.php
+</code></pre><p>查找 <strong>$cfg[‘blowfish_secret’]</strong> 修改为 <strong>$cfg[‘blowfish_secret’] = ’32个以上的字符串’;</strong></p>
+<p><strong>6.2.3 未开启存储功能</strong></p>
+<p>首页出现如下信息提示：</p>
+<pre><code>The phpMyAdmin configuration storage is not completely configured, some extended features have been deactivated. Find out why.
+ Or alternately go to 'Operations' tab of any database to set it up there.
+</code></pre><p>执行以下命令（需要输入phpMyAdmin的root密码）：</p>
+<pre><code>cd /data/ifshow/web/phpMyAdmin/sql/
+mysql -uroot -p &lt; create_tables.sql
+</code></pre><h2 id="7-安装ftp可选">7. 安装FTP（可选）</h2>
+<blockquote>
+<p><a href="https://www.ifshow.com/centos-7-install-vsftpd-with-pasv-over-ssl-explicit/" target="_blank">CentOS 7安装VSFTPD（被动模式&#43;ssl显式加密）</a></p>
+</blockquote>
+<h2 id="8centos-7网站数据自动备份到dropbox可选">8.CentOS 7网站数据自动备份到Dropbox（可选）</h2>
+<blockquote>
+<p><a href="https://www.ifshow.com/centos-7-website-data-is-automatically-backed-up-to-dropbox/" target="_blank">CentOS 7网站数据自动备份到Dropbox</a></p>
+</blockquote>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.ifshow.com/">boxwang</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.ifshow.com/the-new-centos-7-install-lnmp-linux-nginx-mariadb-php-and-multi-site-configuration/">https://www.ifshow.com/the-new-centos-7-install-lnmp-linux-nginx-mariadb-php-and-multi-site-configuration/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。如果特别注明为转载文章，请联系其原始作者。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/centos-7-install-postfix-for-sending-e-mail-alerts/">Centos 7安装Postfix用于发送提醒邮件</a></li>
+        
+        <li><a href="/centos-7-install-fail2ban-with-firewalld-to-defend-brute-force-password/">CentOS 7安装Fail2ban防御暴力破解密码（配合FirewallD）</a></li>
+        
+        <li><a href="/cetnos-7-default-firewall-firewalld-instructions/">CetnOS 7默认防火墙FirewallD的使用说明</a></li>
+        
+        <li><a href="/after-installing-centos-7-some-security-reinforcement-must-be-done/">安装CentOS 7后必做的安全加固</a></li>
+        
+        <li><a href="/how-to-deal-with-the-own-work/">该如何对待自己的工作？</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://www.ifshow.com/tags/centos'>centos</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "pause12345/pause12345.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                </div>
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.ifshow.com/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.ifshow.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-information-navigation/" title="置顶：FGO美服 信息汇总">置顶：FGO美服 信息汇总</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-ccc-revival/" title="FGO美服：CCC复刻">FGO美服：CCC复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-presidents-day-celebration-campaign-2021/" title="FGO美服：总统日庆祝活动2021">FGO美服：总统日庆祝活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-chinese-new-year-campaign-2021/" title="FGO美服：中国新年活动2021">FGO美服：中国新年活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-servant-rank-up-quest-part-ten/" title="FGO美服：从者强化任务第十弹">FGO美服：从者强化任务第十弹</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-valentine-2021/" title="FGO美服：情人节2021">FGO美服：情人节2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-prisma-codes-revival/" title="FGO美服：魔伊活动复刻">FGO美服：魔伊活动复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-1300th-day-celebration-campaign/" title="FGO美服：开服1300天庆祝活动">FGO美服：开服1300天庆祝活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-manga-release-celebration-campaign/" title="FGO美服：漫画上线纪念活动">FGO美服：漫画上线纪念活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-sparrow-inn-daily-report/" title="FGO美服：雀之旅馆的活动日志">FGO美服：雀之旅馆的活动日志</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">推荐内容</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服专区" target="_blank" style="color:red">
+                
+                    FGO美服专区
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.ifshow.com/categories/fgo-us/">fgo-us (370)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/game/">game (1)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (73)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/life/">life (6)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://www.ifshow.com/tags/android/">android</a>
+    
+    <a href="https://www.ifshow.com/tags/app/">app</a>
+    
+    <a href="https://www.ifshow.com/tags/business-analytics/">business-analytics</a>
+    
+    <a href="https://www.ifshow.com/tags/business-plan/">business-plan</a>
+    
+    <a href="https://www.ifshow.com/tags/career-life/">career-life</a>
+    
+    <a href="https://www.ifshow.com/tags/centos/">centos</a>
+    
+    <a href="https://www.ifshow.com/tags/cyberpunk2077/">cyberpunk2077</a>
+    
+    <a href="https://www.ifshow.com/tags/desktop-maintenance/">desktop-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/e-hr/">e-hr</a>
+    
+    <a href="https://www.ifshow.com/tags/etf/">etf</a>
+    
+    <a href="https://www.ifshow.com/tags/fgo/">fgo</a>
+    
+    <a href="https://www.ifshow.com/tags/git/">git</a>
+    
+    <a href="https://www.ifshow.com/tags/hugo/">hugo</a>
+    
+    <a href="https://www.ifshow.com/tags/information-security/">information-security</a>
+    
+    <a href="https://www.ifshow.com/tags/it-auditors/">it-auditors</a>
+    
+    <a href="https://www.ifshow.com/tags/it-outsourcing/">it-outsourcing</a>
+    
+    <a href="https://www.ifshow.com/tags/it-project-management/">it-project-management</a>
+    
+    <a href="https://www.ifshow.com/tags/kali/">kali</a>
+    
+    <a href="https://www.ifshow.com/tags/linux/">linux</a>
+    
+    <a href="https://www.ifshow.com/tags/living/">living</a>
+    
+    <a href="https://www.ifshow.com/tags/openwrt/">openwrt</a>
+    
+    <a href="https://www.ifshow.com/tags/pmp/">pmp</a>
+    
+    <a href="https://www.ifshow.com/tags/refactoring/">refactoring</a>
+    
+    <a href="https://www.ifshow.com/tags/seo/">seo</a>
+    
+    <a href="https://www.ifshow.com/tags/server-maintenance/">server-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/shadowsocks/">shadowsocks</a>
+    
+    <a href="https://www.ifshow.com/tags/stock/">stock</a>
+    
+    <a href="https://www.ifshow.com/tags/system-maintenance/">system-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/win10/">win10</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="" title=""></a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.ifshow.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2005 - 2021 <a href="https://www.ifshow.com/">IFshow By boxwang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-8286719-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

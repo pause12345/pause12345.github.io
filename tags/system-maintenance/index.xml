@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>system-maintenance on IFshow</title>
+    <link>https://www.ifshow.com/tags/system-maintenance/</link>
+    <description>Recent content in system-maintenance on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 01 Jun 2015 01:10:23 +0000</lastBuildDate><atom:link href="https://www.ifshow.com/tags/system-maintenance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在线服务的黑天鹅</title>
+      <link>https://www.ifshow.com/black-swan-of-service/</link>
+      <pubDate>Mon, 01 Jun 2015 01:10:23 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/black-swan-of-service/</guid>
+      <description>转自：http://timyang.net/service/black-swan-of-service/ 软件随想录（More Joel on Software）有这样一段话 提高服务稳定性的最大困难，就是”黑天鹅难题”（problem of black swans）。这个名词是由Nassim Taleb提出来的（</description>
+    </item>
+    
+  </channel>
+</rss>

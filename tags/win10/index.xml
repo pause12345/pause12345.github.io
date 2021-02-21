@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>win10 on IFshow</title>
+    <link>https://www.ifshow.com/tags/win10/</link>
+    <description>Recent content in win10 on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 26 Apr 2020 23:36:45 -0300</lastBuildDate><atom:link href="https://www.ifshow.com/tags/win10/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Win10固定快捷方式到开始菜单磁贴</title>
+      <link>https://www.ifshow.com/win10-pin-shortcut-to-start/</link>
+      <pubDate>Sun, 26 Apr 2020 23:36:45 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/win10-pin-shortcut-to-start/</guid>
+      <description>1、把快捷方式复制到以下目录： C:\ProgramData\Microsoft\Windows\Start Menu\Programs 2、在开始菜单左侧列表里可以找到该快捷方式，右键选择“固定到开始屏幕”即可。</description>
+    </item>
+    
+  </channel>
+</rss>

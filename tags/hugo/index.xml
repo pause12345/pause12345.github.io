@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on IFshow</title>
+    <link>https://www.ifshow.com/tags/hugo/</link>
+    <description>Recent content in hugo on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 23 May 2020 10:16:26 -0300</lastBuildDate><atom:link href="https://www.ifshow.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>调整Hugo maupassant主题</title>
+      <link>https://www.ifshow.com/adjust-hugo-maupassant-theme/</link>
+      <pubDate>Sat, 23 May 2020 10:16:26 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/adjust-hugo-maupassant-theme/</guid>
+      <description>使用 Hugo建站 采用 maupassant主题 后，可以做进一步调整。 1、修改字体 编辑站点目录 \static\css\style.css 文件中的 body {} 段落中的 font-family ，本站修改为： font-family: &amp;quot;Open Sans&amp;quot;,sans-serif; 2、文章内容页面阅读数前面补个空格 编辑站点目录 \themes\maupassant\layouts\_default\single.html 修改以下内容： &amp;lt;span id=&amp;quot;busuanzi_container_page_pv&amp;quot;&amp;gt;| &amp;lt;span id=&amp;quot;busuanzi_value_page_pv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;span&amp;gt; 3、网站导航下面插入大图 编辑站点目录 \themes\maupassant\layouts\_default\baseof.html 修改以下内容： &amp;lt;div class=&amp;quot;col-group&amp;quot;&amp;gt; &amp;lt;img src=&amp;quot;https://storage.live.com/items/240ACD90363D22FB!3827:/top.jpg&amp;quot; /&amp;gt; 图片请自行替换</description>
+    </item>
+    
+    <item>
+      <title>Hugo建站简易教程</title>
+      <link>https://www.ifshow.com/build-websites-with-hugo-simply-tutorial/</link>
+      <pubDate>Fri, 22 May 2020 20:16:26 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/build-websites-with-hugo-simply-tutorial/</guid>
+      <description>Hugo是用 Go 语言编写的跨平台静态网站生成器，简单易用性能高。 下文用windows示范安装使用。 一、安装Hugo 下载Hugo：https://github.com/gohugoio/hugo/releases 把hugo文件存放路径添加到系统环境变量Path中，示例为 d:\hugo\hugo.exe 二、生成站点</description>
+    </item>
+    
+    <item>
+      <title>Hugo扩展Spoiler标签</title>
+      <link>https://www.ifshow.com/hugo-extend-spoiler-laber/</link>
+      <pubDate>Mon, 27 Apr 2020 13:30:27 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/hugo-extend-spoiler-laber/</guid>
+      <description>在主题目录下新建 layouts/shortcodes/spoiler.html ，内容如下： &amp;lt;details&amp;gt; &amp;lt;summary&amp;gt; &amp;lt;strong&amp;gt; {{ with .Get 0}}{{.}}{{else}}click to expand{{ end }} &amp;lt;/strong&amp;gt; &amp;lt;/summary&amp;gt; {{.Inner}} &amp;lt;/details&amp;gt; 在文章中使用以下格式： {{&amp;lt; spoiler &amp;quot;标题&amp;quot; &amp;gt;}} 隐藏文本，支持HTML代码 {{&amp;lt; /spoiler &amp;gt;}}</description>
+    </item>
+    
+    <item>
+      <title>Hugo如何在新标签页打开链接</title>
+      <link>https://www.ifshow.com/hugo-how-to-open-link-in-new-tab/</link>
+      <pubDate>Thu, 23 Apr 2020 16:26:23 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/hugo-how-to-open-link-in-new-tab/</guid>
+      <description>Hugo v0.62.0 版本开始默认的markdown渲染器已更改为Goldmark，可以通过Markdown Render Hooks来实现在新标签页打开链接。 1 [Sample link](https://www.ifshow.com/hugo-how-to-open-link-in-new-tab/) 对于内部链接希望在同一选项卡中打开，可以使用帖子的相对链接。 1 [Sample link](/hugo-how-to-open-link-in-new-tab/) 为实现这个效果，需要做的工作如下： 在修改主题目录下HTML模板文件 layouts/_default/_markup/render-link.html （没有就新增</description>
+    </item>
+    
+  </channel>
+</rss>

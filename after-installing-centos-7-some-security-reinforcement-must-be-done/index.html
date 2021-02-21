@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>安装CentOS 7后必做的安全加固 | IFshow</title>
+    <meta property="og:title" content="安装CentOS 7后必做的安全加固 - IFshow">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2015-03-18T08:34:30&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2015-03-18T08:34:30&#43;08:00'>
+        
+    <meta name="Keywords" content="IT,investment,FGO">
+    <meta name="description" content="安装CentOS 7后必做的安全加固">
+        
+    <meta name="author" content="boxwang">
+    <meta property="og:url" content="https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7012795738014849",
+        enable_page_level_ads: true
+    });
+    </script>
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.ifshow.com/">
+                        IFshow
+                    </a>
+                
+                <p class="description">Cogito Ergo Sum</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.ifshow.com/">首页</a>
+                    
+                    <a  href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服">FGO美服</a>
+                    
+                    <a  href="https://www.ifshow.com/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.ifshow.com/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+            <img src="https://storage.live.com/items/240ACD90363D22FB!3827:/top.jpg" />
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-用root账号通过ssh登录服务器">1. 用root账号通过SSH登录服务器</a></li>
+    <li><a href="#2-修改root账号的密码可选">2. 修改root账号的密码（可选）</a></li>
+    <li><a href="#3-新增一个普通账号并设定密码">3. 新增一个普通账号并设定密码</a></li>
+    <li><a href="#4-修改ssh配置文件改默认端口禁止root账号登录指定允许登录账号">4. 修改SSH配置文件（改默认端口、禁止root账号登录、指定允许登录账号）</a></li>
+    <li><a href="#4-启用firewalld防火墙">4. 启用firewalld防火墙</a></li>
+    <li><a href="#5让系统自动更新">5.让系统自动更新</a></li>
+    <li><a href="#6-开启selinux可选">6. 开启SELinux（可选）</a></li>
+    <li><a href="#7-增加swap分区已有swap分区的跳过">7. 增加swap分区（已有swap分区的跳过）</a></li>
+    <li><a href="#8-必做的安全加固已经完成还可以安装fail2ban防止暴力破解密码">8. 必做的安全加固已经完成，还可以安装fail2ban防止暴力破解密码</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">安装CentOS 7后必做的安全加固</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2015年3月18日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p>刚装好的CentOS 7系统存在很大风险，需要立刻进行安全加固。</p>
+<h2 id="1-用root账号通过ssh登录服务器">1. 用root账号通过SSH登录服务器</h2>
+<p>通常使用SSH远程登录服务器进行日常维护。在windows系统下可以用PuTTY软件，Linux和MAC系统内置SSH客户端功能直接在终端（terminal）输入相关指令。 SSH首次登录服务器，会提示是否接受该服务器的加密公钥，请选择“是”（yes）。</p>
+<h2 id="2-修改root账号的密码可选">2. 修改root账号的密码（可选）</h2>
+<p>如果root的密码是安装时自动生成无法确认安全，则必须立刻修改root密码。指令如下：
+<code>passwd root</code></p>
+<h2 id="3-新增一个普通账号并设定密码">3. 新增一个普通账号并设定密码</h2>
+<p>该账号主要用于SSH登录服务器进行管理，root账号通常禁止远程SSH登录。指令如下：</p>
+<p><code>useradd ifshow</code></p>
+<p>ifshow就是普通账号的名称，根据实际情况来取名。随后给该账号设定密码：</p>
+<p><code>passwd ifshow</code></p>
+<h2 id="4-修改ssh配置文件改默认端口禁止root账号登录指定允许登录账号">4. 修改SSH配置文件（改默认端口、禁止root账号登录、指定允许登录账号）</h2>
+<p>用vi文本编辑器修改SSH配置文件，指令如下：
+<code>vi /etc/ssh/sshd\_config</code></p>
+<p>打开配置文件后，查找
+<code>＃Port 22</code>
+修改为
+<code>Port 2345</code></p>
+<p>查找<code>＃PermitRootLogin yes</code>修改为</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PermitRootLogin no
+AllowUsers ifshow
+</code></pre></td></tr></table>
+</div>
+</div><p>第一行是禁止root账号通过SSH登录； 第二行是指定允许通过SSH登录的账号ifshow，可以输入多个账号用空格隔开。</p>
+<p>然后检查配置文件中，以下字段是否设置为no，字段最前面有#的删除#</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">PermitEmptyPasswords no
+UsePAM no
+X11Forwarding no
+UseDNS no
+</code></pre></td></tr></table>
+</div>
+</div><p>再检查配置文件中，以下字段设置，字段最前面有#的删除#</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Protocol <span style="color:#099">2</span>
+MaxAuthTries <span style="color:#099">3</span>
+MaxSessions <span style="color:#099">2</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>修改完成，保存配置文件退出编辑器。重启SSH服务，使得配置文件生效。
+<code>systemctl restart sshd.service</code></p>
+<h2 id="4-启用firewalld防火墙">4. 启用firewalld防火墙</h2>
+<p>CentOS 7默认采用firewalld防火墙，firewalld的使用说明请点<a href="//www.ifshow.com/cetnos-7-default-firewall-firewalld-instructions/" title="CetnOS 7默认防火墙FirewallD的使用说明">这里</a>。 因为更改过SSH默认端口，所以先修改firewall中SSH服务配置文件。执行如下指令：
+cp /usr/lib/firewalld/services/ssh.xml /etc/firewalld/services/
+vi /etc/firewalld/services/ssh.xml
+查找</p>
+<pre><code>&lt;port protocol=&quot;tcp&quot; port=&quot;22&quot;/&gt;
+</code></pre><p>修改为</p>
+<p>修改为</p>
+<pre><code>&lt;port protocol=&quot;tcp&quot; port=&quot;2345&quot;/&gt;
+</code></pre><p>启动firewalld并设为开机自启，执行如下指令：</p>
+<pre><code>systemctl start firewalld.service
+systemctl enable firewalld.service
+</code></pre><p>在fierwalld中开放ssh服务端口：</p>
+<pre><code>firewall-cmd --permanent --add-service=ssh
+firewall-cmd --reload
+</code></pre><p>启动firewalld并设为开机自启，执行如下指令：
+systemctl start firewalld.service
+systemctl enable firewalld.service
+在fierwalld中开放ssh服务端口：
+firewall-cmd &ndash;permanent &ndash;add-service=ssh
+firewall-cmd &ndash;reload</p>
+<h2 id="5让系统自动更新">5.让系统自动更新</h2>
+<hr>
+<p>查询当前系统版本</p>
+<pre><code>cat /etc/\*release\*
+</code></pre><p>安装EPEL源（可选）</p>
+<pre><code>yum -y install epel-release.noarch
+</code></pre><p>手动进行系统更新，安装所需软件cron和yum-cron，执行如下指令：</p>
+<pre><code>yum -y update
+yum -y install cronie
+yum -y install yum-cron
+</code></pre><p>修改yum-cron配置文件</p>
+<pre><code>vi /etc/yum/yum-cron.conf
+</code></pre><p>查找</p>
+<pre><code>apply_updates = no
+</code></pre><p>修改为</p>
+<pre><code>apply_updates = yes
+</code></pre><p>再检查配置文件中，以下字段是否设置为yes</p>
+<pre><code>update_messages = yes
+download_updates = yes
+apply_updates = yes
+</code></pre><p>修改完成，保存配置文件退出编辑器。启动cron和yum-cron并设为开机自启。</p>
+<pre><code>systemctl start crond.service
+systemctl enable crond.service
+systemctl start yum-cron.service
+systemctl enable yum-cron.service
+</code></pre><p>如果需要系统定时重启（可选），可添加crontab定时执行任务：</p>
+<pre><code>crontab -e
+</code></pre><p>添加一行（每天凌晨5点重启）后保存退出。</p>
+<pre><code>0 5 * * * reboot
+</code></pre><p>查看当前的定时执行任务列表：</p>
+<pre><code>crontab -l
+</code></pre><h2 id="6-开启selinux可选">6. 开启SELinux（可选）</h2>
+<p>编辑SELinux配置文件
+<code>vi /etc/selinux/config</code></p>
+<p>修改SELINUX的值（enforcing为开启，disabled为关闭）
+<code>SELINUX=enforcing</code></p>
+<p><strong>注意：别错误修改SELINUXTYPE的值为disabled，误改会导致系统无法启动。</strong></p>
+<h2 id="7-增加swap分区已有swap分区的跳过">7. 增加swap分区（已有swap分区的跳过）</h2>
+<p>查看当前分区情况</p>
+<p><code>free -m</code></p>
+<p>增加 swap分区，容量为1GB</p>
+<p><code>dd if=/dev/zero of=/var/swap bs=1024 count=1024000</code></p>
+<p>设置交换文件</p>
+<p><code>mkswap /var/swap</code></p>
+<p>立即激活启用交换分区</p>
+<p><code>swapon /var/swap</code></p>
+<p>添加系统引导时自启动运行</p>
+<p><code>vi /etc/fstab</code></p>
+<p>添加一行</p>
+<p><code>/var/swap swap swap defaults 0 0</code></p>
+<p>如果不需要了，收回 swap 空间</p>
+<p><code>swapoff /var/swap</code></p>
+<p>从文件系统中回收</p>
+<p><code>rm /var/swap</code></p>
+<h2 id="8-必做的安全加固已经完成还可以安装fail2ban防止暴力破解密码">8. 必做的安全加固已经完成，还可以安装fail2ban防止暴力破解密码</h2>
+<p><a href="//www.ifshow.com/centos-7-install-fail2ban-with-firewalld-to-defend-brute-force-password/" title="CentOS 7安装Fail2ban防御暴力破解密码（配合FirewallD）">点击这里查看《CentOS 7安装Fail2ban防御暴力破解密码（配合FirewallD）》</a></p>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.ifshow.com/">boxwang</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/">https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。如果特别注明为转载文章，请联系其原始作者。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/how-to-deal-with-the-own-work/">该如何对待自己的工作？</a></li>
+        
+        <li><a href="/win7-batch-command-refresh-icon-cache/">WIN7刷新图标缓存的批处理</a></li>
+        
+        <li><a href="/how-to-achieve-unity-of-knowing-and-doing/">如何做到“知行合一”？</a></li>
+        
+        <li><a href="/some-tips-on-using-the-chrome-browser/">Chrome浏览器的一些使用心得</a></li>
+        
+        <li><a href="/introduction-of-u-disk-boot-mode/">各种U盘启动模式简介</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://www.ifshow.com/tags/centos'>centos</a></li>
+                
+                <li><a href='https://www.ifshow.com/tags/server-maintenance'>server-maintenance</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "pause12345/pause12345.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                </div>
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.ifshow.com/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.ifshow.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-information-navigation/" title="置顶：FGO美服 信息汇总">置顶：FGO美服 信息汇总</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-ccc-revival/" title="FGO美服：CCC复刻">FGO美服：CCC复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-presidents-day-celebration-campaign-2021/" title="FGO美服：总统日庆祝活动2021">FGO美服：总统日庆祝活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-chinese-new-year-campaign-2021/" title="FGO美服：中国新年活动2021">FGO美服：中国新年活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-servant-rank-up-quest-part-ten/" title="FGO美服：从者强化任务第十弹">FGO美服：从者强化任务第十弹</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-valentine-2021/" title="FGO美服：情人节2021">FGO美服：情人节2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-prisma-codes-revival/" title="FGO美服：魔伊活动复刻">FGO美服：魔伊活动复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-1300th-day-celebration-campaign/" title="FGO美服：开服1300天庆祝活动">FGO美服：开服1300天庆祝活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-manga-release-celebration-campaign/" title="FGO美服：漫画上线纪念活动">FGO美服：漫画上线纪念活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-sparrow-inn-daily-report/" title="FGO美服：雀之旅馆的活动日志">FGO美服：雀之旅馆的活动日志</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">推荐内容</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服专区" target="_blank" style="color:red">
+                
+                    FGO美服专区
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.ifshow.com/categories/fgo-us/">fgo-us (370)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/game/">game (1)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (73)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/life/">life (6)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://www.ifshow.com/tags/android/">android</a>
+    
+    <a href="https://www.ifshow.com/tags/app/">app</a>
+    
+    <a href="https://www.ifshow.com/tags/business-analytics/">business-analytics</a>
+    
+    <a href="https://www.ifshow.com/tags/business-plan/">business-plan</a>
+    
+    <a href="https://www.ifshow.com/tags/career-life/">career-life</a>
+    
+    <a href="https://www.ifshow.com/tags/centos/">centos</a>
+    
+    <a href="https://www.ifshow.com/tags/cyberpunk2077/">cyberpunk2077</a>
+    
+    <a href="https://www.ifshow.com/tags/desktop-maintenance/">desktop-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/e-hr/">e-hr</a>
+    
+    <a href="https://www.ifshow.com/tags/etf/">etf</a>
+    
+    <a href="https://www.ifshow.com/tags/fgo/">fgo</a>
+    
+    <a href="https://www.ifshow.com/tags/git/">git</a>
+    
+    <a href="https://www.ifshow.com/tags/hugo/">hugo</a>
+    
+    <a href="https://www.ifshow.com/tags/information-security/">information-security</a>
+    
+    <a href="https://www.ifshow.com/tags/it-auditors/">it-auditors</a>
+    
+    <a href="https://www.ifshow.com/tags/it-outsourcing/">it-outsourcing</a>
+    
+    <a href="https://www.ifshow.com/tags/it-project-management/">it-project-management</a>
+    
+    <a href="https://www.ifshow.com/tags/kali/">kali</a>
+    
+    <a href="https://www.ifshow.com/tags/linux/">linux</a>
+    
+    <a href="https://www.ifshow.com/tags/living/">living</a>
+    
+    <a href="https://www.ifshow.com/tags/openwrt/">openwrt</a>
+    
+    <a href="https://www.ifshow.com/tags/pmp/">pmp</a>
+    
+    <a href="https://www.ifshow.com/tags/refactoring/">refactoring</a>
+    
+    <a href="https://www.ifshow.com/tags/seo/">seo</a>
+    
+    <a href="https://www.ifshow.com/tags/server-maintenance/">server-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/shadowsocks/">shadowsocks</a>
+    
+    <a href="https://www.ifshow.com/tags/stock/">stock</a>
+    
+    <a href="https://www.ifshow.com/tags/system-maintenance/">system-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/win10/">win10</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="" title=""></a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.ifshow.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2005 - 2021 <a href="https://www.ifshow.com/">IFshow By boxwang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-8286719-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

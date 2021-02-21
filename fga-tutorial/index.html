@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FGA教程 | IFshow</title>
+    <meta property="og:title" content="FGA教程 - IFshow">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-09-20T14:27:20&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-09-20T14:27:20&#43;08:00'>
+        
+    <meta name="Keywords" content="IT,investment,FGO">
+    <meta name="description" content="FGA教程">
+        
+    <meta name="author" content="boxwang">
+    <meta property="og:url" content="https://www.ifshow.com/fga-tutorial/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7012795738014849",
+        enable_page_level_ads: true
+    });
+    </script>
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.ifshow.com/">
+                        IFshow
+                    </a>
+                
+                <p class="description">Cogito Ergo Sum</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.ifshow.com/">首页</a>
+                    
+                    <a  href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服">FGO美服</a>
+                    
+                    <a  href="https://www.ifshow.com/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.ifshow.com/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+            <img src="https://storage.live.com/items/240ACD90363D22FB!3827:/top.jpg" />
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一下载安装">一、下载安装</a></li>
+    <li><a href="#二初始配置">二、初始配置</a>
+      <ul>
+        <li><a href="#1fga主界面">1、FGA主界面</a></li>
+        <li><a href="#2主界面more-options">2、主界面More options</a></li>
+      </ul>
+    </li>
+    <li><a href="#三配置auto-skill">三、配置Auto Skill</a>
+      <ul>
+        <li><a href="#1建立新脚本">1、建立新脚本</a></li>
+        <li><a href="#2脚本主界面">2、脚本主界面</a></li>
+        <li><a href="#3support-助战设置">3、Support 助战设置</a></li>
+        <li><a href="#4自定义助战图标">4、自定义助战图标</a></li>
+        <li><a href="#5command-战斗命令进阶">5、Command 战斗命令进阶</a></li>
+      </ul>
+    </li>
+    <li><a href="#四使用fga">四、使用FGA</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">FGA教程</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年9月20日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/fgo-us'>fgo-us</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p>FGA是安卓专用的FGO辅助工具，类似手势模拟点击操作，不修改游戏数据，操作完全在FGO原版客户端上进行。</p>
+<p>看起来问题不大，也不能说完全没风险，封号风险自负。</p>
+<p>本教程针对英文版FGA。</p>
+<h2 id="一下载安装">一、下载安装</h2>
+<p>Google Play商店下载： <a href="https://play.google.com/store/apps/details?id=com.mathewsachin.fategrandautomata" target="_blank">https://play.google.com/store/apps/details?id=com.mathewsachin.fategrandautomata</a></p>
+<p><a href="https://storage.live.com/items/240ACD90363D22FB!4965:/FGA_V0.22.1.apk" target="_blank">分流下载</a></p>
+<p>可以通过 <a href="https://www.ifshow.com/fgo-us-android-emulator-tutorial/" target="_blank">安卓模拟器</a> BlueStacks运行FGA，必须在模拟器<code>设置</code>-<code>引擎</code>-<code>图形引擎</code>改为<code>相容性（进阶模式）</code>，升级模拟器到最新版。</p>
+<p>国产安卓各种改版系统可能会导致FGA不能正常使用，尽量用港行等海外原版安卓手机。</p>
+<p>刘海屏手机有兼容问题，可以尝试主界面-More options-Advanced-启用ignore notch calculation。</p>
+<h2 id="二初始配置">二、初始配置</h2>
+<h3 id="1fga主界面">1、FGA主界面</h3>
+<ul>
+<li>Script Mode 保持默认的 Battle 战斗模式。</li>
+<li>Refill 设置苹果消耗数量，看自己需要，Repetitions默认0就是不消耗。</li>
+<li>Auto Skill 最重要的地方，配置战斗进入后怎么操作，不配置就是默认平A以及NP满了是否放宝具，后文会单独讲解，先跳过。</li>
+<li>More options 见下文。</li>
+</ul>
+<h3 id="2主界面more-options">2、主界面More options</h3>
+<h4 id="1game-server">1）Game Server</h4>
+<p>默认NA就是美服，其他分别为JP 日服、CN B服、TW 台服、KR 韩服。</p>
+<h4 id="2battle">2）Battle</h4>
+<ul>
+<li>Skill Confirmation 技能确认，影响战斗节奏，不启用，FGO游戏里面也要设置成一样。</li>
+<li>Story Skip 故事情节跳过，启用，自动战斗看啥剧情。。</li>
+<li>Enable Withdraw 战败重试，默认不启用。</li>
+<li>Stop on CE drop 掉落礼装停止战斗，通常不启用。</li>
+<li>Stop on CE GET 第一次完成任务奖励礼装停止战斗，通常不启用。</li>
+<li>Screenshot Drops 掉落截图，通常不启用。</li>
+<li>Cast Noble Phantasm 释放宝具，默认不启用，可以改成spam 满了就用 或 danger 危险敌人或从者在场时释放宝具。</li>
+<li>Auto choose target 自动选择攻击目标，会把危险敌人和从者设置为优先攻击目标。如果在战斗脚本设置了每回合具体攻击目标，这里需要设置为不启用。</li>
+<li>Boost Item 战斗前使用的道具，可以根据情况选择不启用、跳过、道具1、道具2、道具3。如果要使用，确保FGO游戏里面设置不需要确认使用战斗道具。</li>
+<li>Skill Command TextBox 编辑Auto Skill命令时候只输入文本命令，新手切勿启用。</li>
+</ul>
+<h4 id="3friend-gacha">3）Friend Gacha</h4>
+<p>Friend Points Summons Only 只进行友情点召唤，默认启用。</p>
+<p>关闭的话，可以自动抽氪金池子，抽光所有石头为止。</p>
+<h4 id="4gift-box-礼物盒">4）Gift Box 礼物盒</h4>
+<p>Max Gold ember set size 礼物盒最大金狗粮数量，默认1。</p>
+<p>超过1的金狗粮保留，其他的自动勾选。</p>
+<h4 id="5adavnced-高级设置">5）Adavnced 高级设置</h4>
+<p>略</p>
+<h2 id="三配置auto-skill">三、配置Auto Skill</h2>
+<h3 id="1建立新脚本">1、建立新脚本</h3>
+<p>点击右下角+ 添加新的脚本。</p>
+<h3 id="2脚本主界面">2、脚本主界面</h3>
+<ul>
+<li>
+<p>Name 给脚本取个自己看得懂的名字。</p>
+</li>
+<li>
+<p>Command 模拟战斗界面设置攻击技能宝具释放等命令，想象实际战斗怎么点击的，多试试就知道了。进一步介绍见后文。</p>
+</li>
+<li>
+<p>Notes 脚本注释，空着就行。</p>
+</li>
+<li>
+<p>Party 队伍设置，根据实际情况设置，不设置就是当前队伍。</p>
+</li>
+<li>
+<p>Card Priority 卡片优先次序，默认即可（WA, WB, WQ, A, B, Q, RA, RQ, RB 意思是 weak arts-&gt;weak buster-&gt;weak buster-&gt;arts-&gt;buster-&gt;quick-&gt;resist arts-&gt;resist buster-&gt;resist quick）。</p>
+</li>
+<li>
+<p>Support 助战设置，见下文。</p>
+</li>
+</ul>
+<h3 id="3support-助战设置">3、Support 助战设置</h3>
+<ul>
+<li>Class 职介，比如Caster术阶。</li>
+<li>Selection Mode 选择模式，默认Preferred即可，会根据设定策略选择助战。</li>
+<li>Fallback Selection Mode 后备选择模式，默认Manual，即玩家手动选择助战。预设刷新五次好友列表都没有找到合适助战时进入此模式。</li>
+<li>Preferred Servants 偏爱从者，比如Skadi 即CBA，列表里面的几个自带的从者均支持各种灵基突破头像图标，这里可以使用自定义图标扩展。支持多选，按顺序匹配。</li>
+<li>Max-asecnded 最大灵基突破，通常启用。</li>
+<li>Skill Levels 最大技能，推荐10/10/10，CBA起码要13技能MAX。</li>
+<li>Preferred CE 偏爱礼装，这里可以使用自定义图标扩展。支持多选，按顺序匹配。</li>
+<li>Max-limit broken 礼装满破，除了活动刚开始，一般都启用。</li>
+<li>Friends Only 只找朋友助战，通常启用，避免战斗结束卡在添加好友的界面。</li>
+</ul>
+<h3 id="4自定义助战图标">4、自定义助战图标</h3>
+<p>FGO游戏里面截屏并裁剪好尺寸或者下载别人做好的，放到手机SD卡根目录如下位置：</p>
+<pre><code>Fate-Grand-Automata/
+-- support/
+-- -- servants/ 这里放从者图标
+-- -- -- ozy4.png 
+-- -- -- melt4.png
+-- -- -- Merlin/ 梅林的不同图标
+-- -- -- -- merlin1.png
+-- -- -- -- merlin2.png
+-- -- -- -- merlin3.png
+-- -- -- -- merlin4.png
+-- -- -- -- merlin_c.png
+-- -- -- Waver/ 孔明的不同图标
+-- -- -- -- waver1.png
+-- -- -- -- waver2.png
+-- -- -- -- waver3.png
+-- -- -- -- waver4.png
+-- -- ce/ 这里放礼装图标
+-- -- -- kscope.png
+-- -- -- black_grail.png
+-- -- friend/ 这里放好友图标，通常不用
+-- -- -- mathew.png
+-- -- -- recon.png
+</code></pre><p>从者图标推荐尺寸：125x53x24</p>
+<p>礼装图标推荐尺寸：158x32x24</p>
+<p>比如这个就是闪闪祭2020的活动礼装图标</p>
+<p><img src="https://storage.live.com/items/240ACD90363D22FB!4898:/SHANSHANJI.png" alt=""></p>
+<p>另外，也可以通过自带的Support Image Marker模式来抓取自定义图标：</p>
+<ul>
+<li>主界面<code>Script Mode</code>设置由默认的<code>Battle</code> 改为<code>Support Image Marker</code>模式。</li>
+<li>进入助战选择界面或者好友一览界面，把目标好友保持在最上方。</li>
+<li>点击左下角的▶️开始抓取图标，选择抓取从者或者礼装图标，取个名字保存。</li>
+<li>要注意从者需要抓取各个灵基突破以及灵衣的图标。</li>
+</ul>
+<h3 id="5command-战斗命令进阶">5、Command 战斗命令进阶</h3>
+<p>要启用上面提到的Skill Command TextBox直接编写命令。</p>
+<h4 id="1战斗服换人">1）战斗服换人</h4>
+<pre><code>x - activates Order Change 
+Starting Member Position - 1  2  3 
+Sub-member position - 1  2  3 
+e.g.  
+Skill_Command = &quot;x13&quot; 
+Exchange starting member 1 with sub-member 3
+</code></pre><p>和普通命令混合使用示例</p>
+<pre><code>e.g. Skill_Command = &quot;bce,0,f3hi,#,j2d,#,4,x13a1g3&quot;
+</code></pre><h4 id="2自定义攻击目标">2）自定义攻击目标</h4>
+<pre><code>t - informs script of targeting
+Position of enemy - 1 2 3
+
+e.g.
+Skill_Command = &quot;t1at35&quot;
+Target far left enemy for using Servant 1 skill 1, then target far right enemy for using Servant 1 NP
+</code></pre><p>把上面提到的Auto choose target 自动选择攻击目标关闭。</p>
+<h4 id="3宝具前使用命令卡攻击">3）宝具前使用命令卡攻击</h4>
+<pre><code>Skill_Command = &quot;n145&quot;
+Use 1 regular Command Card according to the priority from Battle_CardPriority, then use the NPs of the first and second Servants
+
+Skill_Command = &quot;n26&quot;
+Use 2 regular Command Cards, then use the NP of the third Servant
+</code></pre><h2 id="四使用fga">四、使用FGA</h2>
+<p>1、运行FGA，配置完成后，主界面点击 TOGGLE SERVICE，<strong>必须给予需要的权限</strong>。</p>
+<p>安卓系统设置accessibility（辅助功能/无障碍功能），这里要开启FGA ON。</p>
+<p>2、运行FGO，停留在以下位置</p>
+<ul>
+<li>菜单界面，将目标任务作为界面上的第一项（右上角）</li>
+<li>战斗界面，未做任何技能释放等操作</li>
+<li>战斗结果界面</li>
+<li>助战选择界面</li>
+</ul>
+<p>3、点击左下角的▶️开始运行FGA自动战斗脚本，运行中点击⏹停止。</p>
+<p>4、注意手机设置不要自动锁屏休眠了，需要保持开启状态。</p>
+<p>5、补充说明主界面<code>Script Mode</code>设置选项</p>
+<ul>
+<li>Battle 自动战斗，默认。</li>
+<li>Lottery  无限池抽奖，抽光自动重置池子。</li>
+<li>Friend Gacha 抽友情池，默认只抽友情池。</li>
+<li>Support Image Maker 抓取助战图片。</li>
+<li>Gift Box 礼物盒清狗粮，默认保留1以上的金狗粮，可以改。</li>
+</ul>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.ifshow.com/">boxwang</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.ifshow.com/fga-tutorial/">https://www.ifshow.com/fga-tutorial/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。如果特别注明为转载文章，请联系其原始作者。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/fgo-us-newyork-2020/">FGO美服：闪闪祭2020</a></li>
+        
+        <li><a href="/fgo-us-fate-zero-revival/">FGO美服：FZ活动复刻</a></li>
+        
+        <li><a href="/fgo-us-weekly-master-task-2020-08-24-to-08-30/">FGO美服：本周Master任务（2020年8月24日-8月30日）</a></li>
+        
+        <li><a href="/fgo-us-11-million-downloads-campaign/">FGO美服：1100万下载活动</a></li>
+        
+        <li><a href="/fgo-us-weekly-master-task-2020-08-17-to-08-23/">FGO美服：本周Master任务（2020年8月17日-8月23日）</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://www.ifshow.com/tags/fgo'>fgo</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "pause12345/pause12345.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                </div>
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.ifshow.com/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.ifshow.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-information-navigation/" title="置顶：FGO美服 信息汇总">置顶：FGO美服 信息汇总</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-ccc-revival/" title="FGO美服：CCC复刻">FGO美服：CCC复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-presidents-day-celebration-campaign-2021/" title="FGO美服：总统日庆祝活动2021">FGO美服：总统日庆祝活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-chinese-new-year-campaign-2021/" title="FGO美服：中国新年活动2021">FGO美服：中国新年活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-servant-rank-up-quest-part-ten/" title="FGO美服：从者强化任务第十弹">FGO美服：从者强化任务第十弹</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-valentine-2021/" title="FGO美服：情人节2021">FGO美服：情人节2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-prisma-codes-revival/" title="FGO美服：魔伊活动复刻">FGO美服：魔伊活动复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-1300th-day-celebration-campaign/" title="FGO美服：开服1300天庆祝活动">FGO美服：开服1300天庆祝活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-manga-release-celebration-campaign/" title="FGO美服：漫画上线纪念活动">FGO美服：漫画上线纪念活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-sparrow-inn-daily-report/" title="FGO美服：雀之旅馆的活动日志">FGO美服：雀之旅馆的活动日志</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">推荐内容</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服专区" target="_blank" style="color:red">
+                
+                    FGO美服专区
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.ifshow.com/categories/fgo-us/">fgo-us (370)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/game/">game (1)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (73)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/life/">life (6)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://www.ifshow.com/tags/android/">android</a>
+    
+    <a href="https://www.ifshow.com/tags/app/">app</a>
+    
+    <a href="https://www.ifshow.com/tags/business-analytics/">business-analytics</a>
+    
+    <a href="https://www.ifshow.com/tags/business-plan/">business-plan</a>
+    
+    <a href="https://www.ifshow.com/tags/career-life/">career-life</a>
+    
+    <a href="https://www.ifshow.com/tags/centos/">centos</a>
+    
+    <a href="https://www.ifshow.com/tags/cyberpunk2077/">cyberpunk2077</a>
+    
+    <a href="https://www.ifshow.com/tags/desktop-maintenance/">desktop-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/e-hr/">e-hr</a>
+    
+    <a href="https://www.ifshow.com/tags/etf/">etf</a>
+    
+    <a href="https://www.ifshow.com/tags/fgo/">fgo</a>
+    
+    <a href="https://www.ifshow.com/tags/git/">git</a>
+    
+    <a href="https://www.ifshow.com/tags/hugo/">hugo</a>
+    
+    <a href="https://www.ifshow.com/tags/information-security/">information-security</a>
+    
+    <a href="https://www.ifshow.com/tags/it-auditors/">it-auditors</a>
+    
+    <a href="https://www.ifshow.com/tags/it-outsourcing/">it-outsourcing</a>
+    
+    <a href="https://www.ifshow.com/tags/it-project-management/">it-project-management</a>
+    
+    <a href="https://www.ifshow.com/tags/kali/">kali</a>
+    
+    <a href="https://www.ifshow.com/tags/linux/">linux</a>
+    
+    <a href="https://www.ifshow.com/tags/living/">living</a>
+    
+    <a href="https://www.ifshow.com/tags/openwrt/">openwrt</a>
+    
+    <a href="https://www.ifshow.com/tags/pmp/">pmp</a>
+    
+    <a href="https://www.ifshow.com/tags/refactoring/">refactoring</a>
+    
+    <a href="https://www.ifshow.com/tags/seo/">seo</a>
+    
+    <a href="https://www.ifshow.com/tags/server-maintenance/">server-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/shadowsocks/">shadowsocks</a>
+    
+    <a href="https://www.ifshow.com/tags/stock/">stock</a>
+    
+    <a href="https://www.ifshow.com/tags/system-maintenance/">system-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/win10/">win10</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="" title=""></a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.ifshow.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2005 - 2021 <a href="https://www.ifshow.com/">IFshow By boxwang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-8286719-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>企业数据防泄密的几个层次 | IFshow</title>
+    <meta property="og:title" content="企业数据防泄密的几个层次 - IFshow">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2016-06-24T04:05:43&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2016-06-24T04:05:43&#43;08:00'>
+        
+    <meta name="Keywords" content="IT,investment,FGO">
+    <meta name="description" content="企业数据防泄密的几个层次">
+        
+    <meta name="author" content="boxwang">
+    <meta property="og:url" content="https://www.ifshow.com/several-levels-of-enterprise-data-leak-prevention/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7012795738014849",
+        enable_page_level_ads: true
+    });
+    </script>
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.ifshow.com/">
+                        IFshow
+                    </a>
+                
+                <p class="description">Cogito Ergo Sum</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.ifshow.com/">首页</a>
+                    
+                    <a  href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服">FGO美服</a>
+                    
+                    <a  href="https://www.ifshow.com/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.ifshow.com/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+            <img src="https://storage.live.com/items/240ACD90363D22FB!3827:/top.jpg" />
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">企业数据防泄密的几个层次</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2016年6月24日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p>来源：e-works 作者：张文华</p>
+<p>计算机作为一种企业经营管理的一种基本工具，已经渗透到企业日常工作的方方面面。企业在日常工作中产生的大量计算机数据，无疑是企业的宝贵财富和重要资产。对于企业的有形资产，如厂房、原材料、产品等，企业会设仓库、建围墙，保安24小时值班，但面对对大量计算机数据无形资产，企业的认识不同，所采取的措施也大相径庭。笔者结合多年为企业数据防泄密的建设服务经验，总结有以下四种类型。</p>
+<h4 id="无安全意识">　　无安全意识</h4>
+<p>大多数中小企业认为自己的数据无关紧要，加上对自己的员工信心满满，对厂商提出的数据防泄密措施置若罔闻，直到数据泄密给企业带来严重损失后才采取亡羊补牢的措施。 笔者有一位同学开了一家公司，得知笔者在做加密软件，一时心血来潮就让我安排人装上了，但没过几天觉得麻烦，又把加密软件卸载了。可好景不长，没过一年，他信赖的一个得力骨干带着几个人出去单干了，带走了所有设计和管理文件，才让他深刻地认识企业数据安全的重要性。重新装上我的加密软件后，虽然还出现了员工离职单干的事，但对他而言，企业的电子文档没有出现丢失，损失相对来说就小得多。 企业生产经营过程产生的任何数据，都是企业在日积月累中反复摸索出来的，无论是某个人的劳动成果，还是集体的劳动成果，都是企业的财富。一些貌似不紧要的数据和文件，其实在产生过程中都是付出了大量心血。因此，企业经营者一定要采取有效措施保护好这些数据财富。</p>
+<h4 id="有意识嫌麻烦">　　有意识，嫌麻烦</h4>
+<p>有些企业在选型加密软件时，经常会问到一些，比如员工回家加班怎么办？员工的电脑是个人的，不能影响他们自己使用之类的问题。这些需求都很容易理解的，在上一软件，特别是上加密软件时把各种情况考虑到，对上软件之后实施工作是有很大帮助的。问题是，有些企业过份担忧加密软件给现状带来的冲击，最后项目就不了了之了。 我们近年所做项目，有一部分是替换其它的加密软件的。企业之所以替换，有产品本身的原因，比如有些产品功能考虑不全，没有充分考虑企业使用要求的灵活性，导致应用过程员工出现抵触情绪。也有服务方面的原因，比如没有充分培训到位，软件有的功能企业不知道或者不会用。 企业数据防泄密措施与企业管理一样，也是要根据企业不同的发展阶段采用不同的手段的。如果只有几个创业者，完全可以靠自律保证数据的安全；而企业在快速发展过程中，数据的安全性和应用的灵活性必须同时兼顾。我们在软件实施过程中，会充分考虑软件实施给工作带来的影响，在不同实施阶段采用不同的加密策略。实施后紧密跟踪应用情况，对深化应用提出实施建议。</p>
+<h4 id="有措施无管理">　　有措施，无管理</h4>
+<p>有些企业虽然上了加密软件，但仍然出现一些泄密事件，有人便开始怀疑加密软件是否有用了。加密软件不是地牢，为方便企业交流也会有审批及解密的功能，这些关口都是由人去掌握的，如果没有相应的管理措施，出现数据泄密甚至形同虚设也不足为怪。这就跟一个企业有大门，有保安，但大门总是开着，保安对进出人员不闻不问一个道理。 加密软件的实施失败无外乎软件本身缺陷及管理不当两方面原因。软件缺陷另当别论，但管理不当引起的失败尤其应引起企业的重视。笔者认为，管理方面主要有以下两个原因： 1.主管领导不重视。软件买来了，装上了，就不过问了，只有管理员在维护。有些中高领导还要求管理员开后门，甚至以各种借口卸载软件。慢慢地，数据的重要性就变得不重要了，加密软件也就可有可无了。 2.系统管理员经常换。加密软件的管理员掌握着企业数据仓库的钥匙，如果对其没有有效的监督，企业数据安全便没有保障。保持系统管理员的相对稳定，对其权限进行约束尤为重要。</p>
+<h4 id="高度重视">　　高度重视</h4>
+<p>一家成熟的企业总是把数据安全放在十分重要的地位。对他们而言，为数据安全增加管理成本是必须的。我们有家这样的客户，从员工一入厂便开始进行数据保密教育，人手一本保密手册，定期进行保密制度考核，直接与绩效挂钩。在上了我们的加密软件后，不但对管理员有明确的职责要求，而且定期汇总数据，开专题会议分析数据流向，防范可能出现的执行偏差。 保证企业数据财富的安全，一定是人防与技防并举，指望靠一个加密软件解决所有问题，是企业信息化过程中很容易犯的低级错误。结合多年的实践经验，总结用好加密软件的主要要素，最少应该包括如下三点： 1.领导重视。要把企业数据看成财富和资产，有强烈的数据安全意识，建立制度并监督执行。 2.建立制度。用制度规范不同岗位职责和数据流向，时刻提醒员工扣紧数据安全这根弦。 3.做好服务。出现使用问题及时处理，出现业务冲突及时解决，但必须保证数据是安全的。</p>
+<h4 id="小结">　　小结</h4>
+<p>数据财富安全问题，是每个企业在发展过程中必须面对的问题。同时，每个企业所面对的问题会有一定的个性，随着企业的发展，数据安全的需求也是不断变化的。选择适合自己的方法和手段，是件“鞋是否合脚，只有脚知道”的事情。</p>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.ifshow.com/">boxwang</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.ifshow.com/several-levels-of-enterprise-data-leak-prevention/">https://www.ifshow.com/several-levels-of-enterprise-data-leak-prevention/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。如果特别注明为转载文章，请联系其原始作者。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/how-to-access-internet-in-an-unsafe-wifi/">如何在不安全的WiFi下上网</a></li>
+        
+        <li><a href="/from-the-company-management-to-it-audit/">从公司管理到IT审计</a></li>
+        
+        <li><a href="/it-outsourcing-and-risk/">IT外包和风险</a></li>
+        
+        <li><a href="/china-mainstream-hcm-erp-software-reviews/">国内主流HCM/eHR厂商点评</a></li>
+        
+        <li><a href="/windows-10-installed-android-studio-tips/">Windows 10安装Android Studio要点</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://www.ifshow.com/tags/information-security'>information-security</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "pause12345/pause12345.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                </div>
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.ifshow.com/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.ifshow.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-information-navigation/" title="置顶：FGO美服 信息汇总">置顶：FGO美服 信息汇总</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-ccc-revival/" title="FGO美服：CCC复刻">FGO美服：CCC复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-presidents-day-celebration-campaign-2021/" title="FGO美服：总统日庆祝活动2021">FGO美服：总统日庆祝活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-chinese-new-year-campaign-2021/" title="FGO美服：中国新年活动2021">FGO美服：中国新年活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-servant-rank-up-quest-part-ten/" title="FGO美服：从者强化任务第十弹">FGO美服：从者强化任务第十弹</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-valentine-2021/" title="FGO美服：情人节2021">FGO美服：情人节2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-prisma-codes-revival/" title="FGO美服：魔伊活动复刻">FGO美服：魔伊活动复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-1300th-day-celebration-campaign/" title="FGO美服：开服1300天庆祝活动">FGO美服：开服1300天庆祝活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-manga-release-celebration-campaign/" title="FGO美服：漫画上线纪念活动">FGO美服：漫画上线纪念活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-sparrow-inn-daily-report/" title="FGO美服：雀之旅馆的活动日志">FGO美服：雀之旅馆的活动日志</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">推荐内容</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服专区" target="_blank" style="color:red">
+                
+                    FGO美服专区
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.ifshow.com/categories/fgo-us/">fgo-us (370)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/game/">game (1)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (73)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/life/">life (6)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://www.ifshow.com/tags/android/">android</a>
+    
+    <a href="https://www.ifshow.com/tags/app/">app</a>
+    
+    <a href="https://www.ifshow.com/tags/business-analytics/">business-analytics</a>
+    
+    <a href="https://www.ifshow.com/tags/business-plan/">business-plan</a>
+    
+    <a href="https://www.ifshow.com/tags/career-life/">career-life</a>
+    
+    <a href="https://www.ifshow.com/tags/centos/">centos</a>
+    
+    <a href="https://www.ifshow.com/tags/cyberpunk2077/">cyberpunk2077</a>
+    
+    <a href="https://www.ifshow.com/tags/desktop-maintenance/">desktop-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/e-hr/">e-hr</a>
+    
+    <a href="https://www.ifshow.com/tags/etf/">etf</a>
+    
+    <a href="https://www.ifshow.com/tags/fgo/">fgo</a>
+    
+    <a href="https://www.ifshow.com/tags/git/">git</a>
+    
+    <a href="https://www.ifshow.com/tags/hugo/">hugo</a>
+    
+    <a href="https://www.ifshow.com/tags/information-security/">information-security</a>
+    
+    <a href="https://www.ifshow.com/tags/it-auditors/">it-auditors</a>
+    
+    <a href="https://www.ifshow.com/tags/it-outsourcing/">it-outsourcing</a>
+    
+    <a href="https://www.ifshow.com/tags/it-project-management/">it-project-management</a>
+    
+    <a href="https://www.ifshow.com/tags/kali/">kali</a>
+    
+    <a href="https://www.ifshow.com/tags/linux/">linux</a>
+    
+    <a href="https://www.ifshow.com/tags/living/">living</a>
+    
+    <a href="https://www.ifshow.com/tags/openwrt/">openwrt</a>
+    
+    <a href="https://www.ifshow.com/tags/pmp/">pmp</a>
+    
+    <a href="https://www.ifshow.com/tags/refactoring/">refactoring</a>
+    
+    <a href="https://www.ifshow.com/tags/seo/">seo</a>
+    
+    <a href="https://www.ifshow.com/tags/server-maintenance/">server-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/shadowsocks/">shadowsocks</a>
+    
+    <a href="https://www.ifshow.com/tags/stock/">stock</a>
+    
+    <a href="https://www.ifshow.com/tags/system-maintenance/">system-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/win10/">win10</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="" title=""></a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.ifshow.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2005 - 2021 <a href="https://www.ifshow.com/">IFshow By boxwang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-8286719-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

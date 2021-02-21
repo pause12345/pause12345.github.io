@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>从公司管理到IT审计 | IFshow</title>
+    <meta property="og:title" content="从公司管理到IT审计 - IFshow">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2016-05-18T02:02:42&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2016-05-18T02:02:42&#43;08:00'>
+        
+    <meta name="Keywords" content="IT,investment,FGO">
+    <meta name="description" content="从公司管理到IT审计">
+        
+    <meta name="author" content="boxwang">
+    <meta property="og:url" content="https://www.ifshow.com/from-the-company-management-to-it-audit/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7012795738014849",
+        enable_page_level_ads: true
+    });
+    </script>
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.ifshow.com/">
+                        IFshow
+                    </a>
+                
+                <p class="description">Cogito Ergo Sum</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.ifshow.com/">首页</a>
+                    
+                    <a  href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服">FGO美服</a>
+                    
+                    <a  href="https://www.ifshow.com/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.ifshow.com/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+            <img src="https://storage.live.com/items/240ACD90363D22FB!3827:/top.jpg" />
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一管理">一、管理</a></li>
+    <li><a href="#二治理">二、治理</a></li>
+    <li><a href="#三it管理">三、IT管理</a></li>
+    <li><a href="#四it治理">四、IT治理</a></li>
+    <li><a href="#五it审计">五、IT审计</a></li>
+    <li><a href="#延伸一风险若干话题">延伸一：风险若干话题</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#延伸二it审计入门概念">延伸二：IT审计入门概念</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">从公司管理到IT审计</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2016年5月18日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p>转自：<a href="http://www.itpub.net/thread-760593-1-1.html" target="_blank">http://www.itpub.net/thread-760593-1-1.html</a></p>
+<h2 id="一管理">一、管理</h2>
+<p>先来理解一下什么是管理，什么是治理。 假设有一个私人公司A，规模50人，年营业额5千万。这样的公司经营发展，老板最关心的是什么呢？是产品、生产、营销方面的竞争力，也就是说有好产品能够生产出来、以合理的价格卖出去并实现资金回笼、然后再生产，公司通过物流和资金流的不断循环增值，得到发展壮大。在这一阶段，公司面临的最大风险可能是产品、财务、市场、人员等风险。 为了公司的发展壮大，就要开发、生产、销售等各个方面的管理。公司的总体运作由老板（所有人）亲自指挥，带领手下一批得力干将。在这个阶段，公司管理很重要。所谓管理，按照管理学的定义：就是计划、组织、领导、监督四个职能的结合，即设定目标、安排人员、协调激励、监督考核。</p>
+<h2 id="二治理">二、治理</h2>
+<p>假若A公司经过5年的发展，规模扩张到员工5000人、遍布全国有10几家分公司，年销售额几个亿，还在上交所挂牌上市了，变成上市公司了。公式上市就以为着引入外来资本，公司的所有权结构发生了改变，整个公司再也是原来老板一个人说了算了（老板早发达了，在太平洋上买了一个岛屿晒太阳去了。）这时候谁说了算呢？新的公司有很多股东，只有几个大股东能够提名自己的代表，称为董事，成立了董事会。公司的大事情由董事会决议。董事会委任一个CEO，负责日常的经营管理。CEO对董事会考核，决定其薪酬待遇。这样看起来股东们很轻松了，坐在家里等分红就好了。但是实际不是，问题出现了。 1、 所有权结构变了，大股东和小股东存在利益冲突。原来股权结构非常简单，股东之间可能彼此都很信任。现在股东数量很多，而且可能经常变化。根据相对股权比例多少可以分为大股东和小股东两个利益集团。大股东占有公司控制权，拥有绝对的话语权。小股东相对弱势。如果大股东不厚道，就很容易侵犯小股东的利益，就象家里孩子多，力气大的就可能欺负力气小的。我们经常听说的什么关联公司利益输送、大股东把上市公司作为提款机等现象，背后往往就是这么一回事。 2、 所有权和经营权转移的分离，带来所有者和经营者的利益冲突。现阶段，虽然董事会是日常决策机构。但是公司的日常经营是由CEO（管理层）领导的。这就导致了所有权与经营权的分离。董事会和管理层之间构成了委托代理关系。委托方和代理方之间必然存在信息不对称。信息不对称可能导致道德风险和逆向选择。这就是为什么管理层可能会通过报表造价，粉饰业绩来得到高额的回报，或者为了片面追求自身利益违背董事会决议，诸如此类。 我们周围的上市公司丑闻不断，其实最根本的原因就是公司不同利益相关者的的利益冲突，矛盾激化的结果。为了对付这种这种情况，学者就提出公司治理的概念。 所谓公司治理，是为了满足公司内不同利益相关者的利益诉求，将公司决策权、执行权、监督权进行分离，使利益相关者互相制衡，最终博弈各方达到均衡的一种制度度安排。就象民主国家的三权分立的原理是一样的。公司治理的手段也是不断创新的，董事会、独立董事、审计委员会、股东大会、内部审计、外部审计等等都是公司治理的手段或者工具选择。 好了，现在可以总结一下治理和管理的区别了。 1) 管理主要强调的是“做正确的事”，即计划、组织、领导、监督。 2) 治理更多强调的是通过组织架构、权力分配等制度安排，来实现不同利益相关者之间的相互制衡。实质上这二者之间并没有严格的边界。尤其是在大型上市公司中，治理与管理总是同时存在，互相促进，以实现股东利益的最大化。我们也可以理解为公司治理是公司发展到一定程度，对公司管理提出的新的要求。</p>
+<h2 id="三it管理">三、IT管理</h2>
+<p>现在来讲什么是IT管理。 前面讲A公司从一个小公司，发展为一个大型上市公司的过程中，公司管理如何派生出公司治理。现在谈谈随着公司发展的不同阶段，IT及其管理如何演变。 A公司创业之初，也许就是老板带了几个伙计，开了一个门市部。每天老板去进货，找供货商讨价还价，门市部里面一个伙计负责零售，还雇了几个销售员专门去跑客户，拉关系做工程，会计和出纳工作基本上都是老板娘兼职做了。在这个阶段，所谓进货价格、销售价格、库存数量、人员工资、客户信息、应收帐款这些重要数据都在老板的脑袋里面装着。老板如果勤快一点，也许会做个笔记，这个阶段，我们可以看成手工管理阶段。公司里面连个懂电脑的人都没有，更别说程序员、DBA、网管了。这家公司基本上和IT不发生什么关系。 后来公司越做越大，开了好多个店面，销售的产品种类，客户数量、雇员数量、销售额都达到一定的规模了，比如说，每年有几千万的销售额了。这时候，老板的发现自己的脑子就有点不够用了，而且老板的钱也挣够了（完成原始积累了），就想公司的管理要正规一点。正好有个朋友是做MIS的，跟老板说公司的管理可以通过电脑来完成进行啊，不仅能够提高效率，还能够节省人力，降低成本。于是老板决定逐步搞信息化。这个过程一般是这样的，财务部门管钱是最重要的，所以先买了一套会计电算化软件，比如金蝶或者用友，用了两年觉得真不错，会计作帐正规多了，而且每个月的报表都很及时，经营情况一目了然。吃到甜头的老板决定在公司内部推广经验，把库存和销售也通过电脑管理，所以上了一套进销存。公司为了加强企业形象建设，还开发了一个网站。再后来公司不断发展，更加有钱了，要国际化，管理上要向世界巨头看齐了。什么CRM、 ERP、SCM、电子商务全见过世面了。于是公司就花了很多钱，聘请了某海外的著名咨询公司上了一套ERP，例如SAP/ORACLE，什么财务集中、制造、库存、销售、HR统统拿来，连看门的门卫面前都摆了电脑，为啥？要考勤，和HR数据库相连阿。公司成立了一个信息中心了，养了一帮闲散的无政府主义的程序员、网管、DBA，就是那些每天没事情就上网发牢骚的人。 我们看在这个阶段，公司的很多部门工作都开始依赖电脑工作了，所有人都觉得电脑是个好东西了，用某个大人物的话说，电脑开始和水、阳关、空气一样不可或缺了。但是慢慢的问题又来了，例如：1、三天两头的病毒发作；2、发现有员工把公司自己开发的软件偷偷拷出去卖钱；3、网络时好时坏；4、开发的软件偶尔会算错帐、5、员工跳槽后，公司系统没有人维护。6、会计系统硬盘坏了，丢掉一个月的财务数据，如此之类。老板也认识到这个问题的重要性，不敢等闲视之。于是决定加强IT管理。于是高薪聘请了一个海龟，任命为CIO，享受副总待遇。制定并执行了一系列管理制度，例如实行电脑标准安装、用户管理制度、信息安全制度、数据备份、病毒防护制度、人员考核制度、系统开发和测试标准、设备采购制度、问题管理流程、重大故障应急处理流程等等。这些就是IT管理手段。 这样过了一段时间，公司的IT运行果然逐渐稳定起来了。业务部门的满意度比以前提高了很多。老板以为这下子觉得可以松一口气了。</p>
+<h2 id="四it治理">四、IT治理</h2>
+<p>又过了很久，老板注意到新的问题又出来了。公司IT部门势力扩展很厉害，有好几百人，掌握公司所有的IT资源。由于每个业务部门都必须依靠IT才能够开展工作，IT部门通过技术手段逐渐凌驾与各业务部门之上，在公司内部处在很强势的地位。逐渐影响到公司的决策以及执行。例如，1、IT投资管理，CIO宣称今后的预算必须大幅度增加以满足系统建设需要（投资黑洞，black hole），而实际上投资收益并不理想。2、IT权力过大，对业务部门指手画脚（IT暴君 tyrant）。3、对所有用户的意见开始不以为然，对IT服务质量也没有以前重视了。4、IT战略制定，由于IT的专业性特征，管理层很难对IT的发展战略进行规划，IT发展与公司总体战略很难协调，影响公司战略执行。 这个问题并不是A公司独有的，很多公司信息化发展到一定程度都会遇到这样的问题，困扰了很多管理人。于是很多学者开始研究这一现象并提出各种对策。其中一个研究成果就是IT治理。这个方面最有影响的是MIT一个教授，然后就是ISACA下面的ITG研究院了。如同前面对公司治理概念的讨论，IT治理更多强调的也是组织架构和制度安排，以对IT进行制衡。比较典型的治理手段包括：1、成立IT委员会对IT战略和重大决策； 2、设立IT审计职能部门，负责对IT部门的尽职情况进行独立审计，向管理层报告； 4、对IT部门进行重组，（大概可以分为集中管理、联邦式、分布式、混合式）。 好了，我们现在可以再来总结一下IT管理和IT治理了。 1、 IT管理是通过管理手段，来保证IT部门“做正确的事情”，如提高服务质量、提高系统的可用性、保证信息安全等。既然是管理，其基本内容还是组织、计划、领导、监督。 2、 IT治理并不是要替代IT管理工作，IT治理的目的是通过组织架构和制度安排，来对IT部门进行制衡，促进IT更好的完成工作，其最终目标是保证组织目标的完成。</p>
+<h2 id="五it审计">五、IT审计</h2>
+<p>在谈IT治理的时候，引出了IT审计的概念，认为IT审计（包括内审、外审）是IT治理的手段之一，是实现公司内部IT有关的权力、职责、利益分配制衡的工具之一。这个是IT审计在现代公司存在的地位和意义。如果大家熟悉审计学理论的话，这一点就应该很容易理解。IT审计也可以认为是管理层与IT部门的委托代理关系背景下产生的，接受管理层委托来对IT部门进行监督评价，或者按照CIA新的定义，提供增值化的咨询服务。 这样一说，很多长期受IT压迫的兄弟开心了：在公司受了IT这么多年的气，今天终于风水轮流转，也有人来收拾你们了！是不是这么乐观呢? 一个职业的出现和它的发展，最终是由市场决定的。市场决定的手段无非是通过以下几个因素： 1. 需求，需求的问题我们已经论述过了，IT审计已经被定位为IT治理的重要手段和工具了。从目前的现状来看，需求的规模是相当可观的。 2. 供给，供给的问题实际上就是IT审计的从业者能否提供高质量的审计服务，涉及到IT审计从业者的胜任问题。这个问题是我觉得很难回答的一个问题，以后有机会单独讨论。 3. 成本，成本应该是价格的基础，可能和IT审计的期望待遇有关。 这几个方面的讨论如果要深入下去，就要往经济学上面靠了，估计大家也没有兴趣，而且时间也不早了。 ===============================================================</p>
+<h2 id="延伸一风险若干话题">延伸一：风险若干话题</h2>
+<h4 id="一什么是风险risk">一、什么是风险(risk)</h4>
+<p>从风险基础审计(Risk based audit methodology) 角度来看，审计任务总是开始于风险评估，结束于审计建议，今天我们就谈谈风险评估这个题目。 所谓风险，是指组织运营中某种原因(Cause)造成的不确定性（uncertainty），而这些不确定性可能会对组织目标（objectives）造成影响（Impact）。可见定义一个风险必须明确4个要素：原因、不确定性、目标、影响，其中对目标的影响，如果是负面的，就是损失(loss)，当然最新的理论中，风险的影响不完全是负面的，也可能是正面的，这个就是机遇(opportunity)了。这个与ISACA关于风险要素描书似乎不完全相同。但是实质内涵是一样的。我们举例来看如何描述一个风险： 例1：由于证券交易系统设计指标缺乏超前性和日常监控（cause），在证券市场火爆，交易量巨大的时候，处理能力可能难以保证（uncertainty），从而导致系统菪机、处理错误、反应迟缓（Impact），损害客户满意度，影响佣金及其他收入，并导致监管部门警告（objective）。 例2：由于缺乏严格的系统访问权限管理政策或执行不力(cause)，可能存在滥用权限的情况(uncertainty)，使得公司资产损失，造成违规行为得不到及时发现和查处(例如篡改系统数据为自己谋利，impact)，甚至损害客户利益引起诉讼。 例3：由于银行系统参数库制度不健全（cause），导致存贷款利率、准备金率等参数没有及时调整（uncertainty），从而违反监管政策(如存款利率超出人民银行规定，impact)，不能满足监管需要，导致监管处罚（ovjective）。 按照影响的组织目标，风险可以分为不同类别，如： - 财务风险是指可能影响公司利润，损害公司资产的所有风险… - 系统风险是指影响系统的可用性、可靠性、安全性、一致性、效率、合规性的所有风险… - 监管风险是指可能违反监管规定，造成监管部门处罚的所有风险… - 信誉风险是指影响公司商誉的风险，如客户投诉对公司商誉导致的负面影响。 - 运营风险是指可能影响公司持续提供服务能力的风险如 - 舞弊风险是指可能存在内部或者外部人员利用漏洞为自己谋取利益。</p>
+<h4 id="二风险评估risk-evaluation">二、风险评估(Risk evaluation)</h4>
+<p>所谓风险评估，就是要研究组织在当前的状况下，有哪些不确定性，原因是什么，对组织目标将产生什么样的影响，严重程度如何，有没有得到适当的控制。 风险评估在很大程度上和内部控制评估相似，很多项目里面甚至没有区别。值得一提的是风险评估需要先识别风险得出风险列表，而控制评估前，已经对风险列表有比较清楚的认识了，按照已知的风险列表检查控制是否足够。从IT审计角度来看，一般应用环境的控制由于研究的较多，在大部分组织中具有共性，因而针对一般控制(General Control)的风险评估就可以对照公共接受(generally accepted)的标准来看，如COBIT、ISO17799等。银监会在年初搞的商业银行风险自评估应该就属于这种类型。而另外一种则相对难度大些，就是针对具体行业或组织自身的风险，具有个性色彩，需要较多的业务或组织背景，这个也可以看成针对应用控制的风险评估。例如银行和证券公司的业务内容不同、流程不同、组织架构也不同、监管要求也不同，识别并评估各自风险就需要不同的经营和技能了。 前面讲了针对一般应用环境的风险评估，例如环境、运营、访问控制、开发、变更等已经有成熟的范式了，这里就不多说了，下面简要谈谈针对具体业务或者业务系统的风险评估。我们以某个具体行业为例，例如银行信贷管理系统。 风险评估总是开始于业务，结束于控制。因此无论在哪一行业，掌握该行业特有的业务知识始终是项目成功的最重要的因素之一。业务知识如何获得不是本文要讨论的内容。 仅有业务知识当然不够，否则公司的业务员都是风险管理专家了，另一件非常重要的事，就是将业务进行梳理，以流程(Process)作为单位将业务知识进行组织，始之具有更好的结构，应用所谓 “结构化分析方法”(structured analysis)。 在应用结构化分析方法的时候，我们要锚定一个基准，即从某一个出发点，以某一个标准来进行分析，否则结构就很难完整。无论从上到下(Top Down)还是自底向上（Bottom up）。我们既可以从组织结构来分析，分析不同业务部门的职能范围。也可以按照审批流来进行分析。如果我们要研究的对象的经济活动可以分割成很多独立的，互不影响的单元，我们还可以按照某一经济活动的生命周期来进行研究。所谓生命周期就是一件事物从开始产生到最终消亡的全部过程。 在分析银行信贷系统时，我们知道，银行的信贷业务是由很多笔独立的贷款业务构成的，我们假设： 1) 这些贷款的金额都足够小，不会影响银行的资产负债管理； 2) 这些贷款属于不同客户，而且没有关联关系； 3) 同一种类贷款的审批流程是明确定义的，可重复的。 那么我们就认为这些贷款业务是独立的，每笔业务都是是典型的。我们可以从每一类的贷款中，选取一个样本作为代表，这笔贷款从开始申请到贷款收回的流程可以代表总体。对信贷业务分析得到一个简要的列表如下： 对于每一个流程，以及流程里面的每一个任务，根据其执行情况可以列举风险。 我们可以针对每一个流程或者每一个任务来提出问题并发现答案，这些问题有些是common sense的，有些是基于业务特征的。例如：对于贷前调查流程，我们可以提出这样的问题： - 能够给审批提供足够充分的信息么？ - 贷前调查的报告都是可靠的么？ - 调查员与客户共谋舞弊是否可以给自己谋取利益？ - 有没有对调查报告质量的评价标准？ - 有没有客户调查的方法、程序及规范？ - 如何判断财务指标的可靠性？ - 如何识别关联公司？集团公司？ 对这些问题的答案，并进行整理，就是我们需要识别的风险点。对风险点可能造成的影响大小，损失大小，就是可以描述风险的严重程度。针对每个风险去调查有无足够的控制，并评价控制运行的情况，就是审计师的工作范围了。</p>
+<h2 id="延伸二it审计入门概念">延伸二：IT审计入门概念</h2>
+<p>论坛上经常看到有人问什么是IT审计，说明IT审计在很多人眼里还很陌生，甚至包括IT管理者和审计部门的领导。IT审计在国内这些年似乎也逐渐热起来，很多时候还是拜媒体所赐，例如一度热炒的CISA就把IT审计师炒成金领的概念。还有很多培训机构/专家为了推广其理念，专门成立网站推广IT审计或者IT治理。很多学生看了这些广告软文就花了很多银子去考CISA，结果发现拿了证还是不知道什么是IT审计。IT审计热起来还有一个原因就是审计署从2000年以后开始全国性的推动“金审工程”，也就是审计信息化，核心内容之一也是IT审计。不过这些在政府审计体系之外的人就很少机会接触了。 IT审计其实可以从广义和狭义两个方面来理解。 广义的IT审计我理解就是IT审计师可能做的工作。目前我所接触到的圈子里面，IT审计师的工作最主要包括两块，一块是对常规业务审计的支持。另一块是独立的系统审计和咨询。 狭义上的IT审计就是对IT这一特殊对象的审计。 我个人一直理解为IT审计就是在审计领域中的IT应用。按照这个可以罗列出IT审计的很多内容，例如CAAT（计算机辅助审计）、ISA(信息系统审计)、自动化工作底稿、审计档案管理、审计计划管理等等…。IT审计发展到今天，在这些领域里面都已经有非常成熟的理论体系了，基本上服务和软件的产品化程度都比较高了。下面聊聊主要的几点。 1）CAAT(Computer，计算机辅助审计)，就是在日常的财务收支审计中将IT作为一种技术工具来应用，最主要的是常规审计人员如何应用审计数据获取和分析技术。其实这个在国内开始在很早以前了了，应该从1996年左右就出现国内的审计软件了。现在推广力度比较大的是《AO：审计现场实施系统》，审计署开发和推广的，由中软在销售。国外的这方面最著名的软件有ACL和IDEA，这两个软件中文版本都早就出来了，不过似乎都定位高端，因为价格很贵。也有一些审计人员用通用软件，例如ACCESS、EXCEL、SQL Server等。这些软件的比较，由于难免有主观色彩就不赘述了（其实我还是有倾向性的）。 我个人认为CAAT在国内的市场非常大。在谈系统审计、ERP审计之前，审计的核心业务还是常规审计。常规业务审计过程是收集证据而对经济活动进行评价的过程。随着信息化的普及，交易的电子化，海量的业务数据，使得传统的审计手段受到很大局限，必须依赖于电子数据分析方法。这一点，我想审计的同仁都不需要再解释了。 2) 信息系统审计（IS auditing），这个论坛里面讨论最多了。信息系统审计顾名思义就是对信息系统的审计。和常规审计最大的差异在于审计的对象变了。以前人们谈到审计都指对经济活动、业务活动进行审计，一般的审计发现都是通过案件、违纪金额、挽回损失等来体现，审计的对口单位一般是财务、销售、管理等业务部门。而IS 审计的对象完全变了，IS审计的对象是单位进行业务处理的信息系统，例如财务系统、销售系统、ERP、CRM系统。一般审计的对口单位最主要的是开发部门或者运营科技部门。审计发现是程序控制薄弱、处理错误、运行失败、数据质量、安全漏洞等问题。信息系统审计在四大和很多咨询公司已经作为成熟的服务提供了。四大里面的现在system service ,process assurance 已经是非常重要的收入来源了。我了解一个2 个普通顾问做1个月的项目，在最低折扣的情况下，收费有30W。 IS audit既然是作为服务在出售，当然就需要有服务的内容的标准化，这就涉及到怎么审计的问题。COBIT、COSO、ISO9977等都可以作为的ISA的参照审计规范。四大都有自己的系统审计操作体系。IS audit从检查的内容上看，可以分为一般控制检查（general control review）和应用控制检查（application control review）。四大和咨询公司的项目以general control review为主。一般控制就是和具体的业务关系比较弱的控制，看得最多的就是用户密码控制、操作环境控制、职责分离、变更控制、开发控制、文档控制、数据质量、信息安全等等内容，作为行内人，做多了就觉得这些司空见惯的内容，似乎没有什么技术含量，我见过四大的财务auditor转去做IT auditor，作了一段时间觉得没有意思又转回去做fiancial auditor了。也见过这方面的高手，就是那些在某一个专业的IT领域浸淫了10多年，在操作系统、网络安全、数据库管理、项目管理等方面非常有经验，也可以提出非常专业的审计意见，这个就是大家所仰慕的对象了。 系统审计另外一个内容是应用控制，和一般控制区别最大在于，应用控制是和业务逻辑密切相关的。以银行业为例，如果我们来审计一个信贷管理系统，会看什么呢？我会看信贷审批流程、客户评级体系、贷款5级分类、利率管理、收费管理等等这些控制。例如信贷审批流程里面会看在系统对贷前调查、资料完整性、额度管理、权限分配等方面有无控制。如果存在系统控制，则认为风险较小，在业务审计中可以减小样本规模，否则要增加样本规模（理解？）。应用控制审计的审计发现不仅仅是系统设计开发的缺陷，更多的时候也有舞弊损失。从审计的内容来看，应用控制检查与单位的日常业务处理关系更密切，审计发现也和经营成果（财物报表）有更直接的关系，似乎增值效应更加明显，管理者也容易理解你写的报告，更容易为管理层所接受（很多管理层对一般控制的检查结果将信将疑，认为：一直就这样，从来没有问题）。</p>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.ifshow.com/">boxwang</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.ifshow.com/from-the-company-management-to-it-audit/">https://www.ifshow.com/from-the-company-management-to-it-audit/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。如果特别注明为转载文章，请联系其原始作者。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/it-outsourcing-and-risk/">IT外包和风险</a></li>
+        
+        <li><a href="/china-mainstream-hcm-erp-software-reviews/">国内主流HCM/eHR厂商点评</a></li>
+        
+        <li><a href="/windows-10-installed-android-studio-tips/">Windows 10安装Android Studio要点</a></li>
+        
+        <li><a href="/name-com-whois-privacy-promo/">Name.com域名隐私保护优惠码</a></li>
+        
+        <li><a href="/global-full-asset-investment-must-know-16-stocks-etf/">全球全资产投资必须知道的16个美股ETF</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://www.ifshow.com/tags/it-auditors'>it-auditors</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "pause12345/pause12345.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                </div>
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.ifshow.com/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.ifshow.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-information-navigation/" title="置顶：FGO美服 信息汇总">置顶：FGO美服 信息汇总</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-ccc-revival/" title="FGO美服：CCC复刻">FGO美服：CCC复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-presidents-day-celebration-campaign-2021/" title="FGO美服：总统日庆祝活动2021">FGO美服：总统日庆祝活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-chinese-new-year-campaign-2021/" title="FGO美服：中国新年活动2021">FGO美服：中国新年活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-servant-rank-up-quest-part-ten/" title="FGO美服：从者强化任务第十弹">FGO美服：从者强化任务第十弹</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-valentine-2021/" title="FGO美服：情人节2021">FGO美服：情人节2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-prisma-codes-revival/" title="FGO美服：魔伊活动复刻">FGO美服：魔伊活动复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-1300th-day-celebration-campaign/" title="FGO美服：开服1300天庆祝活动">FGO美服：开服1300天庆祝活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-manga-release-celebration-campaign/" title="FGO美服：漫画上线纪念活动">FGO美服：漫画上线纪念活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-sparrow-inn-daily-report/" title="FGO美服：雀之旅馆的活动日志">FGO美服：雀之旅馆的活动日志</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">推荐内容</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服专区" target="_blank" style="color:red">
+                
+                    FGO美服专区
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.ifshow.com/categories/fgo-us/">fgo-us (370)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/game/">game (1)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (73)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/life/">life (6)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://www.ifshow.com/tags/android/">android</a>
+    
+    <a href="https://www.ifshow.com/tags/app/">app</a>
+    
+    <a href="https://www.ifshow.com/tags/business-analytics/">business-analytics</a>
+    
+    <a href="https://www.ifshow.com/tags/business-plan/">business-plan</a>
+    
+    <a href="https://www.ifshow.com/tags/career-life/">career-life</a>
+    
+    <a href="https://www.ifshow.com/tags/centos/">centos</a>
+    
+    <a href="https://www.ifshow.com/tags/cyberpunk2077/">cyberpunk2077</a>
+    
+    <a href="https://www.ifshow.com/tags/desktop-maintenance/">desktop-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/e-hr/">e-hr</a>
+    
+    <a href="https://www.ifshow.com/tags/etf/">etf</a>
+    
+    <a href="https://www.ifshow.com/tags/fgo/">fgo</a>
+    
+    <a href="https://www.ifshow.com/tags/git/">git</a>
+    
+    <a href="https://www.ifshow.com/tags/hugo/">hugo</a>
+    
+    <a href="https://www.ifshow.com/tags/information-security/">information-security</a>
+    
+    <a href="https://www.ifshow.com/tags/it-auditors/">it-auditors</a>
+    
+    <a href="https://www.ifshow.com/tags/it-outsourcing/">it-outsourcing</a>
+    
+    <a href="https://www.ifshow.com/tags/it-project-management/">it-project-management</a>
+    
+    <a href="https://www.ifshow.com/tags/kali/">kali</a>
+    
+    <a href="https://www.ifshow.com/tags/linux/">linux</a>
+    
+    <a href="https://www.ifshow.com/tags/living/">living</a>
+    
+    <a href="https://www.ifshow.com/tags/openwrt/">openwrt</a>
+    
+    <a href="https://www.ifshow.com/tags/pmp/">pmp</a>
+    
+    <a href="https://www.ifshow.com/tags/refactoring/">refactoring</a>
+    
+    <a href="https://www.ifshow.com/tags/seo/">seo</a>
+    
+    <a href="https://www.ifshow.com/tags/server-maintenance/">server-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/shadowsocks/">shadowsocks</a>
+    
+    <a href="https://www.ifshow.com/tags/stock/">stock</a>
+    
+    <a href="https://www.ifshow.com/tags/system-maintenance/">system-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/win10/">win10</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="" title=""></a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.ifshow.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2005 - 2021 <a href="https://www.ifshow.com/">IFshow By boxwang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-8286719-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>seo on IFshow</title>
+    <link>https://www.ifshow.com/tags/seo/</link>
+    <description>Recent content in seo on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 28 Apr 2015 00:40:54 +0000</lastBuildDate><atom:link href="https://www.ifshow.com/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网站页面优化策略</title>
+      <link>https://www.ifshow.com/web-page-optimization-strategy/</link>
+      <pubDate>Tue, 28 Apr 2015 00:40:54 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/web-page-optimization-strategy/</guid>
+      <description>转自：http://www.williamlong.info/archives/4213.html 网站的页面优化，也即网页优化是对网页的程序、内容、版块、布局等多方面的优化调整，使其适合搜索引擎检索，满足搜索引擎排名的指标，从而在搜索引擎检索中获得的排名提升，增强搜索引擎营销的效</description>
+    </item>
+    
+    <item>
+      <title>网站结构优化策略</title>
+      <link>https://www.ifshow.com/website-structure-optimization-strategy/</link>
+      <pubDate>Tue, 28 Apr 2015 00:39:27 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/website-structure-optimization-strategy/</guid>
+      <description>转自：http://www.williamlong.info/archives/4212.html 网站内部结构优化对网站建设起到计划和指导的作用，对网站的内容维护、后期SEO起到关键作用。下面主要从网站结构、页面元素、导航结构、后期优化等方面来讲述网站的内部优化，从网站建设的前期</description>
+    </item>
+    
+  </channel>
+</rss>

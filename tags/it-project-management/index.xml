@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>it-project-management on IFshow</title>
+    <link>https://www.ifshow.com/tags/it-project-management/</link>
+    <description>Recent content in it-project-management on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 23 May 2020 00:40:17 -0300</lastBuildDate><atom:link href="https://www.ifshow.com/tags/it-project-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自定义Chrome用户数据文件夹</title>
+      <link>https://www.ifshow.com/custom-chrome-user-data-folder/</link>
+      <pubDate>Sat, 23 May 2020 00:40:17 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/custom-chrome-user-data-folder/</guid>
+      <description>Chrome用户数据默认放在在C盘且不提供修改途径，可以通过 mklink 来自定义： mklink /j &amp;quot;C:\Users\当前用户名\AppData\Local\Google\Chrome\User Data&amp;quot; &amp;quot;D:\自定义位置\Chrome\User Data&amp;quot; 注：当前用户名 和 自定义位置 需要根据实际情况</description>
+    </item>
+    
+    <item>
+      <title>从甲方视角看如何做好IT项目管理</title>
+      <link>https://www.ifshow.com/from-the-perspective-of-party-a-how-to-do-it-project-management-well/</link>
+      <pubDate>Mon, 26 Sep 2016 01:40:48 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/from-the-perspective-of-party-a-how-to-do-it-project-management-well/</guid>
+      <description>对一个IT项目来讲最重要的部分就应该是项目的启动阶段，项目只有真正启动了才谈得上IT项目的管理方法和技巧，项目启动阶段准备的充足与否往往决定着一个项目的成败，所以对项目启动管理形成统一的认知，对于甲方实施IT项目来说有着非常重要的意义。一般来说，项目的启动管理可以划分为以下几个阶</description>
+    </item>
+    
+    <item>
+      <title>软件项目“免坑”指南</title>
+      <link>https://www.ifshow.com/software-project-away-from-the-trap-guide/</link>
+      <pubDate>Tue, 06 Sep 2016 07:32:31 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/software-project-away-from-the-trap-guide/</guid>
+      <description>转自：http://www.cnblogs.com/MeteorSeed/archive/2012/04/08/2427966.html 谁也无法改变现状，唯有无数程序员血洒大地，才能使项目重建天日。”这一点也不夸张，软件项目做烂了就是个坑，参与者也不过是填坑的。就像是在魔兽世界战</description>
+    </item>
+    
+    <item>
+      <title>项目如何开始：怎样和客户一起搞定需求</title>
+      <link>https://www.ifshow.com/how-the-project-began-how-to-get-along-with-and-customer-demand/</link>
+      <pubDate>Wed, 22 Apr 2015 09:27:41 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/how-the-project-began-how-to-get-along-with-and-customer-demand/</guid>
+      <description>转自西乔的九卦 项目刚刚开始的时期，项目经理做的主要事情是搜集客户需求，这是一个项目经理非常头疼的阶段，合作的磨合刚刚开始，需求问题上的失误又会导致无穷的后患。 三种客户类型： 1 的确很专业。能提供基本可用的文档，能给出要求规范，能向你提出有价值的疑问和担心。能快速回答你的问题 2 以为自</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>refactoring on IFshow</title>
+    <link>https://www.ifshow.com/tags/refactoring/</link>
+    <description>Recent content in refactoring on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 19 May 2015 09:00:44 +0000</lastBuildDate><atom:link href="https://www.ifshow.com/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>什么是重构，什么不是重构</title>
+      <link>https://www.ifshow.com/what-refactoring-is-and-what-it-isnt/</link>
+      <pubDate>Tue, 19 May 2015 09:00:44 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/what-refactoring-is-and-what-it-isnt/</guid>
+      <description>转自：http://www.vaikan.com/what-refactoring-is-and-what-it-isnt/ 有时候，会有程序员跑到我这里说他们不喜欢某个东西的设计，“我们需要给它来个全面的重构”，来纠正里面的错误。哦，哦。这听起来可不是个好主意。而且这听起来也不是</description>
+    </item>
+    
+  </channel>
+</rss>

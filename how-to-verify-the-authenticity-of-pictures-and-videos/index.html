@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>虚假信息鉴别工具箱：如何验证图片和视频的真伪？ | IFshow</title>
+    <meta property="og:title" content="虚假信息鉴别工具箱：如何验证图片和视频的真伪？ - IFshow">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2018-06-08T06:48:52&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2018-06-08T06:48:52&#43;08:00'>
+        
+    <meta name="Keywords" content="IT,investment,FGO">
+    <meta name="description" content="虚假信息鉴别工具箱：如何验证图片和视频的真伪？">
+        
+    <meta name="author" content="boxwang">
+    <meta property="og:url" content="https://www.ifshow.com/how-to-verify-the-authenticity-of-pictures-and-videos/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7012795738014849",
+        enable_page_level_ads: true
+    });
+    </script>
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://www.ifshow.com/">
+                        IFshow
+                    </a>
+                
+                <p class="description">Cogito Ergo Sum</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://www.ifshow.com/">首页</a>
+                    
+                    <a  href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服">FGO美服</a>
+                    
+                    <a  href="https://www.ifshow.com/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://www.ifshow.com/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+            <img src="https://storage.live.com/items/240ACD90363D22FB!3827:/top.jpg" />
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents"></nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">虚假信息鉴别工具箱：如何验证图片和视频的真伪？</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2018年6月8日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        
+        
+        <div class="post-content">
+            <p>转自：https://steemit.com/tools/@iyouport/2zmazk</p>
+<p>由于我的愚钝，直到最近才发现，很多中国大牌媒体在职记者、甚至“资深”记者，几乎完全不具备基本功，他们依靠信息消费者来判断一个消息的真伪 —— 先转发再等着观众辟谣，这就是为什么从他们手中转发的很多消息都是假的。鉴于他们的知名度，如果该消息一段时间内没有被揭发造假，它将形成可观的传播范围。</p>
+<p>现代技术经常能制造出令人惊讶的效果，这是众所周知的，对于新闻报道这种追求真实性的行业来说，肯定不是什么好事。</p>
+<p>技术含量很高的所谓“深度造假”正在越来越多地出现，但是对于中国记者来说，99.9% 的时间里他们根本遇不到这类造假，他们能接触到的不过是一些本土内容营销者的炒作，为了吸引目光而简单制作的浅薄的谎言。这类信息很容易鉴别，以至于这种造假方法早已不再流行，除了段子手们偶尔拿来开玩笑用。</p>
+<p>然而中国“资深”记者们就连一个段子的层次都识别不得。这是比造假技术的飞跃本身更令人担忧的问题 —— 记者的不专业不仅令他们无法完成新闻业的基本职能，更愚弄了整个社会，最终唯一的受益者是政权。</p>
+<p><strong>深度造假</strong></p>
+<p>日前，一个由比利时左翼政党 sp.a <a href="https://www.economist.com/leaders/2018/05/26/a-faked-video-of-donald-trump-points-to-a-worrying-future?frsc=dg%7ce" target="_blank">制作的视频</a>鼓励人们退出巴黎气候协议，虽然其中所呈现的观点听起来很像特朗普，但是视频中的人并不是特朗普。</p>
+<p>伪造信息不新鲜。斯大林曾经将他的敌人从所有历史记录中抹去；好莱坞的电影也经常用它来做特效，包括保护演员免于受伤。如今的技术使这一切变得更加便宜和简单。 sp.a 的视频是一个“深度的假视频” – 它吸收了“深度学习”技术……为了制造出这种层次的假冒，你需要的只是一个自由软件、一些你想要转换脸部的人的照片、一张现有的电影片段以及一个脚本。</p>
+<p>由此，<strong>图片和视频将变得像文本一样：更容易被假冒或以微妙的方式被修改，夸大或淡化真正发生的事情</strong>。sp.a 说这个视频并不是为了欺骗，但这些技术所呈现的前景会随时令人担忧。互联网给了党派宣传和挑衅一种便宜而有效的方式来传播书面的谣言和谎言。伪造的图像和视频非常易于传播，因为很多人还没有学会怀疑图像信息。</p>
+<p>“FakeApp” 这个臭名昭著的软件于2018年1月发布了其桌面应用程序。虽然已经在线操作多年，但现在它使用深度学习来允许任何人创建逼真的换脸视频。今年 2 月，Reddit 和 PornHub 禁止了这些视频的流通 – 就如前文所述的特朗普视频一样，它们被称为“深度假冒” – <a href="https://motherboard.vice.com/EN_US/article/gydydm/gal-gadot-fake-ai-porn" target="_blank">Motherboard</a> 是第一个报道这件事的，作者 Samantha Cole 很清楚该技术的潜在后果。达特茅斯学院的数字取证和图像分析专家警告说，这不是玩笑，很可能造成严重的后果。</p>
+<p>幸亏 sp.a “有分寸”，如果他们伪造一个特朗普支持核战争的假视频，天知道会发生什么。</p>
+<p>尽管“FakeApp”一定程度上被禁止，但依旧无法阻止人们使用它（有可能只是为了一个玩笑）。</p>
+<p>一般来说分辨伪造视频并不难，通过观察就可以作出基本验证，比如视频闪烁吗、是一个非常短的剪辑吗（越短越可疑）、画面上看起来有什么异物吗，人脸的光线合理吗，等等。但现在问题似乎有点复杂了，随着技术的进步，比如华盛顿大学研究人员用来制造<a href="http://www.bbc.co.uk/news/av/technology-40598465/fake-obama-created-using-ai-tool-to-make-phoney-speeches" target="_blank">奥巴马假视频</a>的 AI 技术，加之这些技术更便于使用了，每个人都应该有一套验证假冒的装备。以防被骗。</p>
+<p>我们依旧需要强调常识，很多常识还是很有效的，包括常用的工具。社交媒体上你能看到的最常见的提问就是“这是真的还是假的”，几乎口头禅一般，看起来依旧有太多人不了解这些常识，否则他们应该知道如何验证一张照片、或一个视频、或一则传闻的真实性。亲自检验。</p>
+<p>下面提供一些很简单的工具。它们中有些或许应付不了最新出现的高超的造假技术，但是对于新闻界来说，足够你用来做日常性真伪检验。</p>
+<p><strong>验证视频真伪</strong></p>
+<p><a href="http://www.amnestyusa.org/citizenevidence/" target="_blank">YouTube DataViewer</a>: 在 YouTube 上看到最新的病毒式传播视频时寻找“印痕”很重要：痕迹会显示它是否为旧视频，被某人先从 YouTube 下载，再冒充原始目击者重新上传，或者是声称该视频描述了一个新事件，这种情况很多出现，几乎是最小白的造假。要揭穿它，你只需要粘贴某个 YouTube 视频的 URL 网页地址在这里，就可以查看该视频的上传日期和时间（它们是否与标明的日期不同）。</p>
+<p>你还可以<strong>使用影像缩略图追踪它们在网络上被使用的历史</strong>。如果 YouTube 上存有相同视频的多个版本，日期信息可以让你确定最早的上传，而它最有可能是原始的。缩略图也可用于反向图像搜索，来找到包含该视频的网页，这是鉴别视频的快速有效方法。</p>
+<p>互联网人在绝大部分时间里处于无意识状态，这就是为什么人们看起来很容易受骗、也是为什么假消息会盛行，本网几年前详细分析过这一问题。这种无意识状态下信息几乎不会进入记忆，于是一个骗局在互联网上可以被反复利用，而每次都能骗倒一群人。</p>
+<p>揭露这类谎言非常简单，你只需要简单地检索一下。传播这类谎言是很丢脸的，说明传播者无知和懒惰到了惊人的地步。</p>
+<p><img src="https://steemitimages.com/0x0/https://static.wixstatic.com/media/410870_0ebbcec3785c49d9a12d77601ec7edf8~mv2.jpg/v1/fit/w_638,h_412,al_c,q_90/file.webp" alt="img"></p>
+<p><a href="http://www.wolframalpha.com/" target="_blank">Wolfram Alpha</a>: 这个著名的知识搜索引擎也可以用来验证视频或照片的真伪。其方法之一是，把影像中的天气状况与历史上的气象记录做比较。键入“天气”、位置和日期，就可以在该引擎的数据集中进行搜索。</p>
+<p>你还可以用 Wolfram Alpha 查询一些事件的概率。例如它会告诉你，梭哈扑克中出现“满堂彩”(full house)概率是0.14%(约1/694)。如果你获得的信息中事件呈现的概率和满堂彩差不多，做好先不要发布，用其他方法进一步验证下。</p>
+<p><strong>验证照片真伪</strong></p>
+<p><a href="http://fotoforensics.com/" target="_blank">FotoForensics</a>: 在此网站上传照片，通过查看不同的压缩级别来判断照片是否被修改过。通过<a href="http://fotoforensics.com/tutorial-ela.php" target="_blank">Error Level Analysis</a>，图像被编辑过的部分会被显示出来。它也提供了大量的分享选项，允许你提供直连你的 FotoForensics 分析页面的链接，对于阻止不准确信息的重新流通很有用。</p>
+<p><img src="https://steemitimages.com/0x0/https://static.wixstatic.com/media/410870_f4cc33b20de3431fab2f4f8051304fbc~mv2.jpeg/v1/fit/w_740,h_303,al_c,q_90/file.webp" alt="img"></p>
+<p>简单说，辨别图片有没有加工过，原理就是网站利用 ELA（Error Level Analysis） 分布算法还原相邻像素的压缩特征。一般照片压缩特征是上图中近似的高频白色分布，但如果是编辑过后修改完保存的，则像素之间的压缩特征会有明显的差异，产生较为明显的与别处不同的白线。</p>
+<p>但它也不是万能的，因为有一个很重要的因素必须要考虑。<strong>当图片被反复重新发布，每次发布图像的质量都会有所下降。在 Facebook 和 Twitter 上有很多图片是以低质量保存的，而图像大小和图像的质量都会直接影响其评估图片的能力。</strong></p>
+<p><a href="http://download.cnet.com/JPEGsnoop/3000-12511_4-10920311.html" target="_blank">JPEGsnoop</a>: 这个网站能让你查看照片是在一天中什么时间拍摄的、用什么相机拍摄的以及其他一些细节。像 FotoForensics 一样，你也可以通过比较图像的压缩级别来判断图像是否被编辑过。</p>
+<p>这是一个免费的 Windows 应用程序，用于检查和解码 JPEG，MotionJPEG AVI 和 Photoshop 文件的内部细节。你还可以启用全面的 Huffman VLC 解码，有助于那些正在学习 JPEG 压缩和正在编写 JPEG 解码器的人。</p>
+<p><img src="https://steemitimages.com/0x0/https://static.wixstatic.com/media/410870_64d0cb1dbde64c4c94c74ecb6c68aa91~mv2.jpg/v1/fit/w_740,h_525,al_c,q_90/file.webp" alt="img"></p>
+<p><a href="http://www.izitru.com/" target="_blank">izitru </a>是一个免费、免安装的网上程式，可以检查相片是否被修改过。原理也是常用的 devise signature analysis, JPEG structure analysis, double JPEG detection, JPEG coefficient analysis, sensor pattern analysis, 以及 JPEG ghost detection 等方法，而且使用起来十分简单，只需要：到这里上传需要检查的相片，只接授  JPEG 档。上传后就会自动出现相片的评测，共分为高至没有等 5 个信用等级：high trust (没有修改)；medium trust；undetermined file history；potential file modification；no trust (有修改) 很简单吧。</p>
+<p><img src="https://steemitimages.com/0x0/https://static.wixstatic.com/media/410870_6f17142fa056407494bcb70166b02702~mv2.jpg/v1/fit/w_740,h_396,al_c,q_90/file.webp" alt="img"></p>
+<p><a href="https://addons.mozilla.org/en-us/firefox/addon/who-stole-my-pictures/" target="_blank">Who Stole My Pictures</a>：用一个附加组件就可以在网上通过搜索引擎进行搜索，并找出某张照片的其他版本。它可以让你追踪<strong>此照片被使用的历史</strong>，因为撒谎的发布者声明的照片出处可能并不准确。</p>
+<p><a href="https://regex.info/exif.cgi" target="_blank">Jeffrey’s Exif Viewer</a> ：数码相机和智能手机拍摄的照片、视频和音频包含可交换图像文件 <strong>(EXIF) 信息 – 关于使用相机型号、媒体创建日期，时间和地点的非常重要的元数据信息</strong>。如果你怀疑作者对内容来源的说明性信息是错的，上述这些数据就可以揭穿他。在这种情况下，Jeffrey’s Exif Viewer 等 EXIF 查看器允许你上传图片或输入图片的 URL 来查看其元数据。</p>
+<p>值得注意的是，虽然 Facebook、Instagram 和推特在内容上传到他们服务器时删除 EXIF 数据，通过 Flickr 和 WhatsApp 等平台分享的照片仍然包含这些数据。</p>
+<p><a href="https://tineye.com/" target="_blank">TinEye</a> ：和谷歌反向图片搜索是一样的工具。</p>
+<p><a href="https://29a.ch/photo-forensics/" target="_blank">Forensically</a>：是一套免费的数字图像取证工具。它包括克隆检测，错误级别分析，元数据提取等。上面那些工具基本都包括了这些功能。</p>
+<p><strong>验证消息真伪，以及挖掘网络数据</strong></p>
+<p>*<strong>这里指的是验证信息真伪的用途，不是用来追踪的。但广大互联网用户应该也能通过这些工具了解到自己的在线信息被曝光的程度，以及隐私保护的重要性*</strong></p>
+<p><a href="http://botornot.co/" target="_blank">BotOrNot</a>：忽然有人注册了新账号宣称“曝光秘密”，同时其发布的内容获得了很多转发和点赞，此人所言是否已经有很多人信任？某用户经常发布耸人听闻的消息，而其粉丝量和转发量明显不匹配，其中是否有掺假？这个工具可以帮助你验证。它会检查 Twitter 帐户的活动，并根据帐户是否是 bot 的可能性给一个评分。</p>
+<p><a href="http://geosocialfootprint.com/" target="_blank">GeoSocial Footprint</a>：这是一个可以跟踪用户位置“足迹”的网站，该地图可以通过支持 GPS 的推文、社交签到、自然语言位置搜索（地理编码）和个人资料收集创建。</p>
+<p>如果一个信息发布者声称“亲见”，而他并没有出现在事发地点，这个工具就可以帮你验证；如果你想寻找目击证人做采访，也可以用到它。虽然隐私关注者一直在强调位置信息和读取位置权限的风险，但依旧有很多人不在意，以至于这个工具至今很好用。</p>
+<p><img src="https://steemitimages.com/0x0/https://static.wixstatic.com/media/410870_1a0828835813426eae08b626ba0e1a82~mv2.jpg/v1/fit/w_485,h_455,al_c,q_90/file.webp" alt="img"></p>
+<p><a href="http://www.txtnation.com/mobile-messaging/hlr-number-lookup/" target="_blank">HLR Lookups</a>：可以跟踪网络连接数据，并且可以实时查看号码是否有效、是否处于活动状态，以及移动用户正在使用哪个网络。全部实时数据。</p>
+<p><a href="http://pipl.com/" target="_blank">Pipl.com</a>：搜索个人的互联网足迹，并可通过多个社交媒体帐户、公共记录和联系方式，以帮助识别。</p>
+<p><a href="https://www.spokeo.com/" target="_blank">Spokeo</a>：可以通过姓名，电子邮件，电话或用户名查找一个人的搜索引擎。结果将合并成一份显示性别，年龄，联系方式，职业，教育程度，婚姻状况，家庭背景，经济状况和各种照片的个人资料。</p>
+<p><a href="https://www.ip-tracker.org/locator/ip-lookup.php?ip=Skypegrab.net" target="_blank">Skypegrab</a>：通过 Skype ID，可以跟踪 IP 地址和用户位置。</p>
+<p><a href="http://who.is/" target="_blank">Who.is</a>：它查找域名的注册者，并详细说明注册人或受让人的注册日期、位置和联系方式。还有一个 Chrome 扩展，另外一个功能可以执行历史搜索。</p>
+<p><a href="https://www.flickr.com/" target="_blank">Flickr</a>：一个可用于搜索地理定位照片的照片共享平台。</p>
+<p>谷歌地图：提供覆盖地球大部分地区的高分辨率航空或卫星图像的在线地图，除了两极地区外。包括许多选项，如地形，天气信息和 360 度街景水平视图。但是，应该指出的是，在 Google 被限制访问地理信息的国家/地区，准确性可能会受到质疑。</p>
+<p>谷歌街景时间机器：在大多数主要城市，可以使用历史街景比较街道，建筑物等。对于验证过去内容中显示的位置非常有用。</p>
+<p>……其实还有很多，社交工程学常用的工具就可以写几万字出来。数据是计算的副产品，互联网上的数据无穷无尽，你想查什么都不难做到。上面这些工具足够记者们检验一则信息的真伪了，以及协助采访的需求。至少可以避免露怯 —— <strong>作为一名记者，你不应该去询问他人“这是真的还是假的”</strong>，如果你的确不知道这些常识，建议赶紧回您的母校要求退学费，然后用这些钱资助本网。谢谢～</p>
+<p>（本文不需要翻译英文，因为太常识了，免得让外国人知道中国记者有多无知）</p>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://www.ifshow.com/">boxwang</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://www.ifshow.com/how-to-verify-the-authenticity-of-pictures-and-videos/">https://www.ifshow.com/how-to-verify-the-authenticity-of-pictures-and-videos/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。如果特别注明为转载文章，请联系其原始作者。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/windows-system-virtual-disk-vhd-vhdx-expansion/">windows系统中虚拟磁盘(vhd/vhdx)扩容</a></li>
+        
+        <li><a href="/cancel-win10-system-pops-up-every-time-msn-chinese-network/">取消Win10系统每次开机都弹出msn中文网</a></li>
+        
+        <li><a href="/android-phone-modify-the-network-authentication-server/">安卓手机修改网络验证服务器</a></li>
+        
+        <li><a href="/dxwnd-windowing-tool-introduction/">Dxwnd窗口化工具简介</a></li>
+        
+        <li><a href="/windows10-traditional-software-font-display-exception-solution/">Windows10繁体软件字体显示异常的解决方法</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://www.ifshow.com/tags/desktop-maintenance'>desktop-maintenance</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "pause12345/pause12345.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                </div>
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://www.ifshow.com/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://www.ifshow.com/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-information-navigation/" title="置顶：FGO美服 信息汇总">置顶：FGO美服 信息汇总</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-ccc-revival/" title="FGO美服：CCC复刻">FGO美服：CCC复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-presidents-day-celebration-campaign-2021/" title="FGO美服：总统日庆祝活动2021">FGO美服：总统日庆祝活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-chinese-new-year-campaign-2021/" title="FGO美服：中国新年活动2021">FGO美服：中国新年活动2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-servant-rank-up-quest-part-ten/" title="FGO美服：从者强化任务第十弹">FGO美服：从者强化任务第十弹</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-valentine-2021/" title="FGO美服：情人节2021">FGO美服：情人节2021</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-prisma-codes-revival/" title="FGO美服：魔伊活动复刻">FGO美服：魔伊活动复刻</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-1300th-day-celebration-campaign/" title="FGO美服：开服1300天庆祝活动">FGO美服：开服1300天庆祝活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-manga-release-celebration-campaign/" title="FGO美服：漫画上线纪念活动">FGO美服：漫画上线纪念活动</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/fgo-us-sparrow-inn-daily-report/" title="FGO美服：雀之旅馆的活动日志">FGO美服：雀之旅馆的活动日志</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title" style="color:red">推荐内容</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服专区" target="_blank" style="color:red">
+                
+                    FGO美服专区
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://www.ifshow.com/categories/fgo-us/">fgo-us (370)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/game/">game (1)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (73)</a></li>
+    
+    <li><a href="https://www.ifshow.com/categories/life/">life (6)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://www.ifshow.com/tags/android/">android</a>
+    
+    <a href="https://www.ifshow.com/tags/app/">app</a>
+    
+    <a href="https://www.ifshow.com/tags/business-analytics/">business-analytics</a>
+    
+    <a href="https://www.ifshow.com/tags/business-plan/">business-plan</a>
+    
+    <a href="https://www.ifshow.com/tags/career-life/">career-life</a>
+    
+    <a href="https://www.ifshow.com/tags/centos/">centos</a>
+    
+    <a href="https://www.ifshow.com/tags/cyberpunk2077/">cyberpunk2077</a>
+    
+    <a href="https://www.ifshow.com/tags/desktop-maintenance/">desktop-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/e-hr/">e-hr</a>
+    
+    <a href="https://www.ifshow.com/tags/etf/">etf</a>
+    
+    <a href="https://www.ifshow.com/tags/fgo/">fgo</a>
+    
+    <a href="https://www.ifshow.com/tags/git/">git</a>
+    
+    <a href="https://www.ifshow.com/tags/hugo/">hugo</a>
+    
+    <a href="https://www.ifshow.com/tags/information-security/">information-security</a>
+    
+    <a href="https://www.ifshow.com/tags/it-auditors/">it-auditors</a>
+    
+    <a href="https://www.ifshow.com/tags/it-outsourcing/">it-outsourcing</a>
+    
+    <a href="https://www.ifshow.com/tags/it-project-management/">it-project-management</a>
+    
+    <a href="https://www.ifshow.com/tags/kali/">kali</a>
+    
+    <a href="https://www.ifshow.com/tags/linux/">linux</a>
+    
+    <a href="https://www.ifshow.com/tags/living/">living</a>
+    
+    <a href="https://www.ifshow.com/tags/openwrt/">openwrt</a>
+    
+    <a href="https://www.ifshow.com/tags/pmp/">pmp</a>
+    
+    <a href="https://www.ifshow.com/tags/refactoring/">refactoring</a>
+    
+    <a href="https://www.ifshow.com/tags/seo/">seo</a>
+    
+    <a href="https://www.ifshow.com/tags/server-maintenance/">server-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/shadowsocks/">shadowsocks</a>
+    
+    <a href="https://www.ifshow.com/tags/stock/">stock</a>
+    
+    <a href="https://www.ifshow.com/tags/system-maintenance/">system-maintenance</a>
+    
+    <a href="https://www.ifshow.com/tags/win10/">win10</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="" title=""></a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://www.ifshow.com/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2005 - 2021 <a href="https://www.ifshow.com/">IFshow By boxwang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-8286719-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

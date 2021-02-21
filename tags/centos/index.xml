@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>centos on IFshow</title>
+    <link>https://www.ifshow.com/tags/centos/</link>
+    <description>Recent content in centos on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 18 May 2020 16:35:42 -0300</lastBuildDate><atom:link href="https://www.ifshow.com/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修复Yum警告：Rpmdb Altered Outside of Yum</title>
+      <link>https://www.ifshow.com/fix-rpmdb-altered-outside-of-yum/</link>
+      <pubDate>Mon, 18 May 2020 16:35:42 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/fix-rpmdb-altered-outside-of-yum/</guid>
+      <description>root权限删除yum历史记录即可消除警告： 1 rm -rf /var/lib/yum/history/*.sqlite</description>
+    </item>
+    
+    <item>
+      <title>Centos 8心得</title>
+      <link>https://www.ifshow.com/centos-8-tips/</link>
+      <pubDate>Thu, 05 Mar 2020 20:13:26 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-8-tips/</guid>
+      <description>1、添加 EPEL Repository dnf install epel-release -y 验证EPEL库的状态，返回软件包数量即为正常。 dnf repolist epel dnf repolist epel -v 列出EPEL库中所有可用软件包 dnf repository-packages epel list 在EPEL搜索软件包 dnf repository-packages epel list | grep -i 关键字 仅从EPEL安装指定软件包（不加–enablerepo=”epel”就是所有源里面查找安装） dnf --enablerepo=&amp;quot;epel&amp;quot; install 软件包 -y 2、安装snap</description>
+    </item>
+    
+    <item>
+      <title>Centos 8安装配置shadowsocks-libev</title>
+      <link>https://www.ifshow.com/centos-8-install-and-configure-shadowsocks-libev/</link>
+      <pubDate>Thu, 05 Mar 2020 19:31:41 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-8-install-and-configure-shadowsocks-libev/</guid>
+      <description>1、安装和启用EPEL Repository dnf install epel-release -y 2、安装snap 通过snap来安装应用可以运行在单独的环境不影响主机系统。 1 yum install snapd 添加snap启动通信 socket 1 systemctl enable --now snapd.socket 创建链接（snap软件包一般安装在/snap目录下） 1 ln -s /var/lib/snapd/snap /snap 3、安装shadowsocks-libev稳定版 snap install shadowsocks-libev 4、建立shado</description>
+    </item>
+    
+    <item>
+      <title>Centos7开机自动执行脚本</title>
+      <link>https://www.ifshow.com/centos7-automatically-executed-script-after-booting/</link>
+      <pubDate>Wed, 18 Sep 2019 18:39:34 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos7-automatically-executed-script-after-booting/</guid>
+      <description>1、建立自动执行脚本 vi /root/123.sh 输入内容（示例为重启nginx和php-fpm服务） #!/bin/bash systemctl restart nginx systemctl restart php-fpm 2、修改脚本属性为可执行，修改/etc/rc.d/rc.local为可执行 chmod +x /root/123.sh chmod +x /etc/rc.d/rc.local 3、把自动执行脚本添加到/etc/rc.d/rc.local vi /etc/rc.d/rc.local 在最后添加以下内容后保存退出 /root/123.sh 4、定时重</description>
+    </item>
+    
+    <item>
+      <title>CentOS7免费SSL证书Let&#39;s Encrypt教程</title>
+      <link>https://www.ifshow.com/centos-7-free-ssl-certificate-lets-encrypt-tutorial/</link>
+      <pubDate>Sun, 09 Jul 2017 00:31:18 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-7-free-ssl-certificate-lets-encrypt-tutorial/</guid>
+      <description>1、安装epel源和Certbot客户端（选择一种） yum -y install epel-release yum -y install certbot-apache #apache提供web服务 yum -y install certbot-nginx #nginx提供web服务 2、获取证书（选择一种） certbot --apache -d ifshow.com -d www.ifshow.com #apache提供web服务 certbot --nginx -d ifshow.com -d www.ifshow.com #nginx提供web服务 在 /etc/letsencrypt/live/ 会生成对应域名ifshow的文件夹，里面有指</description>
+    </item>
+    
+    <item>
+      <title>CentOS 7下的软件安装方法及策略</title>
+      <link>https://www.ifshow.com/how-to-install-softwares-under-centos-7/</link>
+      <pubDate>Fri, 22 May 2015 07:56:34 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/how-to-install-softwares-under-centos-7/</guid>
+      <description>转自：http://seisman.info/how-to-install-softwares-under-centos-7.html 一些废话 2010年开始正式接触Linux，入门发行版是Ubuntu 10.10，后来过渡到Ubunu 11.04，这其中也尝试了很多其他主流的发行版。</description>
+    </item>
+    
+    <item>
+      <title>CentOS命令行模式下实现代理上网</title>
+      <link>https://www.ifshow.com/realization-centos-command-line-mode-proxy-access/</link>
+      <pubDate>Fri, 22 May 2015 07:51:53 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/realization-centos-command-line-mode-proxy-access/</guid>
+      <description>在profile文件中设置相关环境变量： vi /etc/profile 添加以下内容： http\_proxy=192.168.137.1:1080 https\_proxy=192.168.137.1:1080 ftp\_proxy=192.168.137.1:1080 no\_proxy=192.168.137.0. export http\_proxy https\_proxy ftp\_proxy no\_proxy 说明：指定http代理、https代理、ftp代理；局域网不使用代理。 保存退出，注销重新登录系统或重启系统生效。</description>
+    </item>
+    
+    <item>
+      <title>CentOS使用logrotate管理日志</title>
+      <link>https://www.ifshow.com/centos-using-logrotate-management-log/</link>
+      <pubDate>Tue, 12 May 2015 01:27:19 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-using-logrotate-management-log/</guid>
+      <description>logrotate是日志循环管理工具，可以分割日志文件，删除旧的日志文件，创建新的日志文件，循环管理日志从而节省磁盘空间。 logrotate命令格式： logrotate [OPTION...] &amp;lt;configfile&amp;gt; -d, –debug ：debug模式，测试配置文件是否有错误。 -f, –force ：强制转储文件。 -m, –mail=command ：发送日志</description>
+    </item>
+    
+    <item>
+      <title>CentOS 7安装Odoo 8（ OpenERP）</title>
+      <link>https://www.ifshow.com/install-odoo-8-on-centos-7/</link>
+      <pubDate>Mon, 13 Apr 2015 02:42:33 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/install-odoo-8-on-centos-7/</guid>
+      <description>文章更新：在CentOS 7.1也成功安装Odoo 8最新版，增加说明及修正个别错误。 1. 准备工作 1.1 清除yum缓存、安装EPEL源并升级系统 yum clean all yum -y install epel-release.noarch yum update 1.2 安装PostgreSQL和PHP PostgreSQL extension yum -y install postgresql-libs postgresql-server postgresql php-pgsql php-gd 1.3 安装所需软件 yum -y install wget babel python-devel libxslt-python pyparsing python-dateutil python-decorator python-imaging python-jinja2 python-ldap python-lxml python-mako python-psycopg2 python-reportlab python-requests python-werkzeug python-yaml python-docutils python-matplotlib python-unittest2.noarch python-babel python-gevent pygtk2 glade3 pytz libxslt-devel bzr</description>
+    </item>
+    
+    <item>
+      <title>CentOS 7 systemd介绍</title>
+      <link>https://www.ifshow.com/centos-7-systemd-introduced/</link>
+      <pubDate>Tue, 07 Apr 2015 03:01:55 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-7-systemd-introduced/</guid>
+      <description>https://wiki.archlinux.org/index.php/Systemd systemd 基本工具 监视和控制systemd的主要命令是systemctl。该命令可用于查看系统状态和管理系统及服务。详见systemctl(1)。、 提示： 在 systemctl 参数中添加 -H &amp;lt;用户名&amp;gt;@&amp;lt;主机名&amp;gt; 可以实现对其他机器的远程控制。该功能使用 SSH 连接。 Plasma 用户可以安装 systemctl 图形前</description>
+    </item>
+    
+    <item>
+      <title>CentOS 7 SSH使用证书登录</title>
+      <link>https://www.ifshow.com/centos-7-ssh-login-using-certificates/</link>
+      <pubDate>Sat, 04 Apr 2015 14:50:24 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-7-ssh-login-using-certificates/</guid>
+      <description>1. 生成用于SSH的公钥和私钥（本例用户为ifshow） ssh-keygen -t rsa 2. 导入公钥 cat ~/.ssh/id\_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized\_keys 3. 设置正确的文件和文件夹权限 chown -R 0700 ~/.ssh chown -R 0644 ~/.ssh/authorized_keys chown -R ifshow:ifshow /home/ifshow 开启SELinux时，还需要执行（root用户把/home改成/root） restorecon -R -v /home 4. 修改SSH配置文件，支持使用证书登录（root权限） vi /etc/ssh/sshd_config 查找RSA</description>
+    </item>
+    
+    <item>
+      <title>CentOS 7 Shadowsocks优化</title>
+      <link>https://www.ifshow.com/centos-7-shadowsocks-optimization/</link>
+      <pubDate>Fri, 03 Apr 2015 00:50:45 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-7-shadowsocks-optimization/</guid>
+      <description>1. 增加TCP连接数量（针对大量TCP连接场合） 编辑limits.confvi /etc/security/limits.conf增加以下两行（设定最大文件打开数为51200） soft nofile 51200 hard nofile 51200 如果只需临时增加此上限，使用以下命令： ulimit -n 51200 2. 修改sysctl.conf配置文件，优化TCP参数</description>
+    </item>
+    
+    <item>
+      <title>Centos 7安装配置Shadowsocks</title>
+      <link>https://www.ifshow.com/centos-7-install-and-configure-shadowsocks/</link>
+      <pubDate>Thu, 02 Apr 2015 07:21:08 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-7-install-and-configure-shadowsocks/</guid>
+      <description>因为shadowsocks-python版本停止更新，本文改为安装配置shadowsocks-libev版本。 为了增强安全性，请使用 AEAD 算法，比如AES-256-GCM。 1. 安装shadowsocks 打开https://github.com/shadowsocks/shadowsoc</description>
+    </item>
+    
+    <item>
+      <title>CentOS 7网站数据自动备份到Dropbox</title>
+      <link>https://www.ifshow.com/centos-7-website-data-is-automatically-backed-up-to-dropbox/</link>
+      <pubDate>Wed, 01 Apr 2015 12:58:15 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-7-website-data-is-automatically-backed-up-to-dropbox/</guid>
+      <description>1. 创建Dropbox应用 注册Dropbox账号，再打开https://www.dropbox.com/developers/apps 选择新建，应用类型选择Dropbox API App；数据存储类型选择Files and datastores；权限选择Yes（应用只能访问自己创建的文件）；输入应</description>
+    </item>
+    
+    <item>
+      <title>CentOS 7安装VSFTPD（被动模式&#43;ssl显式加密）</title>
+      <link>https://www.ifshow.com/centos-7-install-vsftpd-with-pasv-over-ssl-explicit/</link>
+      <pubDate>Mon, 30 Mar 2015 08:26:43 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-7-install-vsftpd-with-pasv-over-ssl-explicit/</guid>
+      <description>1. 安装vsftpd yum -y install vsftpd 2. 编辑vsftpd配置文件 vi /etc/vsftpd/vsftpd.conf 如下修改各项配置（没有的就新增） anonymous_enable=NO local_enable=YES write_enable=YES local_umask=022 dirmessage_enable=YES xferlog_enable=YES connect_from_port_20=NO listen_port=2121 ftp_data_port=2122 pasv_enable=YES pasv_min_port=2123 pasv_max_port=2131 xferlog_std_format=YES ascii_upload_enable=YES ascii_download_enable=YES chroot_local_user=YES chroot_list_enable=YES chroot_list_file=/etc/vsftpd/chroot_list ls_recurse_enable=YES listen=YES listen_ipv6=NO pam_service_name=vsftpd userlist_enable=YES userlist_deny=NO userlist_file=/etc/vsftpd/user_list tcp_wrappers=YES 说明：不允许匿名用户登录，运行本地用户登录，允许写入，本地umask值为022，进入每个目录显示欢迎信息（读取目录下.message文件里的</description>
+    </item>
+    
+    <item>
+      <title>CentOS 7 切换图形界面和文本界面</title>
+      <link>https://www.ifshow.com/centos-7-switching-graphical-and-text-interface/</link>
+      <pubDate>Wed, 25 Mar 2015 03:33:00 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-7-switching-graphical-and-text-interface/</guid>
+      <description>设置系统启动后进入文本界面： systemctl set-default multi-user.target 设置系统启动后进入图形界面： systemctl set-default graphical.target 重启系统： systemctl reboot 以文本界面启动后，执行以下命令启动图形界面： startx Ctrl + Alt + F6 切换到文本界面（F1~F6都是文本界面，默认在F6） Ctrl + Alt + F7 切换到图形界面（F7~F12都是图形界面，默认在F7） Ctrl + Alt + backspace 重启当前图形界面</description>
+    </item>
+    
+    <item>
+      <title>全新CentOS 7安装 LNMP（Linux&#43;Nginx&#43;MariaDB&#43;PHP）及多站点配置</title>
+      <link>https://www.ifshow.com/the-new-centos-7-install-lnmp-linux-nginx-mariadb-php-and-multi-site-configuration/</link>
+      <pubDate>Mon, 23 Mar 2015 15:33:45 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/the-new-centos-7-install-lnmp-linux-nginx-mariadb-php-and-multi-site-configuration/</guid>
+      <description>本文介绍在全新CentOS 7系统下安装 LNMP（Linux+Nginx+MariaDB+PHP）的过程，本博客就在此环境下运行。CentOS 7系统安装过程略过，新装后务必先进行安全加固。 1. 准备工作 1.1 安装EPEL源 yum -y install epel-release.noarch 1.2 手动进行系统更新 yum -y update 1.3 设置系统当前时区为香港，然后检查系</description>
+    </item>
+    
+    <item>
+      <title>Centos 7安装Postfix用于发送提醒邮件</title>
+      <link>https://www.ifshow.com/centos-7-install-postfix-for-sending-e-mail-alerts/</link>
+      <pubDate>Thu, 19 Mar 2015 15:54:04 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-7-install-postfix-for-sending-e-mail-alerts/</guid>
+      <description>本文仅介绍Centos 7安装Postfix用于发送提醒邮件，并非搭建完整邮件服务器教程。 1. 卸载sendmail，没有安装sendmail的跳过 yum remove sendmail 2. 安装 Postfix yum install postfix 3. 更改默认MTA为Postfix /usr/sbin/alternatives --set mta /usr/sbin/sendmail.postfix 4. 检查是否将MTA改为Postfix alternatives --display mta 5. 配置Postfix，修改main.</description>
+    </item>
+    
+    <item>
+      <title>CentOS 7安装Fail2ban防御暴力破解密码（配合FirewallD）</title>
+      <link>https://www.ifshow.com/centos-7-install-fail2ban-with-firewalld-to-defend-brute-force-password/</link>
+      <pubDate>Thu, 19 Mar 2015 13:49:09 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/centos-7-install-fail2ban-with-firewalld-to-defend-brute-force-password/</guid>
+      <description>fail2ban可以监视你的系统日志，然后匹配日志的错误信息（正则表达式匹配）执行相应的屏蔽动作（一般情况下是调用防火墙屏蔽）。比如有人在试探你的SSH、SMTP、FTP密码，只要达到你预设的次数，fail2ban就会调用防火墙屏蔽这个IP，而且可以发送e-mail通知系统管理员</description>
+    </item>
+    
+    <item>
+      <title>CetnOS 7默认防火墙FirewallD的使用说明</title>
+      <link>https://www.ifshow.com/cetnos-7-default-firewall-firewalld-instructions/</link>
+      <pubDate>Thu, 19 Mar 2015 03:13:25 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/cetnos-7-default-firewall-firewalld-instructions/</guid>
+      <description>1. firewalld简介 CetnOS 7默认防火墙使用firewalld替代了之前的iptables，主要特点：动态管理防火墙，不需要重启整个防火墙便可应用更改；使用“区域（zone）”概念。 firewalld支持 IPv4, IPv6 防火墙设置以及以太网桥接，并且拥有运行时配置和永久配置选项。firewal</description>
+    </item>
+    
+    <item>
+      <title>安装CentOS 7后必做的安全加固</title>
+      <link>https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/</link>
+      <pubDate>Wed, 18 Mar 2015 08:34:30 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/</guid>
+      <description>刚装好的CentOS 7系统存在很大风险，需要立刻进行安全加固。 1. 用root账号通过SSH登录服务器 通常使用SSH远程登录服务器进行日常维护。在windows系统下可以用PuTTY软件，Linux和MAC系统内置SSH客户端功能直接在终端（terminal）输入相关指令。 SSH首次</description>
+    </item>
+    
+  </channel>
+</rss>

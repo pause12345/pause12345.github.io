@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>desktop-maintenance on IFshow</title>
+    <link>https://www.ifshow.com/tags/desktop-maintenance/</link>
+    <description>Recent content in desktop-maintenance on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 20 Sep 2019 17:13:25 +0000</lastBuildDate><atom:link href="https://www.ifshow.com/tags/desktop-maintenance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Win10 SysMain服务</title>
+      <link>https://www.ifshow.com/win10-sysmain-service/</link>
+      <pubDate>Fri, 20 Sep 2019 17:13:25 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/win10-sysmain-service/</guid>
+      <description>SysMain服务是WIN10 1809之后的版本出现的，该服务之前叫superfetch服务（超级预读）。原理是将用户可能要使用的应用程序预加载到内存空闲空间，尽量避免从硬盘上读取，从而加快应用程序打开速度。但是superfetch服务很占内存，并且对固态硬盘几乎没有加速效果，固</description>
+    </item>
+    
+    <item>
+      <title>Win10 关闭“同步主机”服务</title>
+      <link>https://www.ifshow.com/win10-turn-off-the-sync-host-service/</link>
+      <pubDate>Fri, 20 Sep 2019 17:07:11 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/win10-turn-off-the-sync-host-service/</guid>
+      <description>1、按下WIN+R调出运行，然后输入 regedit 回车； 2、在注册表编辑器中定位到：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services； 3、找到OneSyncSvc、OneSyncSvc_Session1、UserDataSvc、User</description>
+    </item>
+    
+    <item>
+      <title>申请Google Voice详细教程 - 获取免费美国手机号码</title>
+      <link>https://www.ifshow.com/apply-for-google-voice-detailed-tutorial/</link>
+      <pubDate>Wed, 03 Oct 2018 02:08:17 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/apply-for-google-voice-detailed-tutorial/</guid>
+      <description>一、Google Voice简介 Google Voice由 Google 公司出品，为美国用户免费提供的虚拟手机电话号码，并且用这个虚拟号码向+1区号（美国、加拿大境内）拨打电话、发送短信、语音信息均免费。 用来注册各种国内外服务非常方便，也不怕更换真实手机号得去更换注册各种服务时候的绑定号码。但是申请Goo</description>
+    </item>
+    
+    <item>
+      <title>虚假信息鉴别工具箱：如何验证图片和视频的真伪？</title>
+      <link>https://www.ifshow.com/how-to-verify-the-authenticity-of-pictures-and-videos/</link>
+      <pubDate>Fri, 08 Jun 2018 06:48:52 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/how-to-verify-the-authenticity-of-pictures-and-videos/</guid>
+      <description>转自：https://steemit.com/tools/@iyouport/2zmazk 由于我的愚钝，直到最近才发现，很多中国大牌媒体在职记者、甚至“资深”记者，几乎完全不具备基本功，他们依靠信息消费者来判断一个消息的真伪 —— 先转发再等着观众辟谣，这就是为什么从他们手中转发的很</description>
+    </item>
+    
+    <item>
+      <title>windows系统中虚拟磁盘(vhd/vhdx)扩容</title>
+      <link>https://www.ifshow.com/windows-system-virtual-disk-vhd-vhdx-expansion/</link>
+      <pubDate>Sun, 25 Feb 2018 13:55:47 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/windows-system-virtual-disk-vhd-vhdx-expansion/</guid>
+      <description>1、运行【BOOTICE】切换到【磁盘镜像】选项卡；【加载】虚拟磁盘镜像文件，点击【VHD文件信息】，点击重设，输入要扩容的数值。 2、运行windows磁盘管理，选择【操作】→【附加VHD】加载虚拟磁盘镜像文件；右键单击磁盘镜像文件并选择【扩展卷】命令；连击下一步将最大可用空间均</description>
+    </item>
+    
+    <item>
+      <title>取消Win10系统每次开机都弹出msn中文网</title>
+      <link>https://www.ifshow.com/cancel-win10-system-pops-up-every-time-msn-chinese-network/</link>
+      <pubDate>Wed, 13 Dec 2017 00:19:10 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/cancel-win10-system-pops-up-every-time-msn-chinese-network/</guid>
+      <description>具体方法如下： 在开始菜单按钮上单击右键，点击“运行”；在框中输入：regedit 点击确定打开注册表编辑器； 在注册表左侧依次展开：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Inter</description>
+    </item>
+    
+    <item>
+      <title>安卓手机修改网络验证服务器</title>
+      <link>https://www.ifshow.com/android-phone-modify-the-network-authentication-server/</link>
+      <pubDate>Sat, 16 Sep 2017 00:23:21 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/android-phone-modify-the-network-authentication-server/</guid>
+      <description>电脑安装 ADB 与 Universal Android USB driver。 安卓手机开启 USB 调试，电脑打开CMD运行以下命令： adb.exe shell settings put global captive_portal_use_https 1 adb.exe shell settings put global captive_portal_server captive.v2ex.co adb.exe shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204 adb.exe shell settings put global captive_portal_https_url https://captive.v2ex.co/generate_204</description>
+    </item>
+    
+    <item>
+      <title>Dxwnd窗口化工具简介</title>
+      <link>https://www.ifshow.com/dxwnd-windowing-tool-introduction/</link>
+      <pubDate>Sun, 10 Sep 2017 05:21:47 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/dxwnd-windowing-tool-introduction/</guid>
+      <description>1、添加需窗口化的游戏 菜单栏【Edit】-【Add】，在【Path】添加游戏主程序，比如仙剑三的【PAL3.exe】，在【Name】输入游戏名称，比如PAL3； 完成设置后点击【OK】就会出现在主界面列表。 全部添加完成后，菜单栏【File】-【Save】保存。 2、运行已添加的游戏 在</description>
+    </item>
+    
+    <item>
+      <title>Windows10繁体软件字体显示异常的解决方法</title>
+      <link>https://www.ifshow.com/windows10-traditional-software-font-display-exception-solution/</link>
+      <pubDate>Sat, 26 Aug 2017 06:48:29 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/windows10-traditional-software-font-display-exception-solution/</guid>
+      <description>系统设置 → 应用和功能 → 管理可选功能 → 添加功能 → 找到“繁体中文补充字体”并安装→ 重启电脑。</description>
+    </item>
+    
+    <item>
+      <title>Word文件如何显示中间部分的页码和总页数</title>
+      <link>https://www.ifshow.com/word-documents-how-to-display-page-number-and-the-total-number-of-pages-of-an-intermediate-portion/</link>
+      <pubDate>Wed, 27 Jul 2016 05:11:34 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/word-documents-how-to-display-page-number-and-the-total-number-of-pages-of-an-intermediate-portion/</guid>
+      <description>1、在需要开始显示页码的前一页结尾插入【分节符】类型选【下一页】，如果出现插入空白页则类型选【连续】。目的是划分为两节。 2、在需要开始显示页码的页面合适位置插入【页码】，选择包括页码和总页数的样式。 3、如果页码编号不是从1开始，选中任意页面的页码-右键菜单【设置页码格式】，自定义</description>
+    </item>
+    
+    <item>
+      <title>LED显示屏点间距、模组尺寸和视距计算解析</title>
+      <link>https://www.ifshow.com/led-display-pitch-module-size-and-viewing-distance-calculation-parsing/</link>
+      <pubDate>Fri, 15 Jul 2016 04:25:49 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/led-display-pitch-module-size-and-viewing-distance-calculation-parsing/</guid>
+      <description>源自网络 点间距的计算方法 点间距是每个像素点到每一个相邻像素点之间的中心距离。 LED显示屏点间距、模组尺寸和视距计算解析X点间距是每个像素点到每一个相邻像素点之间的中心距离。 每个像素点可以是一颗LED灯[如：PH10(1R)]、两颗LED灯[如：PH16(2R)]、四颗LED灯[如</description>
+    </item>
+    
+    <item>
+      <title>Windows 10安装Android Studio要点</title>
+      <link>https://www.ifshow.com/windows-10-installed-android-studio-tips/</link>
+      <pubDate>Thu, 18 Feb 2016 14:34:38 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/windows-10-installed-android-studio-tips/</guid>
+      <description>使用官方完整包含SDK的安装文件。 在墙内的话，要能够翻出去。 安装过程会提示下载JDK，就装这个版本。 Android Studio和SDK安装在同一个分区下面。 添加环境变量ANDROID_AVD_HOME，设置AVD模拟器的主目录。</description>
+    </item>
+    
+    <item>
+      <title>Name.com域名隐私保护优惠码</title>
+      <link>https://www.ifshow.com/name-com-whois-privacy-promo/</link>
+      <pubDate>Sat, 26 Dec 2015 04:18:59 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/name-com-whois-privacy-promo/</guid>
+      <description>提交订单输入以下优惠码即可免费： PRIVACYPLEASE 注意要每次选一年的提交订单，选择几年的只会减免一年的费用。</description>
+    </item>
+    
+    <item>
+      <title>MFT表损坏后通过DiskGenius恢复数据</title>
+      <link>https://www.ifshow.com/after-mft-table-corruption-by-diskgenius-restoring-data/</link>
+      <pubDate>Thu, 08 Oct 2015 04:57:37 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/after-mft-table-corruption-by-diskgenius-restoring-data/</guid>
+      <description>Windows 10系统容易出现西部数据移动硬盘丢失MFT表，导致无法读取硬盘数据。而备用MFT表一般是完好的，此时就可以借助DiskGenius恢复数据。 运行DiskGenius，选择目标磁盘。如果备用MFT表未损坏，可以查看整个硬盘的目录结构，选择需要的恢复数据到其他硬盘。</description>
+    </item>
+    
+    <item>
+      <title>Windows 10通过组策略完全关闭Windows Defender服务</title>
+      <link>https://www.ifshow.com/windows-10-is-completely-closed-windows-defender-service-by-group-policy/</link>
+      <pubDate>Thu, 08 Oct 2015 04:46:07 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/windows-10-is-completely-closed-windows-defender-service-by-group-policy/</guid>
+      <description>1、按下 Win+R ，在对话框输入 gpedit.msc 点击确定。 2、定位到&amp;quot;计算机配置 &amp;gt;管理模板 &amp;gt;Windows组件 &amp;gt;Windows Defender&amp;quot;。 3、双击打开&amp;quot;关闭 Windows Defender&amp;quot;，选择启用。</description>
+    </item>
+    
+    <item>
+      <title>从docx文件中提取文本</title>
+      <link>https://www.ifshow.com/extract-text-from-the-docx-file/</link>
+      <pubDate>Tue, 02 Jun 2015 14:39:17 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/extract-text-from-the-docx-file/</guid>
+      <description>1、将“.docx”文件后缀改成“.zip”，用解压缩软件打开这个压缩包。 2、压缩包里面有几个文件夹：“word”文件夹里面的“document.xml”文件保存文本内容（可以直接用记事本打开）；“media”文件夹下存放文档中的图片。 3、也可以通过DOCX2TXT工具直接提取文</description>
+    </item>
+    
+    <item>
+      <title>使用DISM给Windows7安装镜像添加USB3.0驱动</title>
+      <link>https://www.ifshow.com/add-usb-3-0-drivers-to-windows-7-install-image-by-dism/</link>
+      <pubDate>Fri, 29 May 2015 03:38:06 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/add-usb-3-0-drivers-to-windows-7-install-image-by-dism/</guid>
+      <description>MacBook 某些机型装Windows7会遇到键盘触摸板鼠标用不了，原因是Windows7没有原生集成USB 3.0驱动，此时可以给Windows7安装镜像添加USB3.0驱动。 在E盘根目录建立drv文件夹,在drv文件夹里面建立3个子文件夹：usb3、wim、mount。 复制USB3.0驱动</description>
+    </item>
+    
+    <item>
+      <title>【原创】Android DosBox Turbo的典型autoexec配置</title>
+      <link>https://www.ifshow.com/original-android-dosbox-turbo-typical-configuration-autoexec/</link>
+      <pubDate>Thu, 14 May 2015 07:56:04 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/original-android-dosbox-turbo-typical-configuration-autoexec/</guid>
+      <description>Android DosBox Turbo/Manager支持autoexec脚本，省去执行DOS程序先输入一堆命令。我花了点时间写了数个经典DOS游戏的autoexec脚本，在Android 5.1 + DosBox Turbo/Manager 2.1.16环境下测试通过。有问题及需要其他游戏脚本请在本文评论留言（https://www.ifshow.</description>
+    </item>
+    
+    <item>
+      <title>Sony XL39h的Flash mode和Fastboot mode操作简介</title>
+      <link>https://www.ifshow.com/flashtool-flash-mode-and-fastboot-mode-operating-instructions/</link>
+      <pubDate>Thu, 14 May 2015 04:47:56 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/flashtool-flash-mode-and-fastboot-mode-operating-instructions/</guid>
+      <description>1. 电脑安装Flashtool-drivers驱动： Flashmode Drivers Fastboot Drivers Common drivers Rhine board Xperia Z Ultra driver Xperia Z Ultra XL39h driver 2. Flash mode操作简介（线刷）： 运行Flashtool，点击闪电图标，选择Flash mode； 选择ftf格式强刷固件，勾选wipe三个选项； 手机关机，按住音量下键不放，用数据线连接到电脑； Flash</description>
+    </item>
+    
+    <item>
+      <title>苹果电脑制作OS X 10.10 USB启动安装盘</title>
+      <link>https://www.ifshow.com/apple-computer-make-os-x-10-10-usb-boot-installation-disk/</link>
+      <pubDate>Wed, 29 Apr 2015 07:30:57 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/apple-computer-make-os-x-10-10-usb-boot-installation-disk/</guid>
+      <description>1. 准备工作 把OS X Yosemite 正式版的安装程序（&amp;ldquo;Install OS X Yosemite.app&amp;rdquo;，显示为 &amp;ldquo;安装 OS X Yosemite.app&amp;rdquo;） 移动到“应用程序”文件夹。 2. 格式化U盘 插入U盘（至少8GB） → Finder → 应用程序 → 实用工具 → 磁盘工具 → 左侧选</description>
+    </item>
+    
+    <item>
+      <title>NETGEAR WNDR4300安装OpenWRT</title>
+      <link>https://www.ifshow.com/netgear-wndr4300-install-openwrt/</link>
+      <pubDate>Fri, 10 Apr 2015 01:43:11 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/netgear-wndr4300-install-openwrt/</guid>
+      <description>1. 下载对应的OpenWRT固件 WNDR4300的CPU是Atheros AR9344，目前最新固件为barrier_breaker-14.07-ar71xx。 OpenWRT固件有两种：一种是factory固件（用于从原厂系统升级），一种是sysupgrade固件（用于从OpenWR</description>
+    </item>
+    
+    <item>
+      <title>修改FileZilla配置文件位置（Windows系统）</title>
+      <link>https://www.ifshow.com/filezilla-modify-the-configuration-file-location-in-windows-operating-system/</link>
+      <pubDate>Sun, 05 Apr 2015 01:09:38 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/filezilla-modify-the-configuration-file-location-in-windows-operating-system/</guid>
+      <description>FileZilla默认配置文件在C:\Documents and Settings\Administrator\Application Data\FileZilla ，重装系统很容易丢失。 下载FileZilla客户端ZIP压缩包。解压缩文件到某一个文件夹，例如FileZilla。 解压后文件夹结构： FileZilla ├─docs ├─locales └─resources 复制FileZilla/docs</description>
+    </item>
+    
+    <item>
+      <title>WIN7刷新图标缓存的批处理</title>
+      <link>https://www.ifshow.com/win7-batch-command-refresh-icon-cache/</link>
+      <pubDate>Wed, 18 Mar 2015 06:58:26 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/win7-batch-command-refresh-icon-cache/</guid>
+      <description>WIN7下面，把以下命令保存为批处理文件，用管理员权限执行即可立刻刷新图标缓存。 rem 关闭 explorer.exe taskkill /f /im explorer.exe attrib -h -i %userprofile%\\AppData\\Local\\IconCache.db del %userprofile%\\AppData\\Local\\IconCache.db /a rem 打开 explorer.exe start explorer</description>
+    </item>
+    
+    <item>
+      <title>Chrome浏览器的一些使用心得</title>
+      <link>https://www.ifshow.com/some-tips-on-using-the-chrome-browser/</link>
+      <pubDate>Wed, 18 Mar 2015 06:37:34 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/some-tips-on-using-the-chrome-browser/</guid>
+      <description>1、管理所有插件 地址栏输入 about:plugins 2、管理所有扩展 地址栏输入 chrome://extensions/ 3、打造便携版Chrome 创立一个新目录AAA； 把 X:\Users\用户名\AppData\Local\Google\Chrome\版本号\ 下面所有文件复制到AAA； 把 X:\Users\用户名\AppData\Local\G</description>
+    </item>
+    
+    <item>
+      <title>各种U盘启动模式简介</title>
+      <link>https://www.ifshow.com/introduction-of-u-disk-boot-mode/</link>
+      <pubDate>Wed, 18 Mar 2015 06:26:07 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/introduction-of-u-disk-boot-mode/</guid>
+      <description>1、USB-HDD：硬盘仿真模式，DOS启动后显示C:盘，HP U盘格式化工具制作的U盘即采用此启动模式。此模式兼容性很高，但对于一些只支持USB-ZIP模式的电脑则无法启动。 2、USB-ZIP：大容量软盘仿真模式，DOS启动后显示A盘，FlashBoot制作的USB-ZIP启动U</description>
+    </item>
+    
+  </channel>
+</rss>

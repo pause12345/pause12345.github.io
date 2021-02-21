@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on IFshow</title>
+    <link>https://www.ifshow.com/tags/git/</link>
+    <description>Recent content in git on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 26 Apr 2020 23:09:41 -0300</lastBuildDate><atom:link href="https://www.ifshow.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git清除所有历史记录</title>
+      <link>https://www.ifshow.com/git-clear-all-historical-commit-records/</link>
+      <pubDate>Sun, 26 Apr 2020 23:09:41 -0300</pubDate>
+      
+      <guid>https://www.ifshow.com/git-clear-all-historical-commit-records/</guid>
+      <description>选择要操作的本地仓库，执行Git Bash： 1、切换分支 git checkout --orphan latest_branch 2、添加所有文件 git add -A 3、提交更改 git commit -am &amp;quot;no message&amp;quot; 4、删除分支 git branch -D master 5、重命名分支 git branch -m master 6、强制更新 git push -f origin master 操作完成后，本地.git目录下仍然存放着历史文件，可以删除本地仓库，从远程克隆一个到本地。</description>
+    </item>
+    
+  </channel>
+</rss>

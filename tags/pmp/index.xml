@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pmp on IFshow</title>
+    <link>https://www.ifshow.com/tags/pmp/</link>
+    <description>Recent content in pmp on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 09 Aug 2016 00:46:19 +0000</lastBuildDate><atom:link href="https://www.ifshow.com/tags/pmp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PMI主义</title>
+      <link>https://www.ifshow.com/the-principle-of-pmi/</link>
+      <pubDate>Tue, 09 Aug 2016 00:46:19 +0000</pubDate>
+      
+      <guid>https://www.ifshow.com/the-principle-of-pmi/</guid>
+      <description>PMP（Project Management Professional）指项目管理专业人士资格认证，是美国项目管理协会(Project Management Institute，PMI)在全球180多个国家和地区推广，是目前项目管理领域含金量最高的认证。获取PMP证书，不仅提升项目经理的项目管理水平，也直接体现项目经理的个</description>
+    </item>
+    
+  </channel>
+</rss>
