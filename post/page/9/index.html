@@ -51,8 +51,6 @@
                 <nav id="nav-menu" class="clearfix">
                     <a class="current" href="https://www.ifshow.com/">首页</a>
                     
-                    <a  href="https://www.ifshow.com/categories/fgo-us/" title="FGO美服">FGO美服</a>
-                    
                     <a  href="https://www.ifshow.com/archives/" title="归档">归档</a>
                     
                     <a  href="https://www.ifshow.com/about/" title="关于">关于</a>
@@ -70,6 +68,31 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://www.ifshow.com/centos-7-ssh-login-using-certificates/" title="CentOS 7 SSH使用证书登录">CentOS 7 SSH使用证书登录</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2015年4月4日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            1. 生成用于SSH的公钥和私钥（本例用户为ifshow） ssh-keygen -t rsa 2. 导入公钥 cat ~/.ssh/id\_rsa.pub &gt;&gt; ~/.ssh/authorized\_keys 3. 设置正确的文件和文件夹权限 chown -R 0700 ~/.ssh chown -R 0644 ~/.ssh/authorized_keys chown -R ifshow:ifshow /home/ifshow 开启SELinux时，还需要执行（root用户把/home改成/root） restorecon -R -v /home 4. 修改SSH配置文件，支持使用证书登录（root权限） vi /etc/ssh/sshd_config 查找RSA……
+        </div>
+        <p class="readmore"><a href="https://www.ifshow.com/centos-7-ssh-login-using-certificates/">阅读全文</a></p>
+    </article>
+    
     
     
     <article class="post">
@@ -297,31 +320,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/" title="安装CentOS 7后必做的安全加固">安装CentOS 7后必做的安全加固</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2015年3月18日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            刚装好的CentOS 7系统存在很大风险，需要立刻进行安全加固。 1. 用root账号通过SSH登录服务器 通常使用SSH远程登录服务器进行日常维护。在windows系统下可以用PuTTY软件，Linux和MAC系统内置SSH客户端功能直接在终端（terminal）输入相关指令。 SSH首次……
-        </div>
-        <p class="readmore"><a href="https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -401,6 +399,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.ifshow.com/gbfrelink/" title="碧蓝幻想relink PS版本简评">碧蓝幻想relink PS版本简评</a>
+    </li>
+    
+    <li>
         <a href="https://www.ifshow.com/cyberpunk-2077-tips/" title="赛博朋克2077心得">赛博朋克2077心得</a>
     </li>
     
@@ -436,10 +438,6 @@
         <a href="https://www.ifshow.com/win10-pin-shortcut-to-start/" title="Win10固定快捷方式到开始菜单磁贴">Win10固定快捷方式到开始菜单磁贴</a>
     </li>
     
-    <li>
-        <a href="https://www.ifshow.com/git-clear-all-historical-commit-records/" title="Git清除所有历史记录">Git清除所有历史记录</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -464,7 +462,7 @@
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><a href="https://www.ifshow.com/categories/game/">game (1)</a></li>
+    <li><a href="https://www.ifshow.com/categories/game/">game (2)</a></li>
     
     <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
     
@@ -498,6 +496,8 @@
     <a href="https://www.ifshow.com/tags/e-hr/">e-hr</a>
     
     <a href="https://www.ifshow.com/tags/etf/">etf</a>
+    
+    <a href="https://www.ifshow.com/tags/gbfrelink/">gbfrelink</a>
     
     <a href="https://www.ifshow.com/tags/git/">git</a>
     
