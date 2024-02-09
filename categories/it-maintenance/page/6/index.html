@@ -80,6 +80,52 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.ifshow.com/centos-using-logrotate-management-log/">CentOS使用logrotate管理日志</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2015年5月12日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a>
+            
+        </div>
+        
+        <div class="post-content">
+            logrotate是日志循环管理工具，可以分割日志文件，删除旧的日志文件，创建新的日志文件，循环管理日志从而节省磁盘空间。 logrotate命令格式： logrotate [OPTION...] &lt;configfile&gt; -d, –debug ：debug模式，测试配置文件是否有错误。 -f, –force ：强制转储文件。 -m, –mail=command ：发送日志……
+            <p class="readmore"><a href="https://www.ifshow.com/centos-using-logrotate-management-log/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://www.ifshow.com/how-to-access-internet-in-an-unsafe-wifi/">如何在不安全的WiFi下上网</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2015年5月7日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a>
+            
+        </div>
+        
+        <div class="post-content">
+            外出连接公众WiFi时，很容易带来安全问题。首选是用3G/4G流量上网，避免使用未知WiFi。当条件限制只能连接公众WiFi时，可以采用以下方法保证安全： 使用VPN，连接公众WiFi后立刻连接VPN，之后上网流量都走VPN通道；缺点是GFW可以识别，无法用于科学上网。 使用Shad……
+            <p class="readmore"><a href="https://www.ifshow.com/how-to-access-internet-in-an-unsafe-wifi/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.ifshow.com/apple-computer-make-os-x-10-10-usb-boot-installation-disk/">苹果电脑制作OS X 10.10 USB启动安装盘</a>
             </h1>
         </header>
@@ -261,52 +307,6 @@
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.ifshow.com/filezilla-modify-the-configuration-file-location-in-windows-operating-system/">修改FileZilla配置文件位置（Windows系统）</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2015年4月5日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a>
-            
-        </div>
-        
-        <div class="post-content">
-            FileZilla默认配置文件在C:\Documents and Settings\Administrator\Application Data\FileZilla ，重装系统很容易丢失。 下载FileZilla客户端ZIP压缩包。解压缩文件到某一个文件夹，例如FileZilla。 解压后文件夹结构： FileZilla ├─docs ├─locales └─resources 复制FileZilla/docs……
-            <p class="readmore"><a href="https://www.ifshow.com/filezilla-modify-the-configuration-file-location-in-windows-operating-system/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.ifshow.com/centos-7-ssh-login-using-certificates/">CentOS 7 SSH使用证书登录</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2015年4月4日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a>
-            
-        </div>
-        
-        <div class="post-content">
-            1. 生成用于SSH的公钥和私钥（本例用户为ifshow） ssh-keygen -t rsa 2. 导入公钥 cat ~/.ssh/id\_rsa.pub &gt;&gt; ~/.ssh/authorized\_keys 3. 设置正确的文件和文件夹权限 chown -R 0700 ~/.ssh chown -R 0644 ~/.ssh/authorized_keys chown -R ifshow:ifshow /home/ifshow 开启SELinux时，还需要执行（root用户把/home改成/root） restorecon -R -v /home 4. 修改SSH配置文件，支持使用证书登录（root权限） vi /etc/ssh/sshd_config 查找RSA……
-            <p class="readmore"><a href="https://www.ifshow.com/centos-7-ssh-login-using-certificates/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -380,6 +380,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.ifshow.com/oracle-cloud-server-changes-root-password/" title="甲骨文云服务器修改root密码">甲骨文云服务器修改root密码</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/how-to-cancel-the-reminder-to-update-win10-pro-version-to-win11/" title="win10专业版如何取消更新win11的提醒">win10专业版如何取消更新win11的提醒</a>
+    </li>
+    
+    <li>
         <a href="https://www.ifshow.com/gbfrelink-new-player-guide/" title="碧蓝幻想relink 新手指引">碧蓝幻想relink 新手指引</a>
     </li>
     
@@ -411,14 +419,6 @@
         <a href="https://www.ifshow.com/build-websites-with-hugo-simply-tutorial/" title="Hugo建站简易教程">Hugo建站简易教程</a>
     </li>
     
-    <li>
-        <a href="https://www.ifshow.com/fix-rpmdb-altered-outside-of-yum/" title="修复Yum警告：Rpmdb Altered Outside of Yum">修复Yum警告：Rpmdb Altered Outside of Yum</a>
-    </li>
-    
-    <li>
-        <a href="https://www.ifshow.com/hugo-extend-spoiler-laber/" title="Hugo扩展Spoiler标签">Hugo扩展Spoiler标签</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -447,7 +447,7 @@
     
     <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
     
-    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (73)</a></li>
+    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (75)</a></li>
     
     <li><a href="https://www.ifshow.com/categories/life/">life (6)</a></li>
     

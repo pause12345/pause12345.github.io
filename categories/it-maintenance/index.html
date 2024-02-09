@@ -80,6 +80,52 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.ifshow.com/oracle-cloud-server-changes-root-password/">甲骨文云服务器修改root密码</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2024年2月9日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a>
+            
+        </div>
+        
+        <div class="post-content">
+            甲骨文云服务器默认使用OPC用户，通过SSH连接后执行以下命令，即可把root密码改为12345 echo root:12345 |sudo chpasswd root……
+            <p class="readmore"><a href="https://www.ifshow.com/oracle-cloud-server-changes-root-password/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://www.ifshow.com/how-to-cancel-the-reminder-to-update-win10-pro-version-to-win11/">win10专业版如何取消更新win11的提醒</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2024年2月9日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a>
+            
+        </div>
+        
+        <div class="post-content">
+            开始菜单，输入 Gpedit，启动 “编辑组策略” 组件。选择 “本地计算机 策略”&gt;“计算机配置”&gt;“管理模板”&gt;“Windows 组件”&gt;“Windows 更新”&gt;“管理从 Windows 更新提供的更新”&gt;“选择目标功能更新版本” 选项，将此策略调整为 “已启用” ，选项调……
+            <p class="readmore"><a href="https://www.ifshow.com/how-to-cancel-the-reminder-to-update-win10-pro-version-to-win11/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.ifshow.com/adjust-hugo-maupassant-theme/">调整Hugo maupassant主题</a>
             </h1>
         </header>
@@ -261,52 +307,6 @@
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.ifshow.com/centos-8-tips/">Centos 8心得</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年3月5日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a>
-            
-        </div>
-        
-        <div class="post-content">
-            1、添加 EPEL Repository dnf install epel-release -y 验证EPEL库的状态，返回软件包数量即为正常。 dnf repolist epel dnf repolist epel -v 列出EPEL库中所有可用软件包 dnf repository-packages epel list 在EPEL搜索软件包 dnf repository-packages epel list | grep -i 关键字 仅从EPEL安装指定软件包（不加–enablerepo=”epel”就是所有源里面查找安装） dnf --enablerepo=&quot;epel&quot; install 软件包 -y 2、安装snap……
-            <p class="readmore"><a href="https://www.ifshow.com/centos-8-tips/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.ifshow.com/centos-8-install-and-configure-shadowsocks-libev/">Centos 8安装配置shadowsocks-libev</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年3月5日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a>
-            
-        </div>
-        
-        <div class="post-content">
-            1、安装和启用EPEL Repository dnf install epel-release -y 2、安装snap 通过snap来安装应用可以运行在单独的环境不影响主机系统。 1 yum install snapd 添加snap启动通信 socket 1 systemctl enable --now snapd.socket 创建链接（snap软件包一般安装在/snap目录下） 1 ln -s /var/lib/snapd/snap /snap 3、安装shadowsocks-libev稳定版 snap install shadowsocks-libev 4、建立shado……
-            <p class="readmore"><a href="https://www.ifshow.com/centos-8-install-and-configure-shadowsocks-libev/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -376,6 +376,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.ifshow.com/oracle-cloud-server-changes-root-password/" title="甲骨文云服务器修改root密码">甲骨文云服务器修改root密码</a>
+    </li>
+    
+    <li>
+        <a href="https://www.ifshow.com/how-to-cancel-the-reminder-to-update-win10-pro-version-to-win11/" title="win10专业版如何取消更新win11的提醒">win10专业版如何取消更新win11的提醒</a>
+    </li>
+    
+    <li>
         <a href="https://www.ifshow.com/gbfrelink-new-player-guide/" title="碧蓝幻想relink 新手指引">碧蓝幻想relink 新手指引</a>
     </li>
     
@@ -407,14 +415,6 @@
         <a href="https://www.ifshow.com/build-websites-with-hugo-simply-tutorial/" title="Hugo建站简易教程">Hugo建站简易教程</a>
     </li>
     
-    <li>
-        <a href="https://www.ifshow.com/fix-rpmdb-altered-outside-of-yum/" title="修复Yum警告：Rpmdb Altered Outside of Yum">修复Yum警告：Rpmdb Altered Outside of Yum</a>
-    </li>
-    
-    <li>
-        <a href="https://www.ifshow.com/hugo-extend-spoiler-laber/" title="Hugo扩展Spoiler标签">Hugo扩展Spoiler标签</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -443,7 +443,7 @@
     
     <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
     
-    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (73)</a></li>
+    <li><a href="https://www.ifshow.com/categories/it-maintenance/">it-maintenance (75)</a></li>
     
     <li><a href="https://www.ifshow.com/categories/life/">life (6)</a></li>
     

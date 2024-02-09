@@ -6,7 +6,25 @@
     <description>Recent content on IFshow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 08 Feb 2024 18:15:05 -0800</lastBuildDate><atom:link href="https://www.ifshow.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Feb 2024 04:31:21 -0800</lastBuildDate><atom:link href="https://www.ifshow.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>甲骨文云服务器修改root密码</title>
+      <link>https://www.ifshow.com/oracle-cloud-server-changes-root-password/</link>
+      <pubDate>Fri, 09 Feb 2024 04:31:21 -0800</pubDate>
+      
+      <guid>https://www.ifshow.com/oracle-cloud-server-changes-root-password/</guid>
+      <description>甲骨文云服务器默认使用OPC用户，通过SSH连接后执行以下命令，即可把root密码改为12345 echo root:12345 |sudo chpasswd root</description>
+    </item>
+    
+    <item>
+      <title>win10专业版如何取消更新win11的提醒</title>
+      <link>https://www.ifshow.com/how-to-cancel-the-reminder-to-update-win10-pro-version-to-win11/</link>
+      <pubDate>Fri, 09 Feb 2024 04:17:05 -0800</pubDate>
+      
+      <guid>https://www.ifshow.com/how-to-cancel-the-reminder-to-update-win10-pro-version-to-win11/</guid>
+      <description>开始菜单，输入 Gpedit，启动 “编辑组策略” 组件。选择 “本地计算机 策略”&amp;gt;“计算机配置”&amp;gt;“管理模板”&amp;gt;“Windows 组件”&amp;gt;“Windows 更新”&amp;gt;“管理从 Windows 更新提供的更新”&amp;gt;“选择目标功能更新版本” 选项，将此策略调整为 “已启用” ，选项调</description>
+    </item>
+    
     <item>
       <title>碧蓝幻想relink 新手指引</title>
       <link>https://www.ifshow.com/gbfrelink-new-player-guide/</link>
