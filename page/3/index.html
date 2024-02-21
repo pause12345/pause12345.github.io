@@ -71,6 +71,29 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.ifshow.com/centos7-automatically-executed-script-after-booting/" title="Centos7开机自动执行脚本">Centos7开机自动执行脚本</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年9月18日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            1、建立自动执行脚本 vi /root/123.sh 输入内容（示例为重启nginx和php-fpm服务） #!/bin/bash systemctl restart nginx systemctl restart php-fpm 2、修改脚本属性为可执行，修改/etc/rc.d/rc.local为可执行 chmod +x /root/123.sh chmod +x /etc/rc.d/rc.local 3、把自动执行脚本添加到/etc/rc.d/rc.local vi /etc/rc.d/rc.local 在最后添加以下内容后保存退出 /root/123.sh 4、定时重……
+        </div>
+        <p class="readmore"><a href="https://www.ifshow.com/centos7-automatically-executed-script-after-booting/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.ifshow.com/tmux-easy-tutorial/" title="Tmux简易教程">Tmux简易教程</a>
             </h1>
         </header>
@@ -275,29 +298,6 @@
         <p class="readmore"><a href="https://www.ifshow.com/centos-7-free-ssl-certificate-lets-encrypt-tutorial/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.ifshow.com/from-live-to-shared-bicycles-analyzing-hotspots-behind-the-capital-model/" title="从直播到共享单车，深扒“风口”背后资本做局的套路">从直播到共享单车，深扒“风口”背后资本做局的套路</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2017年5月15日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://www.ifshow.com/categories/investment'>investment</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            转自：https://www.huxiu.com/article/194343.html 近几日，行业圈里战火连天，撕逼成为主旋律。 这边，陈欧大手笔进军共享充电宝，40天12亿资金涌入共享充电赛道，那边思聪少爷发下毒誓，这事要是能成我直播吃翔。 这边，映客终于卖身。蓝湖资本殷明撰文指……
-        </div>
-        <p class="readmore"><a href="https://www.ifshow.com/from-live-to-shared-bicycles-analyzing-hotspots-behind-the-capital-model/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -396,6 +396,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.ifshow.com/ogre-battle-reborn-new-player-guide/" title="皇家骑士团重生全称号推荐攻略路线（有几个称号错过只能重新开档）">皇家骑士团重生全称号推荐攻略路线（有几个称号错过只能重新开档）</a>
+    </li>
+    
+    <li>
         <a href="https://www.ifshow.com/oracle-cloud-server-changes-root-password/" title="甲骨文云服务器修改root密码">甲骨文云服务器修改root密码</a>
     </li>
     
@@ -431,10 +435,6 @@
         <a href="https://www.ifshow.com/custom-chrome-user-data-folder/" title="自定义Chrome用户数据文件夹">自定义Chrome用户数据文件夹</a>
     </li>
     
-    <li>
-        <a href="https://www.ifshow.com/build-websites-with-hugo-simply-tutorial/" title="Hugo建站简易教程">Hugo建站简易教程</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -459,7 +459,7 @@
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><a href="https://www.ifshow.com/categories/game/">game (3)</a></li>
+    <li><a href="https://www.ifshow.com/categories/game/">game (4)</a></li>
     
     <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
     
@@ -515,6 +515,8 @@
     <a href="https://www.ifshow.com/tags/living/">living</a>
     
     <a href="https://www.ifshow.com/tags/openwrt/">openwrt</a>
+    
+    <a href="https://www.ifshow.com/tags/orre-battle-reborn/">orre-battle-reborn</a>
     
     <a href="https://www.ifshow.com/tags/pmp/">pmp</a>
     
