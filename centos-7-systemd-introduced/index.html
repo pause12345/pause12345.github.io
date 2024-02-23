@@ -239,13 +239,13 @@
         
         
         <div class="post-content">
-            <p><a href="https://wiki.archlinux.org/index.php/Systemd_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Systemd</a></p>
+            <p><a href="https://wiki.archlinux.org/index.php/Systemd_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29" title="https://wiki.archlinux.org/index.php/Systemd_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank">https://wiki.archlinux.org/index.php/Systemd</a></p>
 <h2 id="systemd-基本工具">systemd 基本工具</h2>
-<p>监视和控制systemd的主要命令是<code>systemctl</code>。该命令可用于查看系统状态和管理系统及服务。详见<a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemctl.1" target="_blank" rel="noopener">systemctl(1)</a>。、</p>
+<p>监视和控制systemd的主要命令是<code>systemctl</code>。该命令可用于查看系统状态和管理系统及服务。详见<a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemctl.1" target="_blank">systemctl(1)</a>。、</p>
 <p><strong>提示：</strong></p>
 <ul>
-<li>在 <code>systemctl</code> 参数中添加 <code>-H &lt;用户名&gt;@&lt;主机名&gt;</code> 可以实现对其他机器的远程控制。该功能使用 <a href="https://wiki.archlinux.org/index.php/SSH_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29" target="_blank" rel="noopener">SSH</a> 连接。</li>
-<li><a href="https://wiki.archlinux.org/index.php/Plasma" target="_blank" rel="noopener">Plasma</a> 用户可以安装 <em>systemctl</em> 图形前端 <a href="https://aur.archlinux.org/packages/systemd-kcm/" target="_blank" rel="noopener">systemd-kcm</a>AUR。安装后可以在 <em>System administration</em> 下找到。</li>
+<li>在 <code>systemctl</code> 参数中添加 <code>-H &lt;用户名&gt;@&lt;主机名&gt;</code> 可以实现对其他机器的远程控制。该功能使用 <a href="https://wiki.archlinux.org/index.php/SSH_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29" target="_blank">SSH</a> 连接。</li>
+<li><a href="https://wiki.archlinux.org/index.php/Plasma" target="_blank">Plasma</a> 用户可以安装 <em>systemctl</em> 图形前端 <a href="https://aur.archlinux.org/packages/systemd-kcm/" target="_blank">systemd-kcm</a>AUR。安装后可以在 <em>System administration</em> 下找到。</li>
 </ul>
 <h3 id="分析系统状态">分析系统状态</h3>
 <p>显示 <strong>系统状态</strong>：</p>
@@ -258,21 +258,21 @@
 <pre><code>$ systemctl --failed
 </code></pre><p>所有可用的单元文件存放在 <code>/usr/lib/systemd/system/</code> 和 <code>/etc/systemd/system/</code> 目录（后者优先级更高）。查看所有已安装服务：</p>
 <pre><code>$ systemctl list-unit-files
-</code></pre><p>显示 <a href="https://wiki.archlinux.org/index.php/Cgroups" target="_blank" rel="noopener">cgroup slice</a>, 内存和父 PID:</p>
+</code></pre><p>显示 <a href="https://wiki.archlinux.org/index.php/Cgroups" target="_blank">cgroup slice</a>, 内存和父 PID:</p>
 <pre><code>$ systemctl status pid
 </code></pre><h3 id="使用单元">使用单元</h3>
-<p>一个单元配置文件可以描述如下内容之一：系统服务（<code>.service</code>）、挂载点（<code>.mount</code>）、sockets（<code>.sockets</code>） 、系统设备（<code>.device</code>）、交换分区（<code>.swap</code>）、文件路径（<code>.path</code>）、启动目标（<code>.target</code>）、由 systemd 管理的计时器（<code>.timer</code>）。详情参阅 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd.unit.5" target="_blank" rel="noopener">systemd.unit(5)</a> 。</p>
+<p>一个单元配置文件可以描述如下内容之一：系统服务（<code>.service</code>）、挂载点（<code>.mount</code>）、sockets（<code>.sockets</code>） 、系统设备（<code>.device</code>）、交换分区（<code>.swap</code>）、文件路径（<code>.path</code>）、启动目标（<code>.target</code>）、由 systemd 管理的计时器（<code>.timer</code>）。详情参阅 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd.unit.5" target="_blank">systemd.unit(5)</a> 。</p>
 <p>使用 <code>systemctl</code> 控制单元时，通常需要使用单元文件的全名，包括扩展名（例如 <code>sshd.service</code> ）。但是有些单元可以在 <code>systemctl</code> 中使用简写方式。</p>
 <ul>
 <li>如果无扩展名，systemctl 默认把扩展名当作 <code>.service</code> 。例如 <code>netcfg</code> 和 <code>netcfg.service</code> 是等价的。</li>
 <li>挂载点会自动转化为相应的 <code>.mount</code> 单元。例如 <code>/home</code> 等价于 <code>home.mount</code> 。</li>
 <li>设备会自动转化为相应的 <code>.device</code> 单元，所以 <code>/dev/sda2</code> 等价于 <code>dev-sda2.device</code> 。</li>
 </ul>
-<p><strong>注意:</strong> 有一些单元的名称包含一个 <code>@</code> 标记（例如： <code>name@*string*.service</code> ），这意味着它是模板单元 <code>name@.service</code> 的一个 <a href="http://0pointer.de/blog/projects/instances.html" target="_blank" rel="noopener">实例</a>。 <code>*string*</code> 被称作实例标识符，在 <em>systemctl</em> 调用模板单元时，会将其当作一个参数传给模板单元，模板单元会使用这个传入的参数代替模板中的 <code>%I</code> 指示符。</p>
+<p><strong>注意:</strong> 有一些单元的名称包含一个 <code>@</code> 标记（例如： <code>name@*string*.service</code> ），这意味着它是模板单元 <code>name@.service</code> 的一个 <a href="http://0pointer.de/blog/projects/instances.html" target="_blank">实例</a>。 <code>*string*</code> 被称作实例标识符，在 <em>systemctl</em> 调用模板单元时，会将其当作一个参数传给模板单元，模板单元会使用这个传入的参数代替模板中的 <code>%I</code> 指示符。</p>
 <p>在实例化之前，<em>systemd</em> 会先检查 <code>name@string.suffix</code> 文件是否存在（如果存在，就直接使用这个文件，而不是模板实例化）。大多数情况下，包含 <code>@</code> 标记都意味着这个文件是模板。如果一个模板单元没有实例化就调用，该调用会返回失败，因为模板单元中的 <code>%I</code> 指示符没有被替换。</p>
 <p><strong>提示：</strong></p>
 <ul>
-<li>下面的大部分命令都可以跟多个单元名, 详细信息参见 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemctl.1" target="_blank" rel="noopener">systemctl(1)</a>。</li>
+<li>下面的大部分命令都可以跟多个单元名, 详细信息参见 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemctl.1" target="_blank">systemctl(1)</a>。</li>
 <li><code>systemctl</code>命令在<code>enable</code>、<code>disable</code>和<code>mask</code>子命令中增加了<code>--now</code>选项，可以实现激活的同时启动服务，取消激活的同时停止服务。</li>
 <li>一个软件包可能会提供多个不同的单元。如果你已经安装了软件包，可以通过<code>pacman -Qql *package* | grep systemd</code>命令检查这个软件包提供了哪些单元。</li>
 </ul>
@@ -303,7 +303,7 @@
 </code></pre><p>重新载入 systemd 系统配置，扫描单元文件的变动。注意这里不会重新加载变更的单元文件。参考上面的 <code>reload</code> 示例。</p>
 <pre><code># systemctl daemon-reload
 </code></pre><h3 id="电源管理">电源管理</h3>
-<p>安装 <a href="https://wiki.archlinux.org/index.php/Polkit" target="_blank" rel="noopener">polkit</a> 后才能以普通用户身份使用电源管理。</p>
+<p>安装 <a href="https://wiki.archlinux.org/index.php/Polkit" target="_blank">polkit</a> 后才能以普通用户身份使用电源管理。</p>
 <p>如果你正登录在一个本地的 <code>systemd-logind</code> 用户会话，且当前没有其它活动的会话，那么以下命令无需 root 权限即可执行。否则（例如，当前有另一个用户登录在某个 tty ）， systemd 将会自动请求输入root密码。</p>
 <p>重启：</p>
 <pre><code>$ systemctl reboot
@@ -316,21 +316,21 @@
 </code></pre><p>混合休眠模式（同时休眠到硬盘并待机）：</p>
 <pre><code>$ systemctl hybrid-sleep
 </code></pre><h2 id="编写单元文件">编写单元文件</h2>
-<p><code>systemd</code> <a href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html" target="_blank" rel="noopener">单元文件</a>的语法来源于 XDG 桌面项配置文件<code>.desktop</code>文件，最初的源头则是Microsoft Windows的<code>.ini</code>文件。单元文件可以从多个地方加载，<code>systemctl show --property=UnitPath</code> 可以按优先级从低到高显示加载目录：</p>
+<p><code>systemd</code> <a href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html" target="_blank">单元文件</a>的语法来源于 XDG 桌面项配置文件<code>.desktop</code>文件，最初的源头则是Microsoft Windows的<code>.ini</code>文件。单元文件可以从多个地方加载，<code>systemctl show --property=UnitPath</code> 可以按优先级从低到高显示加载目录：</p>
 <ul>
 <li><code>/usr/lib/systemd/system/</code> ：软件包安装的单元</li>
 <li><code>/etc/systemd/system/</code> ：系统管理员安装的单元</li>
 </ul>
 <p><strong>注意:</strong></p>
 <ul>
-<li>当 <code>systemd</code> 运行在<a href="https://wiki.archlinux.org/index.php/Systemd/User#How_it_works" target="_blank" rel="noopener">用户模式</a>下时，使用的加载路径是完全不同的。</li>
-<li>systemd 单元名仅能包含 ASCII 字符，下划线和点号和有特殊意义的字符('@', &lsquo;-')。其它字符需要用 C-style &ldquo;\x2d&rdquo; 替换。参阅 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd.unit.5" target="_blank" rel="noopener">systemd.unit(5)</a> 和 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd-escape.1" target="_blank" rel="noopener">systemd-escape(1)</a> 。</li>
+<li>当 <code>systemd</code> 运行在<a href="https://wiki.archlinux.org/index.php/Systemd/User#How_it_works" target="_blank">用户模式</a>下时，使用的加载路径是完全不同的。</li>
+<li>systemd 单元名仅能包含 ASCII 字符，下划线和点号和有特殊意义的字符('@', &lsquo;-')。其它字符需要用 C-style &ldquo;\x2d&rdquo; 替换。参阅 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd.unit.5" target="_blank">systemd.unit(5)</a> 和 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd-escape.1" target="_blank">systemd-escape(1)</a> 。</li>
 </ul>
-<p>单元文件的语法，可以参考系统已经安装的单元，也可以参考 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd.service.5" target="_blank" rel="noopener">systemd.service(5)</a> 中的<a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html#Examples" target="_blank" rel="noopener">EXAMPLES章节</a>。</p>
+<p>单元文件的语法，可以参考系统已经安装的单元，也可以参考 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd.service.5" target="_blank">systemd.service(5)</a> 中的<a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html#Examples" target="_blank">EXAMPLES章节</a>。</p>
 <p><strong>提示：</strong> 以 <code>#</code> 开头的注释可能也能用在 unit-files 中，但是只能在新行中使用。不要在 <em>systemd</em> 的参数后面使用行末注释， 否则 unit 将会启动失败。</p>
 <h3 id="处理依赖关系">处理依赖关系</h3>
 <p>使用 systemd 时，可通过正确编写单元配置文件来解决其依赖关系。典型的情况是，单元 <code>A</code> 要求单元 <code>B</code> 在 <code>A</code> 启动之前运行。在此情况下，向单元 <code>A</code> 配置文件中的 <code>[Unit]</code> 段添加 <code>Requires=B</code> 和 <code>After=B</code> 即可。若此依赖关系是可选的，可添加 <code>Wants=B</code> 和 <code>After=B</code> 。请注意 <code>Wants=</code> 和 <code>Requires=</code> 并不意味着 <code>After=</code> ，即如果 <code>After=</code> 选项没有制定，这两个单元将被并行启动。</p>
-<p>依赖关系通常被用在服务（service）而不是<a href="https://wiki.archlinux.org/index.php/Systemd_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29#%e7%9b%ae%e6%a0%87%ef%bc%88target%ef%bc%89" target="_blank" rel="noopener">目标（target）</a>上。例如， <code>network.target</code> 一般会被某个配置网络接口的服务引入，所以，将自定义的单元排在该服务之后即可，因为 <code>network.target</code> 已经启动。</p>
+<p>依赖关系通常被用在服务（service）而不是<a href="https://wiki.archlinux.org/index.php/Systemd_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29#%e7%9b%ae%e6%a0%87%ef%bc%88target%ef%bc%89" target="_blank">目标（target）</a>上。例如， <code>network.target</code> 一般会被某个配置网络接口的服务引入，所以，将自定义的单元排在该服务之后即可，因为 <code>network.target</code> 已经启动。</p>
 <h3 id="服务类型">服务类型</h3>
 <p>编写自定义的 service 文件时，可以选择几种不同的服务启动方式。启动方式可通过配置文件 <code>[Service]</code> 段中的 <code>Type=</code> 参数进行设置。</p>
 <ul>
@@ -341,7 +341,7 @@
 <li><code>Type=dbus</code> ：若以此方式启动，当指定的 <code>BusName</code> 出现在DBus系统总线上时，systemd认为服务就绪。</li>
 <li><code>Type=idle</code> ：<code>systemd</code>会等待所有任务处理完成后，才开始执行 <code>idle</code> 类型的单元。其他行为与 <code>Type=simple</code> 类似。</li>
 </ul>
-<p><code>type</code> 的更多解释可以参考 <a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html#Type=" target="_blank" rel="noopener">systemd.service(5)</a>。</p>
+<p><code>type</code> 的更多解释可以参考 <a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html#Type=" target="_blank">systemd.service(5)</a>。</p>
 <h3 id="修改现存单元文件">修改现存单元文件</h3>
 <p>为了避免和 pacman 冲突，不应该直接编辑软件包提供的文件。有两种方法可以不改动原始文件就做到修改单元文件：创建一个优先级更高的本地单元文件或创建一个片段，应用到原始单元文件之上。两种方法都需要在修改后重新加载单元，用 <code>systemctl edit</code> 编辑单元(会自动重载单元)或通过下面命令重新加载单元：</p>
 <pre><code># systemctl daemon-reload
@@ -361,7 +361,7 @@
 <p>要附加配置片段，先创建名为 <code>/etc/systemd/system/&lt;单元名&gt;.d/</code> 的目录，然后放入 <code>*.conf</code> 文件，其中可以添加或重置参数。这里设置的参数优先级高于原来的单元文件。下面的更新方式比较简单：</p>
 <pre><code># systemctl edit unit
 </code></pre><p>这将会在编辑器中打开文件 <code>/etc/systemd/system/*unit*.d/override.conf</code>，编辑完成之后自动加载。</p>
-<p><strong>Note:</strong> 并不是所有参数都会被子配置文件覆盖。例如要修改 <code>Conflicts=</code> 就必须 <a href="https://lists.freedesktop.org/archives/systemd-devel/2017-June/038976.html" target="_blank" rel="noopener">替换原始文件</a>。</p>
+<p><strong>Note:</strong> 并不是所有参数都会被子配置文件覆盖。例如要修改 <code>Conflicts=</code> 就必须 <a href="https://lists.freedesktop.org/archives/systemd-devel/2017-June/038976.html" target="_blank">替换原始文件</a>。</p>
 <h4 id="重置到软件包版本">重置到软件包版本</h4>
 <p>要回退单元的变更，使用 <code>systemctl edit</code> 并执行:</p>
 <pre><code># systemctl revert unit
@@ -376,7 +376,7 @@ After=&lt;新依赖&gt;
 [Service]
 ExecStart=
 ExecStart=new command
-</code></pre><p>修改 <code>ExecStart</code> 前必须将其置空，参见 ([<a href="https://bugzilla.redhat.com/show_bug.cgi?id=756787#c9" target="_blank" rel="noopener">1]</a> 。所有可能多次赋值的变量都需要这个操作，例如定时器的 <code>OnCalendar</code> 。</p>
+</code></pre><p>修改 <code>ExecStart</code> 前必须将其置空，参见 ([<a href="https://bugzilla.redhat.com/show_bug.cgi?id=756787#c9" target="_blank">1]</a> 。所有可能多次赋值的变量都需要这个操作，例如定时器的 <code>OnCalendar</code> 。</p>
 <p>下面是自动重启服务的一个例子：</p>
 <pre><code>/etc/systemd/system/unit.d/restart.conf
 [Service]
@@ -448,7 +448,7 @@ RestartSec=30
 <pre><code>$ systemctl set-default multi-user.target
 Removed /etc/systemd/system/default.target.
 Created symlink /etc/systemd/system/default.target -&gt; /usr/lib/systemd/system/graphical.target.
-</code></pre><p>另一方法是向bootloader添加<a href="https://wiki.archlinux.org/index.php/Kernel_parameters_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29" target="_blank" rel="noopener">内核参数</a>：</p>
+</code></pre><p>另一方法是向bootloader添加<a href="https://wiki.archlinux.org/index.php/Kernel_parameters_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29" target="_blank">内核参数</a>：</p>
 <ul>
 <li><code>systemd.unit=multi-user.target</code> （大致相当于运行级别3）</li>
 <li><code>systemd.unit=rescue.target</code> （大致相当于运行级别1）</li>
@@ -462,24 +462,24 @@ Created symlink /etc/systemd/system/default.target -&gt; /usr/lib/systemd/system
 </ol>
 <h2 id="临时文件">临时文件</h2>
 <p><code>/usr/lib/tmpfiles.d/</code> 和 <code>/etc/tmpfiles.d/</code> 中的文件描述了 systemd-tmpfiles 如何创建、清理、删除临时文件和目录，这些文件和目录通常存放在 <code>/run</code> 和 <code>/tmp</code> 中。配置文件名称为 <code>/etc/tmpfiles.d/.conf</code>。此处的配置能覆盖 <code>/usr/lib/tmpfiles.d/</code> 目录中的同名配置。</p>
-<p>临时文件通常和服务文件同时提供，以生成守护进程需要的文件和目录。例如 <a href="https://wiki.archlinux.org/index.php/Samba_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29" target="_blank" rel="noopener">Samba</a> 服务需要目录 <code>/run/samba</code> 存在并设置正确的权限位，就象这样：</p>
+<p>临时文件通常和服务文件同时提供，以生成守护进程需要的文件和目录。例如 <a href="https://wiki.archlinux.org/index.php/Samba_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29" target="_blank">Samba</a> 服务需要目录 <code>/run/samba</code> 存在并设置正确的权限位，就象这样：</p>
 <pre><code>/usr/lib/tmpfiles.d/samba.conf
 D /run/samba 0755 root root
 </code></pre><p>此外，临时文件还可以用来在开机时向特定文件写入某些内容。比如，要禁止系统从USB设备唤醒，利用旧的 <code>/etc/rc.local</code> 可以用 <code>echo USBE &gt; /proc/acpi/wakeup</code>，而现在可以这么做：</p>
 <pre><code>/etc/tmpfiles.d/disable-usb-wake.conf
 w /proc/acpi/wakeup - - - - USBE
-</code></pre><p>详情参见<code>systemd-tmpfiles(8)</code> 和 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/tmpfiles.d.5" target="_blank" rel="noopener">tmpfiles.d(5)</a>。</p>
-<p><strong>注意:</strong> 该方法不能向 <code>/sys</code> 中的配置文件添加参数，因为 <code>systemd-tmpfiles-setup</code> 有可能在相关模块加载前运行。这种情况下，需要首先通过 <code>modinfo &lt;模块名&gt;</code> 确认需要的参数，然后在 <a href="https://wiki.archlinux.org/index.php/Kernel_modules_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29#%e9%85%8d%e7%bd%ae%e6%a8%a1%e5%9d%97%e5%8f%82%e6%95%b0" target="_blank" rel="noopener">&lt;code&gt;/etc/modprobe.d&lt;/code&gt; 目录下的配置文件</a>中修改配置参数。另外，还可以使用 <a href="https://wiki.archlinux.org/index.php/Udev_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29#udev_%e8%a7%84%e5%88%99" target="_blank" rel="noopener">udev 规则</a>，在设备就绪时设置相应属性。</p>
+</code></pre><p>详情参见<code>systemd-tmpfiles(8)</code> 和 <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/tmpfiles.d.5" target="_blank">tmpfiles.d(5)</a>。</p>
+<p><strong>注意:</strong> 该方法不能向 <code>/sys</code> 中的配置文件添加参数，因为 <code>systemd-tmpfiles-setup</code> 有可能在相关模块加载前运行。这种情况下，需要首先通过 <code>modinfo &lt;模块名&gt;</code> 确认需要的参数，然后在 <a href="https://wiki.archlinux.org/index.php/Kernel_modules_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29#%e9%85%8d%e7%bd%ae%e6%a8%a1%e5%9d%97%e5%8f%82%e6%95%b0" target="_blank">&lt;code&gt;/etc/modprobe.d&lt;/code&gt; 目录下的配置文件</a>中修改配置参数。另外，还可以使用 <a href="https://wiki.archlinux.org/index.php/Udev_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29#udev_%e8%a7%84%e5%88%99" target="_blank">udev 规则</a>，在设备就绪时设置相应属性。</p>
 <h2 id="定时器">定时器</h2>
-<p>一个定时器是一个以 <code>.timer</code> 为结尾的单元配置文件并包含由 <code>systemd</code> 控制和监督的信息。<a href="https://wiki.archlinux.org/index.php/Systemd/Timers_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29" target="_blank" rel="noopener">systemd/Timers (简体中文)</a></p>
-<p><strong>注意:</strong> 定时器很大程度上可取代 <code>cron</code>。<a href="https://wiki.archlinux.org/index.php/Systemd/Timers_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29#%e6%9b%bf%e4%bb%a3_cron" target="_blank" rel="noopener">systemd/Timers (简体中文)#替代 cron</a></p>
+<p>一个定时器是一个以 <code>.timer</code> 为结尾的单元配置文件并包含由 <code>systemd</code> 控制和监督的信息。<a href="https://wiki.archlinux.org/index.php/Systemd/Timers_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29" target="_blank">systemd/Timers (简体中文)</a></p>
+<p><strong>注意:</strong> 定时器很大程度上可取代 <code>cron</code>。<a href="https://wiki.archlinux.org/index.php/Systemd/Timers_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29#%e6%9b%bf%e4%bb%a3_cron" target="_blank">systemd/Timers (简体中文)#替代 cron</a></p>
 <h2 id="挂载">挂载</h2>
-<p>因为 systemd 也负责按 <code>/etc/fstab</code> 挂载目录。在系统启动和重新加载系统管理器时，<a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd-fstab-generator.8" target="_blank" rel="noopener">systemd-fstab-generator(8)</a> 会将 <code>/etc/fstab</code> 中的配置转化为 systemd 单元。</p>
-<p><em>systemd</em> 扩展了 <a href="https://wiki.archlinux.org/index.php/Fstab" target="_blank" rel="noopener">fstab</a> 的传统功能，提供了额外的挂载选项。例如可以确保一个挂载仅在网络已经连接时进行，或者仅当另外一个分区已挂载时再挂载。这些选项通常以 <code>x-systemd.</code> 开头，<a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd.mount.5#FSTAB" target="_blank" rel="noopener">systemd.mount(5)</a> 中包含了完整说明。</p>
-<p><em>automounting</em> 也是一个例子，可以在使用时，而不是启动时挂载分区，详情请参考 <a href="https://wiki.archlinux.org/index.php/Fstab#Automount_with_systemd" target="_blank" rel="noopener">fstab#Automount with systemd</a>。</p>
+<p>因为 systemd 也负责按 <code>/etc/fstab</code> 挂载目录。在系统启动和重新加载系统管理器时，<a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd-fstab-generator.8" target="_blank">systemd-fstab-generator(8)</a> 会将 <code>/etc/fstab</code> 中的配置转化为 systemd 单元。</p>
+<p><em>systemd</em> 扩展了 <a href="https://wiki.archlinux.org/index.php/Fstab" target="_blank">fstab</a> 的传统功能，提供了额外的挂载选项。例如可以确保一个挂载仅在网络已经连接时进行，或者仅当另外一个分区已挂载时再挂载。这些选项通常以 <code>x-systemd.</code> 开头，<a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd.mount.5#FSTAB" target="_blank">systemd.mount(5)</a> 中包含了完整说明。</p>
+<p><em>automounting</em> 也是一个例子，可以在使用时，而不是启动时挂载分区，详情请参考 <a href="https://wiki.archlinux.org/index.php/Fstab#Automount_with_systemd" target="_blank">fstab#Automount with systemd</a>。</p>
 <h3 id="gpt-分区自动挂载">GPT 分区自动挂载</h3>
-<p>在 <a href="https://wiki.archlinux.org/index.php/GPT" target="_blank" rel="noopener">GPT</a> 分区磁盘系统上，<a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd-gpt-auto-generator.8" target="_blank" rel="noopener">systemd-gpt-auto-generator(8)</a> 会按照 <a href="https://systemd.io/DISCOVERABLE_PARTITIONS/" target="_blank" rel="noopener">可探测分区规范</a> 进行挂载。可以在 <code>fstab</code> 中忽略。</p>
-<p>要禁用自动挂载，请修改分区的 <a href="https://en.wikipedia.org/wiki/GUID_Partition_Table#Partition_type_GUIDs" target="_blank" rel="noopener">类型 GUID</a> 或设置分区属性 63 位 &ldquo;不自动挂载&rdquo;，详情参考 <a href="https://wiki.archlinux.org/index.php/Gdisk#Prevent_GPT_partition_automounting" target="_blank" rel="noopener">gdisk#Prevent GPT partition automounting</a>。</p>
+<p>在 <a href="https://wiki.archlinux.org/index.php/GPT" target="_blank">GPT</a> 分区磁盘系统上，<a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/systemd-gpt-auto-generator.8" target="_blank">systemd-gpt-auto-generator(8)</a> 会按照 <a href="https://systemd.io/DISCOVERABLE_PARTITIONS/" target="_blank">可探测分区规范</a> 进行挂载。可以在 <code>fstab</code> 中忽略。</p>
+<p>要禁用自动挂载，请修改分区的 <a href="https://en.wikipedia.org/wiki/GUID_Partition_Table#Partition_type_GUIDs" target="_blank">类型 GUID</a> 或设置分区属性 63 位 &ldquo;不自动挂载&rdquo;，详情参考 <a href="https://wiki.archlinux.org/index.php/Gdisk#Prevent_GPT_partition_automounting" target="_blank">gdisk#Prevent GPT partition automounting</a>。</p>
 <h2 id="tips-and-tricks">Tips and tricks</h2>
 <h3 id="running-services-after-the-network-is-up">Running services after the network is up</h3>
 <p>To delay a service after the network is up, include the following dependencies in the <em>.service</em> file:</p>
@@ -491,26 +491,26 @@ After=network-online.target
 ...
 </code></pre><p>The network wait service of the particular application that manages the network, must also be enabled so that <code>network-online.target</code> properly reflects the network status.</p>
 <ul>
-<li>For the ones using <a href="https://wiki.archlinux.org/index.php/NetworkManager" target="_blank" rel="noopener">NetworkManager</a>, <a href="https://wiki.archlinux.org/index.php/Enable" target="_blank" rel="noopener">enable</a> <code>NetworkManager-wait-online.service</code>.</li>
-<li>If using <a href="https://wiki.archlinux.org/index.php/Systemd-networkd" target="_blank" rel="noopener">systemd-networkd</a>, <code>systemd-networkd-wait-online.service</code> is by default enabled automatically whenever <code>systemd-networkd.service</code> has been enabled; check this is the case with <code>systemctl is-enabled systemd-networkd-wait-online.service</code>, there is no other action needed.</li>
+<li>For the ones using <a href="https://wiki.archlinux.org/index.php/NetworkManager" target="_blank">NetworkManager</a>, <a href="https://wiki.archlinux.org/index.php/Enable" target="_blank">enable</a> <code>NetworkManager-wait-online.service</code>.</li>
+<li>If using <a href="https://wiki.archlinux.org/index.php/Systemd-networkd" target="_blank">systemd-networkd</a>, <code>systemd-networkd-wait-online.service</code> is by default enabled automatically whenever <code>systemd-networkd.service</code> has been enabled; check this is the case with <code>systemctl is-enabled systemd-networkd-wait-online.service</code>, there is no other action needed.</li>
 </ul>
-<p>For more detailed explanations see <a href="https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/" target="_blank" rel="noopener">Running services after the network is up</a> in the systemd wiki.</p>
+<p>For more detailed explanations see <a href="https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/" target="_blank">Running services after the network is up</a> in the systemd wiki.</p>
 <h3 id="enable-installed-units-by-default">Enable installed units by default</h3>
-<p><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" target="_blank" rel="noopener">&lt;img src=&#34;https://wiki.archlinux.org/images/3/38/Tango-view-fullscreen.png&#34; alt=&#34;Tango-view-fullscreen.png&#34;&gt;</a><strong>This article or section needs expansion.</strong><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" target="_blank" rel="noopener">&lt;img src=&#34;https://wiki.archlinux.org/images/3/38/Tango-view-fullscreen.png&#34; alt=&#34;Tango-view-fullscreen.png&#34;&gt;</a></p>
-<p><strong>Reason:</strong> How does it work with instantiated units? (Discuss in <a href="https://wiki.archlinux.org/index.php/Talk:Systemd_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29" target="_blank" rel="noopener">Talk:Systemd (简体中文)#</a>)</p>
+<p><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" target="_blank">&lt;img src=&#34;https://wiki.archlinux.org/images/3/38/Tango-view-fullscreen.png&#34; alt=&#34;Tango-view-fullscreen.png&#34;&gt;</a><strong>This article or section needs expansion.</strong><a href="https://wiki.archlinux.org/index.php/File:Tango-view-fullscreen.png" target="_blank">&lt;img src=&#34;https://wiki.archlinux.org/images/3/38/Tango-view-fullscreen.png&#34; alt=&#34;Tango-view-fullscreen.png&#34;&gt;</a></p>
+<p><strong>Reason:</strong> How does it work with instantiated units? (Discuss in <a href="https://wiki.archlinux.org/index.php/Talk:Systemd_%28%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87%29" target="_blank">Talk:Systemd (简体中文)#</a>)</p>
 <p>Arch Linux ships with <code>/usr/lib/systemd/system-preset/99-default.preset</code> containing <code>disable *</code>. This causes <em>systemctl preset</em> to disable all units by default, such that when a new package is installed, the user must manually enable the unit.</p>
 <p>If this behavior is not desired, simply create a symlink from <code>/etc/systemd/system-preset/99-default.preset</code> to <code>/dev/null</code> in order to override the configuration file. This will cause <em>systemctl preset</em> to enable all units that get installed—regardless of unit type—unless specified in another file in one *systemctl preset&rsquo;*s configuration directories. User units are not affected. See the manpage for <code>systemd.preset</code> for more information.</p>
 <p><strong>Note:</strong> Enabling all units by default may cause problems with packages that contain two or more mutually exclusive units. <em>systemctl preset</em> is designed to be used by distributions and spins or system administrators. In the case where two conflicting units would be enabled, you should explicitly specify which one is to be disabled in a preset configuration file as specified in the manpage for <code>systemd.preset</code>.</p>
 <h3 id="sandboxing-application-environments">Sandboxing application environments</h3>
-<p>A unit file can be created as a sandbox to isolate applications and their processes within a hardened virtual environment. systemd leverages <a href="https://en.wikipedia.org/wiki/Linux_namespaces" target="_blank" rel="noopener">namespaces</a>, white-/blacklisting of <a href="https://wiki.archlinux.org/index.php/Capabilities" target="_blank" rel="noopener">Capabilities</a>, and <a href="https://wiki.archlinux.org/index.php/Control_groups" target="_blank" rel="noopener">control groups</a> to container processes through an extensive <a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html" target="_blank" rel="noopener">execution environment configuration</a>.</p>
-<p>The enhancement of an existing systemd unit file with application sandboxing typically requires trial-and-error tests accompanied by the generous use of <a href="https://www.archlinux.org/packages/?name=strace" target="_blank" rel="noopener">strace</a>, <a href="https://en.wikipedia.org/wiki/Standard_streams#Standard_error_.28stderr.29" target="_blank" rel="noopener">stderr</a> and <a href="https://www.freedesktop.org/software/systemd/man/journalctl.html" target="_blank" rel="noopener">journalctl</a> error logging and output facilities. You may want to first search upstream documentation for already done tests to base trials on.</p>
+<p>A unit file can be created as a sandbox to isolate applications and their processes within a hardened virtual environment. systemd leverages <a href="https://en.wikipedia.org/wiki/Linux_namespaces" target="_blank">namespaces</a>, white-/blacklisting of <a href="https://wiki.archlinux.org/index.php/Capabilities" target="_blank">Capabilities</a>, and <a href="https://wiki.archlinux.org/index.php/Control_groups" target="_blank">control groups</a> to container processes through an extensive <a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html" target="_blank">execution environment configuration</a>.</p>
+<p>The enhancement of an existing systemd unit file with application sandboxing typically requires trial-and-error tests accompanied by the generous use of <a href="https://www.archlinux.org/packages/?name=strace" target="_blank">strace</a>, <a href="https://en.wikipedia.org/wiki/Standard_streams#Standard_error_.28stderr.29" target="_blank">stderr</a> and <a href="https://www.freedesktop.org/software/systemd/man/journalctl.html" target="_blank">journalctl</a> error logging and output facilities. You may want to first search upstream documentation for already done tests to base trials on.</p>
 <p>Some examples on how sandboxing with systemd can be deployed:</p>
 <ul>
 <li>
 <pre><code>CapabilityBoundingSet
 </code></pre><p>defines a whitelisted set of allowed capabilities, but may also be used to blacklist a specific capability for a unit.</p>
 <ul>
-<li>The <code>CAP_SYS_ADM</code> capability, for example, which should be one of the <a href="https://lwn.net/Articles/486306/" target="_blank" rel="noopener">goals of a secure sandbox</a>: <code>CapabilityBoundingSet=~ CAP_SYS_ADM</code></li>
+<li>The <code>CAP_SYS_ADM</code> capability, for example, which should be one of the <a href="https://lwn.net/Articles/486306/" target="_blank">goals of a secure sandbox</a>: <code>CapabilityBoundingSet=~ CAP_SYS_ADM</code></li>
 </ul>
 </li>
 </ul>
@@ -563,9 +563,9 @@ systemd-modules-load.service - Load Kernel Modules
 Aug 25 12:22:31 mypc systemd[1]: Started Load Kernel Modules.
 </code></pre><h3 id="诊断启动问题">诊断启动问题</h3>
 <p>使用如下内核参数引导： <code>systemd.log_level=debug systemd.log_target=kmsg log_buf_len=1M</code></p>
-<p>更多有关调试的信息，参见<a href="https://freedesktop.org/wiki/Software/systemd/Debugging" target="_blank" rel="noopener">该文</a>。</p>
+<p>更多有关调试的信息，参见<a href="https://freedesktop.org/wiki/Software/systemd/Debugging" target="_blank">该文</a>。</p>
 <h3 id="诊断一个服务">诊断一个服务</h3>
-<p>如果某个 <em>systemd</em> 服务的工作状况不合预期,希望调试的话,设置 <code>SYSTEMD_LOG_LEVEL</code> <a href="https://wiki.archlinux.org/index.php/Environment_variable" target="_blank" rel="noopener">环境变量</a> 为 <code>debug</code> . 例如以调试模式运行 <em>systemd-networkd</em> 服务:</p>
+<p>如果某个 <em>systemd</em> 服务的工作状况不合预期,希望调试的话,设置 <code>SYSTEMD_LOG_LEVEL</code> <a href="https://wiki.archlinux.org/index.php/Environment_variable" target="_blank">环境变量</a> 为 <code>debug</code> . 例如以调试模式运行 <em>systemd-networkd</em> 服务:</p>
 <p>在此服务的配置文件片段中加入：</p>
 <pre><code>[Service]
 Environment=SYSTEMD_LOG_LEVEL=debug
@@ -573,9 +573,9 @@ Environment=SYSTEMD_LOG_LEVEL=debug
 <ol>
 <li>SYSTEMD_LOG_LEVEL=debug /lib/systemd/systemd-networkd</li>
 </ol>
-<p><a href="https://wiki.archlinux.org/index.php/Restart" target="_blank" rel="noopener">重启</a> <em>systemd-networkd</em> 服务，用 <code>--follow</code> 选项检查日志。</p>
+<p><a href="https://wiki.archlinux.org/index.php/Restart" target="_blank">重启</a> <em>systemd-networkd</em> 服务，用 <code>--follow</code> 选项检查日志。</p>
 <h3 id="关机重启十分缓慢">关机/重启十分缓慢</h3>
-<p>如果关机特别慢（甚至跟死机了一样），很可能是某个拒不退出的服务在作怪。systemd 会等待一段时间，然后再尝试杀死它。请阅读<a href="https://freedesktop.org/wiki/Software/systemd/Debugging#Shutdown_Completes_Eventually" target="_blank" rel="noopener">这篇文章</a>，确认你是否是该问题受害者。</p>
+<p>如果关机特别慢（甚至跟死机了一样），很可能是某个拒不退出的服务在作怪。systemd 会等待一段时间，然后再尝试杀死它。请阅读<a href="https://freedesktop.org/wiki/Software/systemd/Debugging#Shutdown_Completes_Eventually" target="_blank">这篇文章</a>，确认你是否是该问题受害者。</p>
 <h3 id="短时进程无日志记录">短时进程无日志记录</h3>
 <p>若 <code>journalctl -u foounit.service</code> 没有显示某个短时进程的任何输出，那么改用 PID 试试。例如，若 <code>systemd-modules-load.service</code> 执行失败，那么先用 <code>systemctl status systemd-modules-load</code> 查询其 PID（比如是123），然后检索该 PID 相关的日志 <code>journalctl -b _PID=123</code>。运行时进程的日志元数据（诸如 _SYSTEMD_UNIT 和 _COMM）被乱序收集在 <code>/proc</code> 目录。要修复该问题，必须修改内核，使其通过套接字连接来提供上述数据，该过程类似于 SCM_CREDENTIALS。</p>
 <h3 id="禁止在程序崩溃时转储内存">禁止在程序崩溃时转储内存</h3>
@@ -587,39 +587,39 @@ kernel.core_uses_pid = 0
 <pre><code># /usr/lib/systemd/systemd-sysctl
 </code></pre><p>同样可能需要执行“unlimit”设置文件大小：</p>
 <pre><code>$ ulimit -c unlimited
-</code></pre><p>更多信息请参阅 <a href="https://www.freedesktop.org/software/systemd/man/sysctl.d.html" target="_blank" rel="noopener">sysctl.d</a> 和 <a href="https://www.kernel.org/doc/Documentation/sysctl/kernel.txt" target="_blank" rel="noopener">/proc/sys/kernel 文档</a>。</p>
+</code></pre><p>更多信息请参阅 <a href="https://www.freedesktop.org/software/systemd/man/sysctl.d.html" target="_blank">sysctl.d</a> 和 <a href="https://www.kernel.org/doc/Documentation/sysctl/kernel.txt" target="_blank">/proc/sys/kernel 文档</a>。</p>
 <h3 id="启动的时间太长">启动的时间太长</h3>
-<p>不少用户用了 <code>systemd-analyze</code> 命令以后报告启动的时间比预计的要长,通常会说 <code>systemd-analyze</code> 分析结果表示 <a href="https://wiki.archlinux.org/index.php/NetworkManager" target="_blank" rel="noopener">NetworkManager</a> 占据了太多的启动的时间.</p>
+<p>不少用户用了 <code>systemd-analyze</code> 命令以后报告启动的时间比预计的要长,通常会说 <code>systemd-analyze</code> 分析结果表示 <a href="https://wiki.archlinux.org/index.php/NetworkManager" target="_blank">NetworkManager</a> 占据了太多的启动的时间.</p>
 <p>有些用户的问题是 <code>/var/log/journal</code> 文件夹似乎过大.这也许也会对像<code>systemctl status</code> 或 <code>journalctl</code> 的命令有影响.一种解决方案是删除其中的文件 (但最好将它们备份到某处) 然后限制日志文件的大小.</p>
 <h3 id="systemd-tmpfiles-setupservice-在启动时启动失败">systemd-tmpfiles-setup.service 在启动时启动失败</h3>
 <p>从 systemd 219 开始, <code>/usr/lib/tmpfiles.d/systemd.conf</code> 指定 <code>/var/log/journal</code> 的 ACL 属性和目录, 因此日志所在的文件系统上要启用ACL.</p>
-<p>参阅 <a href="https://wiki.archlinux.org/index.php/Access_Control_Lists#Enable_ACL" target="_blank" rel="noopener">Access Control Lists#Enable ACL</a> 获得如何包含 <code>/var/log/journal</code> 启动 ACL 的详细信息.</p>
+<p>参阅 <a href="https://wiki.archlinux.org/index.php/Access_Control_Lists#Enable_ACL" target="_blank">Access Control Lists#Enable ACL</a> 获得如何包含 <code>/var/log/journal</code> 启动 ACL 的详细信息.</p>
 <h3 id="启动时显示的-systemd-版本和安装版本不一致">启动时显示的 systemd 版本和安装版本不一致</h3>
-<p>需要 <a href="https://wiki.archlinux.org/index.php/Mkinitcpio#Image_creation_and_activation" target="_blank" rel="noopener">重新生成 initramfs</a>。</p>
-<p><strong>提示：</strong> 可以使用 pacman 钩子在更新 <a href="https://www.archlinux.org/packages/?name=systemd" target="_blank" rel="noopener">systemd</a>时重新生成 initramfs。参考 <a href="https://bbs.archlinux.org/viewtopic.php?id=215411" target="_blank" rel="noopener">这个帖子</a> 和 <a href="https://wiki.archlinux.org/index.php/Pacman#Hooks" target="_blank" rel="noopener">Pacman#Hooks</a>.</p>
+<p>需要 <a href="https://wiki.archlinux.org/index.php/Mkinitcpio#Image_creation_and_activation" target="_blank">重新生成 initramfs</a>。</p>
+<p><strong>提示：</strong> 可以使用 pacman 钩子在更新 <a href="https://www.archlinux.org/packages/?name=systemd" target="_blank">systemd</a>时重新生成 initramfs。参考 <a href="https://bbs.archlinux.org/viewtopic.php?id=215411" target="_blank">这个帖子</a> 和 <a href="https://wiki.archlinux.org/index.php/Pacman#Hooks" target="_blank">Pacman#Hooks</a>.</p>
 <h3 id="禁用远程机器的-emergency-模式">禁用远程机器的 emergency 模式</h3>
 <p>如果远程机器位于云主机，emergency 模式会导致系统无法远程连接，可以通过下面方式禁用紧急模式：</p>
 <pre><code># systemctl mask emergency.service
 # systemctl mask emergency.target
 </code></pre><h2 id="相关资源">相关资源</h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/systemd" target="_blank" rel="noopener">Wikipedia article</a></li>
-<li><a href="https://www.freedesktop.org/wiki/Software/systemd" target="_blank" rel="noopener">systemd Official web site</a></li>
-<li><a href="https://www.freedesktop.org/wiki/Software/systemd/Optimizations" target="_blank" rel="noopener">systemd optimizations</a></li>
-<li><a href="https://www.freedesktop.org/wiki/Software/systemd/FrequentlyAskedQuestions" target="_blank" rel="noopener">systemd FAQ</a></li>
-<li><a href="https://www.freedesktop.org/wiki/Software/systemd/TipsAndTricks" target="_blank" rel="noopener">systemd Tips and tricks</a></li>
-<li><a href="http://wiki.gentoo.org/wiki/Systemd" target="_blank" rel="noopener">Gentoo Wiki systemd page</a></li>
-<li><a href="http://fedoraproject.org/wiki/Systemd" target="_blank" rel="noopener">Fedora Project - About systemd</a></li>
-<li><a href="http://fedoraproject.org/wiki/How_to_debug_Systemd_problems" target="_blank" rel="noopener">Fedora Project - How to debug systemd problems</a></li>
-<li><a href="http://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet" target="_blank" rel="noopener">Fedora Project - SysVinit to systemd cheatsheet</a></li>
-<li><a href="https://wiki.debian.org/systemd" target="_blank" rel="noopener">Debian Wiki systemd page</a></li>
-<li><a href="http://0pointer.de/public/systemd-man/" target="_blank" rel="noopener">Manual pages</a></li>
-<li><a href="http://0pointer.de/blog/projects/systemd.html" target="_blank" rel="noopener">Lennart&amp;rsquo;s blog story</a>, <a href="http://0pointer.de/blog/projects/systemd-update.html" target="_blank" rel="noopener">update 1</a>, <a href="http://0pointer.de/blog/projects/systemd-update-2.html" target="_blank" rel="noopener">update 2</a>, <a href="http://0pointer.de/blog/projects/systemd-update-3.html" target="_blank" rel="noopener">update 3</a>, <a href="http://0pointer.de/blog/projects/why.html" target="_blank" rel="noopener">summary</a></li>
-<li><a href="http://0pointer.de/public/systemd-ebook-psankar.pdf" target="_blank" rel="noopener">systemd for Administrators (PDF)</a></li>
-<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units" target="_blank" rel="noopener">How To Use Systemctl to Manage Systemd Services and Units</a></li>
-<li><a href="https://dvdhrm.wordpress.com/2013/08/24/session-management-on-linux/" target="_blank" rel="noopener">Session management with systemd-logind</a></li>
-<li><a href="https://wiki.archlinux.org/index.php/Emacs#Syntax_highlighting_for_systemd_Files" target="_blank" rel="noopener">Emacs Syntax highlighting for Systemd files</a></li>
-<li><a href="http://www.h-online.com/open/features/Control-Centre-The-systemd-Linux-init-system-1565543.html" target="_blank" rel="noopener">Two</a> <a href="http://www.h-online.com/open/features/Booting-up-Tools-and-tips-for-systemd-1570630.html" target="_blank" rel="noopener">part</a> introductory article in <em>The H Open</em> magazine.</li>
+<li><a href="https://en.wikipedia.org/wiki/systemd" target="_blank">Wikipedia article</a></li>
+<li><a href="https://www.freedesktop.org/wiki/Software/systemd" target="_blank">systemd Official web site</a></li>
+<li><a href="https://www.freedesktop.org/wiki/Software/systemd/Optimizations" target="_blank">systemd optimizations</a></li>
+<li><a href="https://www.freedesktop.org/wiki/Software/systemd/FrequentlyAskedQuestions" target="_blank">systemd FAQ</a></li>
+<li><a href="https://www.freedesktop.org/wiki/Software/systemd/TipsAndTricks" target="_blank">systemd Tips and tricks</a></li>
+<li><a href="http://wiki.gentoo.org/wiki/Systemd" target="_blank">Gentoo Wiki systemd page</a></li>
+<li><a href="http://fedoraproject.org/wiki/Systemd" target="_blank">Fedora Project - About systemd</a></li>
+<li><a href="http://fedoraproject.org/wiki/How_to_debug_Systemd_problems" target="_blank">Fedora Project - How to debug systemd problems</a></li>
+<li><a href="http://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet" target="_blank">Fedora Project - SysVinit to systemd cheatsheet</a></li>
+<li><a href="https://wiki.debian.org/systemd" target="_blank">Debian Wiki systemd page</a></li>
+<li><a href="http://0pointer.de/public/systemd-man/" target="_blank">Manual pages</a></li>
+<li><a href="http://0pointer.de/blog/projects/systemd.html" target="_blank">Lennart&amp;rsquo;s blog story</a>, <a href="http://0pointer.de/blog/projects/systemd-update.html" target="_blank">update 1</a>, <a href="http://0pointer.de/blog/projects/systemd-update-2.html" target="_blank">update 2</a>, <a href="http://0pointer.de/blog/projects/systemd-update-3.html" target="_blank">update 3</a>, <a href="http://0pointer.de/blog/projects/why.html" target="_blank">summary</a></li>
+<li><a href="http://0pointer.de/public/systemd-ebook-psankar.pdf" target="_blank">systemd for Administrators (PDF)</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units" target="_blank">How To Use Systemctl to Manage Systemd Services and Units</a></li>
+<li><a href="https://dvdhrm.wordpress.com/2013/08/24/session-management-on-linux/" target="_blank">Session management with systemd-logind</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/Emacs#Syntax_highlighting_for_systemd_Files" target="_blank">Emacs Syntax highlighting for Systemd files</a></li>
+<li><a href="http://www.h-online.com/open/features/Control-Centre-The-systemd-Linux-init-system-1565543.html" target="_blank">Two</a> <a href="http://www.h-online.com/open/features/Booting-up-Tools-and-tips-for-systemd-1570630.html" target="_blank">part</a> introductory article in <em>The H Open</em> magazine.</li>
 </ul>
 
         </div>

@@ -218,7 +218,7 @@
         
         
         <div class="post-content">
-            <p>本文介绍在全新CentOS 7系统下安装 LNMP（Linux+Nginx+MariaDB+PHP）的过程，本博客就在此环境下运行。CentOS 7系统安装过程略过，新装后务必先进行<a href="https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/">安全加固</a>。</p>
+            <p>本文介绍在全新CentOS 7系统下安装 LNMP（Linux+Nginx+MariaDB+PHP）的过程，本博客就在此环境下运行。CentOS 7系统安装过程略过，新装后务必先进行<a href="https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/" target="_blank">安全加固</a>。</p>
 <h2 id="1-准备工作">1. 准备工作</h2>
 <h4 id="11-安装epel源">1.1 安装EPEL源</h4>
 <pre><code>yum -y install epel-release.noarch
@@ -267,7 +267,7 @@ nginx默认站点主目录：/usr/share/nginx/html/
 nginx默认日志目录：/var/log/nginx/</p>
 <h2 id="3-安装mariadb">3. 安装MariaDB</h2>
 <h4 id="31-添加最新版本">3.1 添加最新版本</h4>
-<p>首先访问<a href="https://downloads.mariadb.org/mariadb/repositories/" target="_blank" rel="noopener">Setting Up MariaDB Repositories</a>页面，选择CentOS → 发行版本 → MariaDB版本。复制页面提示的内容到MariaDB.repo并保存退出。</p>
+<p>首先访问<a href="https://downloads.mariadb.org/mariadb/repositories/" target="_blank">Setting Up MariaDB Repositories</a>页面，选择CentOS → 发行版本 → MariaDB版本。复制页面提示的内容到MariaDB.repo并保存退出。</p>
 <pre><code>vi /etc/yum.repos.d/MariaDB.repo
 </code></pre><h4 id="32-安装mariadb">3.2 安装mariadb</h4>
 <pre><code>yum -y install MariaDB-server MariaDB-client
@@ -415,7 +415,7 @@ server {
 }
 </code></pre><p><strong>补充1：CentOS7免费SSL证书Let’s Encrypt教程</strong></p>
 <blockquote>
-<p><a href="https://www.ifshow.com/centos-7-free-ssl-certificate-lets-encrypt-tutorial/">CentOS7免费SSL证书Let’s Encrypt教程</a></p>
+<p><a href="https://www.ifshow.com/centos-7-free-ssl-certificate-lets-encrypt-tutorial/" target="_blank">CentOS7免费SSL证书Let’s Encrypt教程</a></p>
 </blockquote>
 <p><strong>补充2：在启用wordpress固定链接后修改nginx配置文件</strong></p>
 <p>修改nginx的wordpress配置文件，在root行下面添加以下内容后保存退出：</p>
@@ -469,7 +469,7 @@ postrotate
  [ -f /var/run/nginx.pid ] &amp;&amp; kill -USR1 `cat /var/run/nginx.pid`
 endscript
 }
-</code></pre><p>进一步了解logrotate请点击<a href="https://www.ifshow.com/centos-using-logrotate-management-log/">这里</a>。</p>
+</code></pre><p>进一步了解logrotate请点击<a href="https://www.ifshow.com/centos-using-logrotate-management-log/" target="_blank">这里</a>。</p>
 <h4 id="56-重启nginx和php-fpm服务重载配置也可以">5.6 重启nginx和php-fpm服务（重载配置也可以）</h4>
 <pre><code>systemctl restart nginx.service
 systemctl restart php-fpm.service
@@ -516,11 +516,11 @@ chmod 777 /data/ifshow/web/phpmyadmin/tmp
 mysql -uroot -p &lt; create_tables.sql
 </code></pre><h2 id="7-安装ftp可选">7. 安装FTP（可选）</h2>
 <blockquote>
-<p><a href="https://www.ifshow.com/centos-7-install-vsftpd-with-pasv-over-ssl-explicit/">CentOS 7安装VSFTPD（被动模式&#43;ssl显式加密）</a></p>
+<p><a href="https://www.ifshow.com/centos-7-install-vsftpd-with-pasv-over-ssl-explicit/" target="_blank">CentOS 7安装VSFTPD（被动模式&#43;ssl显式加密）</a></p>
 </blockquote>
 <h2 id="8centos-7网站数据自动备份到dropbox可选">8.CentOS 7网站数据自动备份到Dropbox（可选）</h2>
 <blockquote>
-<p><a href="https://www.ifshow.com/centos-7-website-data-is-automatically-backed-up-to-dropbox/">CentOS 7网站数据自动备份到Dropbox</a></p>
+<p><a href="https://www.ifshow.com/centos-7-website-data-is-automatically-backed-up-to-dropbox/" target="_blank">CentOS 7网站数据自动备份到Dropbox</a></p>
 </blockquote>
 
         </div>

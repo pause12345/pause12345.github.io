@@ -211,13 +211,13 @@
 └── themes #网站主题目录
 </code></pre><h2 id="三安装主题">三、安装主题</h2>
 <p>Hugo必须配合某个主题一起使用。</p>
-<p>可以去这里下载主题：<a href="https://themes.gohugo.io/" target="_blank" rel="noopener">https://themes.gohugo.io/</a></p>
+<p>可以去这里下载主题：<a href="https://themes.gohugo.io/" target="_blank">https://themes.gohugo.io/</a></p>
 <p>把主题放到 themes 目录里，按照主题安装说明配置网站，记得修改config.toml文件里面的 <code>theme</code> 字段的值为主题名称。</p>
-<p>本站用的是<a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank" rel="noopener">maupassant主题</a> ，安装后可以进一步 <a href="https://www.ifshow.com/adjust-hugo-maupassant-theme/">调整主题</a>。</p>
+<p>本站用的是<a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant主题</a> ，安装后可以进一步 <a href="https://www.ifshow.com/adjust-hugo-maupassant-theme/" target="_blank">调整主题</a>。</p>
 <h2 id="四常用操作">四、常用操作</h2>
 <p>1、新建文章</p>
 <pre><code>hugo new post/abc.md
-</code></pre><p>推荐使用 <a href="https://typora.io/" target="_blank" rel="noopener">Typora</a> 编辑，记得编写完成修改meta中的 <code>draft</code> 字段如下：</p>
+</code></pre><p>推荐使用 <a href="https://typora.io/" target="_blank">Typora</a> 编辑，记得编写完成修改meta中的 <code>draft</code> 字段如下：</p>
 <pre><code>draft: false
 </code></pre><p>不修改就是草稿状态，不会生成和发布文章。</p>
 <p>2、本地发布网站</p>
@@ -225,12 +225,12 @@
 </code></pre><p>默认发布到 <code>d:\hugo\blog\hugo\pubilc</code> 目录，该目录可以同步到远程网站服务器。</p>
 <p>3、本地调试（不发布）</p>
 <pre><code>d:\hugo\blog\hugo server d
-</code></pre><p>可在 <a href="http://localhost:1313/" target="_blank" rel="noopener">http://localhost:1313</a> 预览网站。</p>
+</code></pre><p>可在 <a href="http://localhost:1313/" target="_blank">http://localhost:1313</a> 预览网站。</p>
 <p>Hugo server 实时检测本地文件变化，自动刷新浏览器，使用 <code>CTRL+C</code> 停止运行。</p>
 <h2 id="五部署到-github-pages">五、部署到 GitHub Pages</h2>
-<p>1、在 GitHub 建立 <code>GitHub用户名.github.io</code> 的仓库，<a href="https://help.github.com/cn/github/working-with-github-pages/about-github-pages" target="_blank" rel="noopener">点击查看官方教程</a>。</p>
+<p>1、在 GitHub 建立 <code>GitHub用户名.github.io</code> 的仓库，<a href="https://help.github.com/cn/github/working-with-github-pages/about-github-pages" target="_blank">点击查看官方教程</a>。</p>
 <p>2、把 config.toml 的 <code>baseURL</code> 设置为 <code>https://GitHub用户名.github.io</code></p>
-<p>3、安装 GitHub Desktop：<a href="https://desktop.github.com/" target="_blank" rel="noopener">https://desktop.github.com/</a></p>
+<p>3、安装 GitHub Desktop：<a href="https://desktop.github.com/" target="_blank">https://desktop.github.com/</a></p>
 <p>4、运行 GitHub Desktop，把<code>GitHub用户名.github.io</code> 的仓库克隆到本地，比如 <code>d:\hugo\blog\hugo\GitHub用户名.github.io</code></p>
 <p>5、在 config.toml 顶部区域添加以下字段：</p>
 <pre><code>publishdir = &quot;GitHub用户名.github.io&quot;
@@ -245,8 +245,8 @@
 <pre><code>tags: []
 categories: []
 </code></pre><p>其他需要的也可以在这里添加，省去每次手动输入。</p>
-<p>3、<a href="https://www.ifshow.com/hugo-extend-spoiler-laber/">Hugo扩展Spoiler标签</a></p>
-<p>4、<a href="https://www.ifshow.com/hugo-how-to-open-link-in-new-tab/">Hugo如何在新标签页打开链接</a></p>
+<p>3、<a href="https://www.ifshow.com/hugo-extend-spoiler-laber/" target="_blank">Hugo扩展Spoiler标签</a></p>
+<p>4、<a href="https://www.ifshow.com/hugo-how-to-open-link-in-new-tab/" target="_blank">Hugo如何在新标签页打开链接</a></p>
 
         </div>
 
