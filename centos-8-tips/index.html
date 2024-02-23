@@ -209,7 +209,7 @@ dnf repolist epel -v
 <pre><code>systemctl enable --now snapd.socket
 </code></pre><p>创建链接（snap应用通常安装在/snap目录下）</p>
 <pre><code>ln -s /var/lib/snapd/snap /snap
-</code></pre><p>实例：<a href="https://www.ifshow.com/centos-8-install-and-configure-shadowsocks-libev/" target="_blank">安装shadowsocks-libev</a></p>
+</code></pre><p>实例：<a href="https://www.ifshow.com/centos-8-install-and-configure-shadowsocks-libev/">安装shadowsocks-libev</a></p>
 <p>常用的命令：</p>
 <p>切换软件仓库（扩展/稳定）</p>
 <pre><code>snap refresh &lt;snap app name&gt; --channel=extended 
@@ -229,7 +229,7 @@ snap refresh &lt;snap app name&gt; --channel=stable
 </code></pre><h2 id="3恢复firewalld防火墙">3、恢复FirewallD防火墙</h2>
 <p>Centos 8 默认禁用防火墙（下面操作的remask改成mask就是禁用）</p>
 <pre><code>systemctl remask --now firewalld
-</code></pre><p>注意：如果SSH自定义端口号时，务必先修改firewall对应的SSH配置文件，以免启用防火墙后SSH远程上不去。 <a href="https://www.ifshow.com/cetnos-7-default-firewall-firewalld-instructions/" target="_blank">FirewallD防火墙使用说明</a></p>
+</code></pre><p>注意：如果SSH自定义端口号时，务必先修改firewall对应的SSH配置文件，以免启用防火墙后SSH远程上不去。 <a href="https://www.ifshow.com/cetnos-7-default-firewall-firewalld-instructions/">FirewallD防火墙使用说明</a></p>
 <pre><code>cp /usr/lib/firewalld/services/ssh.xml /etc/firewalld/services/
 vi /etc/firewalld/services/ssh.xml
 </code></pre><p>查找</p>

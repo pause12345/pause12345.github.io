@@ -256,7 +256,7 @@ MaxSessions <span style="color:#099">2</span>
 </div><p>修改完成，保存配置文件退出编辑器。重启SSH服务，使得配置文件生效。
 <code>systemctl restart sshd.service</code></p>
 <h2 id="4-启用firewalld防火墙">4. 启用firewalld防火墙</h2>
-<p>CentOS 7默认采用firewalld防火墙，firewalld的使用说明请点<a href="//www.ifshow.com/cetnos-7-default-firewall-firewalld-instructions/" title="CetnOS 7默认防火墙FirewallD的使用说明">这里</a>。 因为更改过SSH默认端口，所以先修改firewall中SSH服务配置文件。执行如下指令：
+<p>CentOS 7默认采用firewalld防火墙，firewalld的使用说明请点<a href="//www.ifshow.com/cetnos-7-default-firewall-firewalld-instructions/" target="_blank" rel="noopener">这里</a>。 因为更改过SSH默认端口，所以先修改firewall中SSH服务配置文件。执行如下指令：
 cp /usr/lib/firewalld/services/ssh.xml /etc/firewalld/services/
 vi /etc/firewalld/services/ssh.xml
 查找</p>
@@ -331,7 +331,7 @@ systemctl enable yum-cron.service
 <p>从文件系统中回收</p>
 <p><code>rm /var/swap</code></p>
 <h2 id="8-必做的安全加固已经完成还可以安装fail2ban防止暴力破解密码">8. 必做的安全加固已经完成，还可以安装fail2ban防止暴力破解密码</h2>
-<p><a href="//www.ifshow.com/centos-7-install-fail2ban-with-firewalld-to-defend-brute-force-password/" title="CentOS 7安装Fail2ban防御暴力破解密码（配合FirewallD）">点击这里查看《CentOS 7安装Fail2ban防御暴力破解密码（配合FirewallD）》</a></p>
+<p><a href="//www.ifshow.com/centos-7-install-fail2ban-with-firewalld-to-defend-brute-force-password/" target="_blank" rel="noopener">点击这里查看《CentOS 7安装Fail2ban防御暴力破解密码（配合FirewallD）》</a></p>
 
         </div>
 

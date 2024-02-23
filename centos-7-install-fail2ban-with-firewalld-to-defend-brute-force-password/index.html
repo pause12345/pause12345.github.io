@@ -192,13 +192,13 @@
         
         
         <div class="post-content">
-            <p>fail2ban可以监视你的系统日志，然后匹配日志的错误信息（<a href="https://www.ifshow.com/regex-introduction/" target="_blank">正则表达式</a>匹配）执行相应的屏蔽动作（一般情况下是调用防火墙屏蔽）。比如有人在试探你的SSH、SMTP、FTP密码，只要达到你预设的次数，fail2ban就会调用防火墙屏蔽这个IP，而且可以发送e-mail通知系统管理员。</p>
+            <p>fail2ban可以监视你的系统日志，然后匹配日志的错误信息（<a href="https://www.ifshow.com/regex-introduction/">正则表达式</a>匹配）执行相应的屏蔽动作（一般情况下是调用防火墙屏蔽）。比如有人在试探你的SSH、SMTP、FTP密码，只要达到你预设的次数，fail2ban就会调用防火墙屏蔽这个IP，而且可以发送e-mail通知系统管理员。</p>
 <h2 id="1-安装epel源">1. 安装EPEL源</h2>
 <pre><code>yum -y install epel-release.noarch
 </code></pre><h2 id="2-安装支持firewalld的fail2ban">2. 安装支持firewalld的fail2ban</h2>
 <pre><code>yum -y install fail2ban-firewalld fail2ban-systemd
 </code></pre><h2 id="3-安装相关软件让fail2ban可以通过postfix发送提醒邮件可选">3. 安装相关软件，让fail2ban可以通过postfix发送提醒邮件（可选）</h2>
-<p><a href="https://www.ifshow.com/centos-7-install-postfix-for-sending-e-mail-alerts/" target="_blank">安装配置postfix用于发送提醒邮件请点这里</a></p>
+<p><a href="https://www.ifshow.com/centos-7-install-postfix-for-sending-e-mail-alerts/">安装配置postfix用于发送提醒邮件请点这里</a></p>
 <pre><code>yum -y install postfix whois fail2ban-sendmail
 systemctl enable postfix
 systemctl start postfix
