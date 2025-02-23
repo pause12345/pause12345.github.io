@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ai on IFshow</title>
+    <link>https://www.ifshow.com/tags/ai/</link>
+    <description>Recent content in ai on IFshow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 23 Feb 2025 15:18:32 -0800</lastBuildDate><atom:link href="https://www.ifshow.com/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pytorch Common Operations</title>
+      <link>https://www.ifshow.com/pytorch-common-operations/</link>
+      <pubDate>Sun, 23 Feb 2025 15:18:32 -0800</pubDate>
+      
+      <guid>https://www.ifshow.com/pytorch-common-operations/</guid>
+      <description>1、安装Pytorch 推荐打开官网https://pytorch.org/，页面会自动检测本机环境，给出安装命令行 或者手动安装标准版本 pip3 install torch torchvision torchaudio 2、更新Pytorch和torchvision pip install --upgrade pytorch torchvision 3、卸载Pytorch pip uninstall torch 4、查看当前pytorch版本 python &amp;gt;&amp;gt;&amp;gt;import torch &amp;gt;&amp;gt;&amp;gt;print(torch.__version__) 5、查看pyt</description>
+    </item>
+    
+  </channel>
+</rss>
