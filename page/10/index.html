@@ -71,6 +71,29 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.ifshow.com/centos-7-ssh-login-using-certificates/" title="CentOS 7 SSH使用证书登录">CentOS 7 SSH使用证书登录</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2015年4月4日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            1. 生成用于SSH的公钥和私钥（本例用户为ifshow） ssh-keygen -t rsa 2. 导入公钥 cat ~/.ssh/id\_rsa.pub &gt;&gt; ~/.ssh/authorized\_keys 3. 设置正确的文件和文件夹权限 chown -R 0700 ~/.ssh chown -R 0644 ~/.ssh/authorized_keys chown -R ifshow:ifshow /home/ifshow 开启SELinux时，还需要执行（root用户把/home改成/root） restorecon -R -v /home 4. 修改SSH配置文件，支持使用证书登录（root权限） vi /etc/ssh/sshd_config 查找RSA……
+        </div>
+        <p class="readmore"><a href="https://www.ifshow.com/centos-7-ssh-login-using-certificates/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.ifshow.com/centos-7-shadowsocks-optimization/" title="CentOS 7 Shadowsocks优化">CentOS 7 Shadowsocks优化</a>
             </h1>
         </header>
@@ -275,29 +298,6 @@
         <p class="readmore"><a href="https://www.ifshow.com/cetnos-7-default-firewall-firewalld-instructions/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/" title="安装CentOS 7后必做的安全加固">安装CentOS 7后必做的安全加固</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2015年3月18日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            刚装好的CentOS 7系统存在很大风险，需要立刻进行安全加固。 1. 用root账号通过SSH登录服务器 通常使用SSH远程登录服务器进行日常维护。在windows系统下可以用PuTTY软件，Linux和MAC系统内置SSH客户端功能直接在终端（terminal）输入相关指令。 SSH首次……
-        </div>
-        <p class="readmore"><a href="https://www.ifshow.com/after-installing-centos-7-some-security-reinforcement-must-be-done/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -359,6 +359,13 @@
         </li>
         
     
+        
+        
+        <li >
+            <a href="https://www.ifshow.com/page/12/">12</a>
+        </li>
+        
+    
 
     
     
@@ -388,6 +395,10 @@
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
+    
+    <li>
+        <a href="https://www.ifshow.com/armored-core-6-tips/" title="装甲核心6心得">装甲核心6心得</a>
+    </li>
     
     <li>
         <a href="https://www.ifshow.com/borderlands-4-tips/" title="无主之地4心得">无主之地4心得</a>
@@ -425,10 +436,6 @@
         <a href="https://www.ifshow.com/gbfrelink/" title="碧蓝幻想relink PS版本简评">碧蓝幻想relink PS版本简评</a>
     </li>
     
-    <li>
-        <a href="https://www.ifshow.com/ogre-battle-reborn-new-player-guide/" title="皇家骑士团重生全称号推荐攻略路线（有几个称号错过只能重新开档）">皇家骑士团重生全称号推荐攻略路线（有几个称号错过只能重新开档）</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -455,7 +462,7 @@
     
     <li><a href="https://www.ifshow.com/categories/ai/">ai (1)</a></li>
     
-    <li><a href="https://www.ifshow.com/categories/game/">game (8)</a></li>
+    <li><a href="https://www.ifshow.com/categories/game/">game (9)</a></li>
     
     <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
     

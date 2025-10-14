@@ -71,6 +71,29 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.ifshow.com/openwrt-install-openvpn-client/" title="OpenWRT安装OpenVPN客户端">OpenWRT安装OpenVPN客户端</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2015年6月12日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            1. 安装所需软件 用root账号通过SSH连接设备，执行以下命令： opkg update opkg install openvpn-openssl openvpn-easy-rsa opkg install ipset libopenssl resolveip reboot 2. 编辑OpenVPN配置文件 vi /etc/config/openvpn 找到 config openvpn sample_client 配置段，修改一下内容 option enabled 1 option client 1 # option dev tap option dev tun # option proto tcp option proto udp list remote “my_server_IP 1194” option ca /etc/openvpn/ca.crt option cert /etc/openvpn/ifshow.crt option key /etc/openvpn/ifshow.key 说明：允许本配置段生效，客户端模式……
+        </div>
+        <p class="readmore"><a href="https://www.ifshow.com/openwrt-install-openvpn-client/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.ifshow.com/company-airborne-managers-should-do-something-what/" title="公司空降兵，应该做点儿啥？">公司空降兵，应该做点儿啥？</a>
             </h1>
         </header>
@@ -275,29 +298,6 @@
         <p class="readmore"><a href="https://www.ifshow.com/flashtool-flash-mode-and-fastboot-mode-operating-instructions/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.ifshow.com/about-the-business-plan-look-at-this-one-is-enough/" title="有关商业计划书，看这一篇就够了">有关商业计划书，看这一篇就够了</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2015年5月12日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://www.ifshow.com/categories/investment'>investment</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            来源：3W互联网深度精选 微信：studywww 作者：郑焕德 商业计划书建议用PPT的形式，每一页讲明白一个具体事情，用Word文档的方式相比内容和内容之间分割不开，并且显得内容多，不能突出重点。PPT要包含以下几个部分： 1.团队介绍(Who) 2.要解决的问题(Why) 3.产品或服务……
-        </div>
-        <p class="readmore"><a href="https://www.ifshow.com/about-the-business-plan-look-at-this-one-is-enough/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -375,7 +375,7 @@
         
         
         <li >
-            <a href="https://www.ifshow.com/page/11/">11</a>
+            <a href="https://www.ifshow.com/page/12/">12</a>
         </li>
         
     
@@ -408,6 +408,10 @@
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
 <ul class="widget-list">
+    
+    <li>
+        <a href="https://www.ifshow.com/armored-core-6-tips/" title="装甲核心6心得">装甲核心6心得</a>
+    </li>
     
     <li>
         <a href="https://www.ifshow.com/borderlands-4-tips/" title="无主之地4心得">无主之地4心得</a>
@@ -445,10 +449,6 @@
         <a href="https://www.ifshow.com/gbfrelink/" title="碧蓝幻想relink PS版本简评">碧蓝幻想relink PS版本简评</a>
     </li>
     
-    <li>
-        <a href="https://www.ifshow.com/ogre-battle-reborn-new-player-guide/" title="皇家骑士团重生全称号推荐攻略路线（有几个称号错过只能重新开档）">皇家骑士团重生全称号推荐攻略路线（有几个称号错过只能重新开档）</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -475,7 +475,7 @@
     
     <li><a href="https://www.ifshow.com/categories/ai/">ai (1)</a></li>
     
-    <li><a href="https://www.ifshow.com/categories/game/">game (8)</a></li>
+    <li><a href="https://www.ifshow.com/categories/game/">game (9)</a></li>
     
     <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
     
