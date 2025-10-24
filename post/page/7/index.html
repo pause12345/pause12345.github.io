@@ -73,6 +73,31 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://www.ifshow.com/openwrt-install-openvpn-client/" title="OpenWRT安装OpenVPN客户端">OpenWRT安装OpenVPN客户端</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2015年6月12日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            1. 安装所需软件 用root账号通过SSH连接设备，执行以下命令： opkg update opkg install openvpn-openssl openvpn-easy-rsa opkg install ipset libopenssl resolveip reboot 2. 编辑OpenVPN配置文件 vi /etc/config/openvpn 找到 config openvpn sample_client 配置段，修改一下内容 option enabled 1 option client 1 # option dev tap option dev tun # option proto tcp option proto udp list remote “my_server_IP 1194” option ca /etc/openvpn/ca.crt option cert /etc/openvpn/ifshow.crt option key /etc/openvpn/ifshow.key 说明：允许本配置段生效，客户端模式……
+        </div>
+        <p class="readmore"><a href="https://www.ifshow.com/openwrt-install-openvpn-client/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://www.ifshow.com/openvpn-server-and-client-configuration-file-description/" title="OpenWRT安装OpenVPN客户端">OpenWRT安装OpenVPN客户端</a>
             </h1>
         </header>
@@ -295,31 +320,6 @@
     
     
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://www.ifshow.com/flashtool-flash-mode-and-fastboot-mode-operating-instructions/" title="Sony XL39h的Flash mode和Fastboot mode操作简介">Sony XL39h的Flash mode和Fastboot mode操作简介</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2015年5月14日
-        </date>
-        
-        <div class="post-meta">
-            <span>|</span>
-            
-            <span class="meta-category"><a href='https://www.ifshow.com/categories/it-maintenance'>it-maintenance</a></span>
-            
-        </div>
-        
-        <div class="post-content">
-            1. 电脑安装Flashtool-drivers驱动： Flashmode Drivers Fastboot Drivers Common drivers Rhine board Xperia Z Ultra driver Xperia Z Ultra XL39h driver 2. Flash mode操作简介（线刷）： 运行Flashtool，点击闪电图标，选择Flash mode； 选择ftf格式强刷固件，勾选wipe三个选项； 手机关机，按住音量下键不放，用数据线连接到电脑； Flash……
-        </div>
-        <p class="readmore"><a href="https://www.ifshow.com/flashtool-flash-mode-and-fastboot-mode-operating-instructions/">阅读全文</a></p>
-    </article>
-    
-    
-    
 
 
 
@@ -431,6 +431,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://www.ifshow.com/symphony-of-war-tips/" title="战争交响曲心得">战争交响曲心得</a>
+    </li>
+    
+    <li>
         <a href="https://www.ifshow.com/armored-core-6-tips/" title="装甲核心6心得">装甲核心6心得</a>
     </li>
     
@@ -466,10 +470,6 @@
         <a href="https://www.ifshow.com/gbfrelink-new-player-guide/" title="碧蓝幻想relink从入门到毕业">碧蓝幻想relink从入门到毕业</a>
     </li>
     
-    <li>
-        <a href="https://www.ifshow.com/gbfrelink/" title="碧蓝幻想relink PS版本简评">碧蓝幻想relink PS版本简评</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -496,7 +496,7 @@
     
     <li><a href="https://www.ifshow.com/categories/ai/">ai (1)</a></li>
     
-    <li><a href="https://www.ifshow.com/categories/game/">game (9)</a></li>
+    <li><a href="https://www.ifshow.com/categories/game/">game (10)</a></li>
     
     <li><a href="https://www.ifshow.com/categories/investment/">investment (19)</a></li>
     
